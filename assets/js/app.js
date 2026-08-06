@@ -292,27 +292,12 @@ function markDrawer() {
 
 /* ---------------------------------------------------------------- portal */
 /*
- * The landing page sits on one tall piece of key art. Three stations:
- *
- *   screen 1  the colossus and the wordmark — nothing else
- *   screen 2  the six gateways, over the glowing trench
- *   screen 3  the cave, with Oyster and Chip — no content over them
- *
- * The art scrolls slower than the content, and the lag is not a guess: the
- * image top is pinned to the first screen, the image bottom to the last, and
- * the parallax factor falls out of those two constraints. The gateways are
- * placed so they centre exactly when the trench band centres behind them.
- * All fractions below are measured from the artwork.
+ * The landing page: three stations, three framed views of the same painting,
+ * all in normal document flow so everything scrolls together, locked. The
+ * hero shows the top of the art with the wordmark; the gateways sit on its
+ * trench band; the cave at the bottom of the art closes the page. All
+ * cropping is plain CSS — nothing here computes layout.
  */
-
-const ART = {
-  ratio: 2.1618,      // height / width
-  markBottom: 0.365,  // wordmark baseline — hero copy starts under it
-  markGlow: 0.315,    // wordmark centre — breathing glow
-  gates: 0.53,        // trench band centre — gateways align here
-  lantern: { x: 0.365, y: 0.874 },
-  ember: { x: 0.29, y: 0.285 },
-};
 
 const ROMAN = ['I', 'II', 'III', 'IV', 'V', 'VI', 'VII', 'VIII'];
 
@@ -336,41 +321,46 @@ function home() {
 
   paint(`
     <div class="portal" id="portal" style="--art:url('${art}')">
-      <div class="portal-shade top" aria-hidden="true"></div>
-      <div class="portal-shade bottom" aria-hidden="true"></div>
-      <div class="portal-sky" aria-hidden="true">
-        <div class="portal-drift" id="portal-drift">
-          <img class="portal-img" src="${art}" alt="" fetchpriority="high">
+      <section class="st st-hero">
+        <div class="st-art" aria-hidden="true">
+          <img src="${art}" alt="" fetchpriority="high">
           <span class="portal-pulse"></span>
+        </div>
+        <canvas id="portal-fx" aria-hidden="true"></canvas>
+        <div class="portal-rays" aria-hidden="true"><i></i><i></i><i></i></div>
+        <div class="st-hero-copy shell">
+          <p class="banner">${escapeHtml(site.site.banner)}</p>
+          <p class="creed">${site.site.creed.map(escapeHtml).join('<br>')}</p>
+          <a class="cta" href="#/story/chapter-1/scene-01">
+            <span class="cta-glare" aria-hidden="true"></span>
+            <b>Begin the Descent</b>
+            <small>Chapter One · The Crash</small>
+          </a>
+          <div class="scroll-cue" aria-hidden="true">
+            <span>Descend</span>
+            ${icon('i-chevron-down', '')}
+          </div>
+        </div>
+      </section>
+
+      <section class="st st-gates">
+        <div class="st-art" aria-hidden="true"><img src="${art}" alt="" loading="lazy"></div>
+        <div class="shell st-gates-body">
+          <p class="banner">Enter the Archive</p>
+          <nav class="gateways" aria-label="Wiki sections">${gates}</nav>
+        </div>
+      </section>
+
+      <section class="st st-still">
+        <p class="epitaph">${escapeHtml(site.site.epitaph)}</p>
+      </section>
+
+      <section class="st st-cave" aria-label="Two survivors in a cave, far below">
+        <div class="st-art" aria-hidden="true">
+          <img src="${art}" alt="" loading="lazy">
           <span class="portal-lantern"></span>
-          <span class="portal-markveil"></span>
-          <span class="portal-caveveil"></span>
-          <canvas id="portal-fx"></canvas>
-        </div>
-        <div class="portal-rays"><i></i><i></i><i></i></div>
-        <div class="portal-veil"></div>
-      </div>
-
-      <section class="portal-hero shell" id="portal-hero">
-        <p class="banner">${escapeHtml(site.site.banner)}</p>
-        <p class="creed">${site.site.creed.map(escapeHtml).join('<br>')}</p>
-        <a class="cta" href="#/story/chapter-1/scene-01">
-          <span class="cta-glare" aria-hidden="true"></span>
-          <b>Begin the Descent</b>
-          <small>Chapter One · The Crash</small>
-        </a>
-        <div class="scroll-cue" aria-hidden="true">
-          <span>Descend</span>
-          ${icon('i-chevron-down', '')}
         </div>
       </section>
-
-      <section class="portal-gates shell" id="portal-gates">
-        <p class="banner">Enter the Archive</p>
-        <nav class="gateways" aria-label="Wiki sections">${gates}</nav>
-      </section>
-
-      <p class="epitaph" id="portal-epitaph">${escapeHtml(site.site.epitaph)}</p>
 
       <div class="depth-rail" aria-hidden="true">
         <span class="depth-track"><i class="depth-node"></i></span>
@@ -378,123 +368,13 @@ function home() {
       </div>
     </div>`);
 
-  layoutPortal();
   portalFX();
 }
 
 /*
- * Solve the page geometry. With lag p, a content element at document
- * position c overlays image coordinate  c − y·p  at scroll y. Pinning the
- * image top to scroll 0 and its bottom to the last screen gives
- *
- *   p = 1 − (Himg − V) / (pageH − V)
- *
- * and the gateways land on the trench centre at
- *
- *   c = (gates·Himg − p·V/2) / (1 − p)
- */
-function layoutPortal() {
-  const portal = document.getElementById('portal');
-  if (!portal) return;
-
-  const V = innerHeight;
-  const drift = document.getElementById('portal-drift');
-  const hero = document.getElementById('portal-hero');
-  const gates = document.getElementById('portal-gates');
-  const epitaph = document.getElementById('portal-epitaph');
-
-  // The stage width is set by viewport HEIGHT: the wordmark must sit at
-  // ~62% of the first screen with the hero copy below it. Phones get a
-  // full-bleed crop, desktops a sharp centred poster.
-  const vw = innerWidth;
-  const S = Math.round(Math.min(660, Math.max(vw, Math.min(vw * 1.65, V * 0.78))));
-  portal.style.setProperty('--stage', `${S}px`);
-  const Himg = S * ART.ratio;
-
-  const gatesH = gates.offsetHeight || V * 0.7;
-  const still = Math.round(V * 0.55);                  // dark water before the cave
-  const pageH = Math.max(Himg, V + gatesH + still + V);
-  const p = Math.max(0, 1 - (Himg - V) / (pageH - V));
-
-  portal.style.height = `${Math.round(pageH)}px`;
-  portal.dataset.lag = p.toFixed(4);
-  // End offset for the CSS scroll() timeline: the layer's shift at full scroll.
-  portal.style.setProperty('--drift-end', `${((pageH - V) * p).toFixed(1)}px`);
-
-  hero.style.paddingTop = `${Math.round(ART.markBottom * Himg + 10)}px`;
-  const heroBottom = hero.offsetTop + hero.offsetHeight;
-
-  const centre = (ART.gates * Himg - p * (V / 2)) / (1 - p || 1);
-  const top = Math.min(
-    Math.max(Math.round(centre - gatesH / 2), V + 40, heroBottom + 30),
-    Math.round(pageH - V - gatesH - still * 0.5),
-  );
-  gates.style.top = `${top}px`;
-
-  // The epitaph floats in the still water between the gates and the cave.
-  epitaph.style.top = `${Math.round(top + gatesH + Math.max(pageH - V * 0.72 - top - gatesH, 60) * 0.5)}px`;
-
-  portalScroll();
-}
-
-/*
- * The parallax itself. Scroll events fire well below frame rate during
- * momentum scrolling, so positioning the art from inside the handler makes
- * it stutter against the smoothly-composited content. Two tiers instead:
- *
- *  - Browsers with CSS scroll-driven animations get a scroll() timeline —
- *    the compositor moves the layer off the main thread and JavaScript
- *    never touches it again. layoutPortal() supplies the end offset.
- *  - Everyone else gets a requestAnimationFrame loop that eases the layer
- *    toward its target each frame, which turns the sparse scroll samples
- *    into continuous motion.
- */
-const SCROLL_TIMELINE = typeof CSS !== 'undefined'
-  && CSS.supports('animation-timeline: scroll()');
-
-let driftFrame = null;
-let driftY = 0;
-let driftWritten = null;
-
-function driftLoop() {
-  const portal = document.getElementById('portal');
-  const drift = document.getElementById('portal-drift');
-  if (!portal || !drift) { driftFrame = null; return; }
-
-  const target = scrollY * Number(portal.dataset.lag || 0);
-  driftY += (target - driftY) * 0.16;
-  if (Math.abs(target - driftY) < 0.05) driftY = target;
-  if (driftY !== driftWritten) {
-    drift.style.transform = `translate3d(-50%, ${driftY}px, 0)`;
-    driftWritten = driftY;
-  }
-
-  driftFrame = requestAnimationFrame(driftLoop);
-}
-
-/** Scroll work the portal owns: the depth readout (and the JS parallax tier). */
-function portalScroll() {
-  const portal = document.getElementById('portal');
-  if (!portal) return;
-
-  if (!SCROLL_TIMELINE && driftFrame === null) {
-    driftY = scrollY * Number(portal.dataset.lag || 0);
-    driftFrame = requestAnimationFrame(driftLoop);
-  }
-
-  const read = document.getElementById('depth-read');
-  if (read) {
-    const span = document.documentElement.scrollHeight - innerHeight;
-    const sink = span > 24 ? Math.min(1, scrollY / span) : 0;
-    read.textContent = `${String(Math.round(sink * 3840)).padStart(4, '0')}m`;
-  }
-}
-
-/*
- * Life in the water, drawn onto a canvas that rides with the art so every
- * particle stays anchored to the painting: plankton twinkling in the trench,
- * bubbles rising from the arch lights, embers off the scavenger's ribs and
- * sparks of dust around the lantern.
+ * Life in the water of the first screen: plankton twinkling, bubbles rising,
+ * and embers off the scavenger's ribs. Coordinates hang off the art's stage
+ * width so the embers stay on the bird at every size.
  */
 function portalFX() {
   const canvas = document.getElementById('portal-fx');
@@ -511,6 +391,7 @@ function portalFX() {
   const rand = (a, b) => a + Math.random() * (b - a);
 
   const seed = () => {
+    if (!canvas.isConnected) return;
     const ratio = Math.min(devicePixelRatio || 1, 1.5);
     W = canvas.offsetWidth;
     H = canvas.offsetHeight;
@@ -518,81 +399,72 @@ function portalFX() {
     canvas.height = H * ratio;
     context.setTransform(ratio, 0, 0, ratio, 0, 0);
 
-    plankton = Array.from({ length: 64 }, () => ({
-      x: rand(0.06, 0.94) * W,
-      y: rand(0.36, 0.74) * H,
-      r: rand(0.4, 1.3),
+    const stage = document.querySelector('.st-hero .st-art img')?.offsetWidth || W;
+    const left = (W - stage) / 2;
+
+    plankton = Array.from({ length: 42 }, () => ({
+      x: rand(0.04, 0.96) * W,
+      y: rand(0.08, 0.96) * H,
+      r: rand(0.4, 1.2),
       phase: rand(0, Math.PI * 2),
       speed: rand(0.4, 1.1),
-      warm: Math.random() > 0.8,
+      warm: Math.random() > 0.82,
     }));
 
-    bubbles = Array.from({ length: 18 }, () => spawnBubble(true));
+    bubbles = Array.from({ length: 12 }, () => ({
+      x: rand(0.2, 0.8) * W,
+      y: rand(0.5, 1) * H,
+      r: rand(0.5, 1.7),
+      up: rand(0.08, 0.26),
+      sway: rand(0.4, 1.2),
+      phase: rand(0, Math.PI * 2),
+    }));
 
-    embers = [
-      ...Array.from({ length: 7 }, () => spawnEmber(ART.ember, 0.05)),
-      ...Array.from({ length: 9 }, () => spawnEmber(ART.lantern, 0.035)),
-    ];
+    // The scavenger's chest sits at (0.29, 0.285×ratio) of the art.
+    embers = Array.from({ length: 7 }, () => ({
+      hx: left + 0.29 * stage,
+      hy: 0.616 * stage,
+      x: 0, y: 0, vx: 0, vy: 0, life: 0, r: rand(0.4, 1.1),
+    })).map((e) => ({ ...e, life: rand(0.1, 1), x: e.hx + rand(-14, 14), y: e.hy + rand(-14, 14), vx: rand(-0.04, 0.08), vy: rand(-0.1, -0.02) }));
   };
 
-  function spawnBubble(anywhere) {
-    return {
-      x: rand(0.18, 0.82) * W,
-      y: (anywhere ? rand(0.4, 0.95) : rand(0.8, 0.95)) * H,
-      r: rand(0.5, 1.9),
-      up: rand(0.1, 0.32),
-      sway: rand(0.4, 1.4),
-      phase: rand(0, Math.PI * 2),
-    };
-  }
-
-  function spawnEmber(at, spread) {
-    return {
-      home: at,
-      x: (at.x + rand(-spread, spread)) * W,
-      y: (at.y + rand(-spread, spread)) * H,
-      vx: rand(-0.04, 0.08),
-      vy: rand(-0.1, -0.02),
-      life: rand(0.3, 1),
-      r: rand(0.4, 1.1),
-      spread,
-    };
-  }
-
   const tick = (now) => {
-    if (!canvas.isConnected) { cancelAnimationFrame(frame); return; }
+    if (!canvas.isConnected) { frame = null; return; }
     context.clearRect(0, 0, W, H);
 
     for (const m of plankton) {
-      const a = 0.10 + 0.22 * (0.5 + Math.sin(now / 1400 * m.speed + m.phase) / 2);
+      const a = 0.08 + 0.2 * (0.5 + Math.sin(now / 1400 * m.speed + m.phase) / 2);
       context.beginPath();
       context.fillStyle = m.warm ? `rgba(190,140,255,${a})` : `rgba(140,225,240,${a})`;
       context.arc(m.x, m.y, m.r, 0, Math.PI * 2);
       context.fill();
     }
 
-    for (let i = 0; i < bubbles.length; i += 1) {
-      const b = bubbles[i];
+    for (const b of bubbles) {
       b.y -= b.up;
+      if (b.y < 0.06 * H) { b.y = rand(0.75, 1) * H; b.x = rand(0.2, 0.8) * W; }
       const x = b.x + Math.sin(now / 1800 + b.phase) * b.sway * 6;
-      const fade = Math.min(1, Math.max(0, (b.y / H - 0.33) * 8));
-      if (b.y < 0.34 * H) { bubbles[i] = spawnBubble(false); continue; }
+      const fade = Math.min(1, Math.max(0, (b.y / H - 0.05) * 4));
       context.beginPath();
-      context.strokeStyle = `rgba(170,225,240,${0.16 * fade})`;
+      context.strokeStyle = `rgba(170,225,240,${0.15 * fade})`;
       context.lineWidth = 0.8;
       context.arc(x, b.y, b.r, 0, Math.PI * 2);
       context.stroke();
     }
 
-    for (let i = 0; i < embers.length; i += 1) {
-      const e = embers[i];
+    for (const e of embers) {
       e.x += e.vx;
       e.y += e.vy;
       e.life -= 0.004;
-      if (e.life <= 0) { embers[i] = spawnEmber(e.home, e.spread); continue; }
-      const a = 0.5 * Math.min(1, e.life * 2.4);
+      if (e.life <= 0) {
+        e.life = rand(0.4, 1);
+        e.x = e.hx + rand(-14, 14);
+        e.y = e.hy + rand(-14, 14);
+        e.vx = rand(-0.04, 0.08);
+        e.vy = rand(-0.1, -0.02);
+      }
       context.beginPath();
-      context.fillStyle = `rgba(235,160,70,${a})`;
+      context.fillStyle = `rgba(235,160,70,${0.5 * Math.min(1, e.life * 2.4)})`;
       context.arc(e.x, e.y, e.r * e.life + 0.2, 0, Math.PI * 2);
       context.fill();
     }
@@ -604,8 +476,18 @@ function portalFX() {
   const pause = () => { if (frame) { cancelAnimationFrame(frame); frame = null; } };
 
   document.addEventListener('visibilitychange', () => (document.hidden ? pause() : play()));
+  addEventListener('resize', seed, { passive: true });
   seed();
   play();
+}
+
+/** The only scroll work the portal owns now: the depth readout. */
+function portalScroll() {
+  const read = document.getElementById('depth-read');
+  if (!read) return;
+  const span = document.documentElement.scrollHeight - innerHeight;
+  const sink = span > 24 ? Math.min(1, scrollY / span) : 0;
+  read.textContent = `${String(Math.round(sink * 3840)).padStart(4, '0')}m`;
 }
 
 const rosterIndex = (s) => `<div class="roster">${s.entries.map((item, i) => `
@@ -1085,7 +967,6 @@ function splash(ready) {
 
 async function start() {
   addEventListener('scroll', trackScroll, { passive: true });
-  addEventListener('resize', () => layoutPortal(), { passive: true });
   addEventListener('hashchange', route);
 
   document.getElementById('menu-open').addEventListener('click', () => toggleDrawer(true));
