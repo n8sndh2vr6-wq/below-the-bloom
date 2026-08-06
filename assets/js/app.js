@@ -232,6 +232,7 @@ function trackScroll() {
   document.body.classList.toggle('scrolled', window.scrollY > 40);
   // The page sinks as you read: the ambient wash deepens with scroll depth.
   document.documentElement.style.setProperty('--sink', ratio.toFixed(3));
+  portalScroll();
 }
 
 const waiting = (label = 'Sounding the depth') =>
@@ -289,37 +290,283 @@ function markDrawer() {
 
 /* ----------------------------------------------------------------- views -- */
 
+/* ---------------------------------------------------------------- portal */
+/*
+ * The landing page sits on one tall piece of key art. Three stations:
+ *
+ *   screen 1  the colossus and the wordmark — nothing else
+ *   screen 2  the six gateways, over the glowing trench
+ *   screen 3  the cave, with Oyster and Chip — no content over them
+ *
+ * The art scrolls slower than the content, and the lag is not a guess: the
+ * image top is pinned to the first screen, the image bottom to the last, and
+ * the parallax factor falls out of those two constraints. The gateways are
+ * placed so they centre exactly when the trench band centres behind them.
+ * All fractions below are measured from the artwork.
+ */
+
+const ART = {
+  ratio: 2.1618,      // height / width
+  markBottom: 0.365,  // wordmark baseline — hero copy starts under it
+  markGlow: 0.315,    // wordmark centre — breathing glow
+  gates: 0.53,        // trench band centre — gateways align here
+  lantern: { x: 0.365, y: 0.874 },
+  ember: { x: 0.29, y: 0.285 },
+};
+
+const ROMAN = ['I', 'II', 'III', 'IV', 'V', 'VI', 'VII', 'VIII'];
+
 function home() {
   setChrome('');
   document.body.classList.remove('scrolled');
 
-  const gateways = site.sections.map((s) => `
-    <a class="gateway" href="#/${s.slug}" style="--gw:${s.accent}">
-      ${icon(s.icon)}
-      <span>${escapeHtml(s.title)}</span>
-      ${icon('i-chevron-right', 'icon chev')}
+  const gates = site.sections.map((s, i) => `
+    <a class="gate" href="#/${s.slug}" style="--gw:${s.accent};--gi:${i}">
+      <span class="gate-glare" aria-hidden="true"></span>
+      <span class="gate-emblem">${icon(s.icon)}</span>
+      <span class="gate-text">
+        <b>${escapeHtml(s.title)}</b>
+        <small>${escapeHtml(s.standfirst)}</small>
+      </span>
+      <span class="gate-index">${ROMAN[i] || ''}</span>
+      ${icon('i-chevron-right', 'icon gate-chev')}
     </a>`).join('');
 
+  const art = escapeHtml(site.site.art);
+
   paint(`
-    <div class="portal-stage" style="--art:url('${escapeHtml(site.site.art)}')">
-      <div class="portal-art">
-        <img src="${escapeHtml(site.site.art)}" alt="${escapeHtml(site.site.artAlt)}" fetchpriority="high">
+    <div class="portal" id="portal" style="--art:url('${art}')">
+      <div class="portal-shade top" aria-hidden="true"></div>
+      <div class="portal-shade bottom" aria-hidden="true"></div>
+      <div class="portal-sky" aria-hidden="true">
+        <div class="portal-drift" id="portal-drift">
+          <img class="portal-img" src="${art}" alt="" fetchpriority="high">
+          <span class="portal-pulse"></span>
+          <span class="portal-lantern"></span>
+          <span class="portal-markveil"></span>
+          <span class="portal-caveveil"></span>
+          <canvas id="portal-fx"></canvas>
+        </div>
+        <div class="portal-rays"><i></i><i></i><i></i></div>
+        <div class="portal-veil"></div>
       </div>
-    </div>
-    <div class="portal-body shell">
-      <div class="portal-intro">
+
+      <section class="portal-hero shell" id="portal-hero">
         <p class="banner">${escapeHtml(site.site.banner)}</p>
         <p class="creed">${site.site.creed.map(escapeHtml).join('<br>')}</p>
+        <a class="cta" href="#/story/chapter-1/scene-01">
+          <span class="cta-glare" aria-hidden="true"></span>
+          <b>Begin the Descent</b>
+          <small>Chapter One · The Crash</small>
+        </a>
         <div class="scroll-cue" aria-hidden="true">
           <span>Descend</span>
           ${icon('i-chevron-down', '')}
         </div>
+      </section>
+
+      <section class="portal-gates shell" id="portal-gates">
+        <p class="banner">Enter the Archive</p>
+        <nav class="gateways" aria-label="Wiki sections">${gates}</nav>
+      </section>
+
+      <p class="epitaph" id="portal-epitaph">${escapeHtml(site.site.epitaph)}</p>
+
+      <div class="depth-rail" aria-hidden="true">
+        <span class="depth-track"><i class="depth-node"></i></span>
+        <b id="depth-read">0000m</b>
       </div>
-      ${ornament()}
-      <nav class="gateways" aria-label="Wiki sections">${gateways}</nav>
-      <p class="epitaph">“${escapeHtml(site.site.epitaph)}”</p>
-      ${ornament(true)}
     </div>`);
+
+  layoutPortal();
+  portalFX();
+}
+
+/*
+ * Solve the page geometry. With lag p, a content element at document
+ * position c overlays image coordinate  c − y·p  at scroll y. Pinning the
+ * image top to scroll 0 and its bottom to the last screen gives
+ *
+ *   p = 1 − (Himg − V) / (pageH − V)
+ *
+ * and the gateways land on the trench centre at
+ *
+ *   c = (gates·Himg − p·V/2) / (1 − p)
+ */
+function layoutPortal() {
+  const portal = document.getElementById('portal');
+  if (!portal) return;
+
+  const V = innerHeight;
+  const drift = document.getElementById('portal-drift');
+  const hero = document.getElementById('portal-hero');
+  const gates = document.getElementById('portal-gates');
+  const epitaph = document.getElementById('portal-epitaph');
+
+  // The stage width is set by viewport HEIGHT: the wordmark must sit at
+  // ~62% of the first screen with the hero copy below it. Phones get a
+  // full-bleed crop, desktops a sharp centred poster.
+  const vw = innerWidth;
+  const S = Math.round(Math.min(660, Math.max(vw, Math.min(vw * 1.65, V * 0.78))));
+  portal.style.setProperty('--stage', `${S}px`);
+  const Himg = S * ART.ratio;
+
+  const gatesH = gates.offsetHeight || V * 0.7;
+  const still = Math.round(V * 0.55);                  // dark water before the cave
+  const pageH = Math.max(Himg, V + gatesH + still + V);
+  const p = Math.max(0, 1 - (Himg - V) / (pageH - V));
+
+  portal.style.height = `${Math.round(pageH)}px`;
+  portal.dataset.lag = p.toFixed(4);
+
+  hero.style.paddingTop = `${Math.round(ART.markBottom * Himg + 10)}px`;
+  const heroBottom = hero.offsetTop + hero.offsetHeight;
+
+  const centre = (ART.gates * Himg - p * (V / 2)) / (1 - p || 1);
+  const top = Math.min(
+    Math.max(Math.round(centre - gatesH / 2), V + 40, heroBottom + 30),
+    Math.round(pageH - V - gatesH - still * 0.5),
+  );
+  gates.style.top = `${top}px`;
+
+  // The epitaph floats in the still water between the gates and the cave.
+  epitaph.style.top = `${Math.round(top + gatesH + Math.max(pageH - V * 0.72 - top - gatesH, 60) * 0.5)}px`;
+
+  portalScroll();
+}
+
+/** Scroll work the portal owns: the parallax and the depth readout. */
+function portalScroll() {
+  const portal = document.getElementById('portal');
+  if (!portal) return;
+  const drift = document.getElementById('portal-drift');
+  const lag = Number(portal.dataset.lag || 0);
+  drift.style.transform = `translate3d(-50%, ${(scrollY * lag).toFixed(1)}px, 0)`;
+
+  const read = document.getElementById('depth-read');
+  if (read) {
+    const span = document.documentElement.scrollHeight - innerHeight;
+    const sink = span > 24 ? Math.min(1, scrollY / span) : 0;
+    read.textContent = `${String(Math.round(sink * 3840)).padStart(4, '0')}m`;
+  }
+}
+
+/*
+ * Life in the water, drawn onto a canvas that rides with the art so every
+ * particle stays anchored to the painting: plankton twinkling in the trench,
+ * bubbles rising from the arch lights, embers off the scavenger's ribs and
+ * sparks of dust around the lantern.
+ */
+function portalFX() {
+  const canvas = document.getElementById('portal-fx');
+  if (!canvas || REDUCED.matches) return;
+
+  const context = canvas.getContext('2d');
+  let frame = null;
+  let W = 0;
+  let H = 0;
+  let plankton = [];
+  let bubbles = [];
+  let embers = [];
+
+  const rand = (a, b) => a + Math.random() * (b - a);
+
+  const seed = () => {
+    const ratio = Math.min(devicePixelRatio || 1, 1.5);
+    W = canvas.offsetWidth;
+    H = canvas.offsetHeight;
+    canvas.width = W * ratio;
+    canvas.height = H * ratio;
+    context.setTransform(ratio, 0, 0, ratio, 0, 0);
+
+    plankton = Array.from({ length: 64 }, () => ({
+      x: rand(0.06, 0.94) * W,
+      y: rand(0.36, 0.74) * H,
+      r: rand(0.4, 1.3),
+      phase: rand(0, Math.PI * 2),
+      speed: rand(0.4, 1.1),
+      warm: Math.random() > 0.8,
+    }));
+
+    bubbles = Array.from({ length: 18 }, () => spawnBubble(true));
+
+    embers = [
+      ...Array.from({ length: 7 }, () => spawnEmber(ART.ember, 0.05)),
+      ...Array.from({ length: 9 }, () => spawnEmber(ART.lantern, 0.035)),
+    ];
+  };
+
+  function spawnBubble(anywhere) {
+    return {
+      x: rand(0.18, 0.82) * W,
+      y: (anywhere ? rand(0.4, 0.95) : rand(0.8, 0.95)) * H,
+      r: rand(0.5, 1.9),
+      up: rand(0.1, 0.32),
+      sway: rand(0.4, 1.4),
+      phase: rand(0, Math.PI * 2),
+    };
+  }
+
+  function spawnEmber(at, spread) {
+    return {
+      home: at,
+      x: (at.x + rand(-spread, spread)) * W,
+      y: (at.y + rand(-spread, spread)) * H,
+      vx: rand(-0.04, 0.08),
+      vy: rand(-0.1, -0.02),
+      life: rand(0.3, 1),
+      r: rand(0.4, 1.1),
+      spread,
+    };
+  }
+
+  const tick = (now) => {
+    if (!canvas.isConnected) { cancelAnimationFrame(frame); return; }
+    context.clearRect(0, 0, W, H);
+
+    for (const m of plankton) {
+      const a = 0.10 + 0.22 * (0.5 + Math.sin(now / 1400 * m.speed + m.phase) / 2);
+      context.beginPath();
+      context.fillStyle = m.warm ? `rgba(190,140,255,${a})` : `rgba(140,225,240,${a})`;
+      context.arc(m.x, m.y, m.r, 0, Math.PI * 2);
+      context.fill();
+    }
+
+    for (let i = 0; i < bubbles.length; i += 1) {
+      const b = bubbles[i];
+      b.y -= b.up;
+      const x = b.x + Math.sin(now / 1800 + b.phase) * b.sway * 6;
+      const fade = Math.min(1, Math.max(0, (b.y / H - 0.33) * 8));
+      if (b.y < 0.34 * H) { bubbles[i] = spawnBubble(false); continue; }
+      context.beginPath();
+      context.strokeStyle = `rgba(170,225,240,${0.16 * fade})`;
+      context.lineWidth = 0.8;
+      context.arc(x, b.y, b.r, 0, Math.PI * 2);
+      context.stroke();
+    }
+
+    for (let i = 0; i < embers.length; i += 1) {
+      const e = embers[i];
+      e.x += e.vx;
+      e.y += e.vy;
+      e.life -= 0.004;
+      if (e.life <= 0) { embers[i] = spawnEmber(e.home, e.spread); continue; }
+      const a = 0.5 * Math.min(1, e.life * 2.4);
+      context.beginPath();
+      context.fillStyle = `rgba(235,160,70,${a})`;
+      context.arc(e.x, e.y, e.r * e.life + 0.2, 0, Math.PI * 2);
+      context.fill();
+    }
+
+    frame = requestAnimationFrame(tick);
+  };
+
+  const play = () => { if (!frame && canvas.isConnected) frame = requestAnimationFrame(tick); };
+  const pause = () => { if (frame) { cancelAnimationFrame(frame); frame = null; } };
+
+  document.addEventListener('visibilitychange', () => (document.hidden ? pause() : play()));
+  seed();
+  play();
 }
 
 const rosterIndex = (s) => `<div class="roster">${s.entries.map((item, i) => `
@@ -769,6 +1016,7 @@ function splash(ready) {
 
 async function start() {
   addEventListener('scroll', trackScroll, { passive: true });
+  addEventListener('resize', () => layoutPortal(), { passive: true });
   addEventListener('hashchange', route);
 
   document.getElementById('menu-open').addEventListener('click', () => toggleDrawer(true));
