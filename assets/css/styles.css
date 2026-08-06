@@ -571,34 +571,6 @@ body.scrolled .masthead-title { opacity: 1; }
   letter-spacing: 0.06em;
 }
 
-.chapter-heading {
-  margin: 46px 0 0;
-  padding-top: 30px;
-  border-top: 1px solid var(--rule-soft);
-  font-family: var(--face-display);
-  font-weight: 500;
-  font-size: clamp(1.3rem, 5vw, 1.8rem);
-  letter-spacing: 0.03em;
-  text-transform: uppercase;
-  color: #f2f8fb;
-}
-.chapter-heading:first-child {
-  margin-top: 0;
-  padding-top: 0;
-  border-top: 0;
-}
-.chapter-heading small {
-  display: block;
-  margin-top: 6px;
-  font-family: var(--face-text);
-  font-size: 0.95rem;
-  font-weight: 400;
-  letter-spacing: 0;
-  text-transform: none;
-  font-style: italic;
-  color: var(--bone-3);
-}
-
 .act {
   margin: 34px 0 0;
   padding-bottom: 10px;
