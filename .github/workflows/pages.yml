@@ -19,7 +19,7 @@ jobs:
   deploy:
     environment:
       name: github-pages
-      url: ${{ steps.deployment.outputs.page_url }}
+      url: ${{ steps.deployment.outputs.page_url || steps.deployment_retry.outputs.page_url }}
     runs-on: ubuntu-latest
     steps:
       - name: Checkout
@@ -33,14 +33,25 @@ jobs:
         with:
           path: .
 
+      # The deploy step does no work itself — it hands the artifact to
+      # GitHub's Pages service and polls until the deployment goes live.
+      # On 6 Aug that queue stalled for over half an hour at a time while
+      # the status page stayed green, so: a generous timeout, quiet
+      # polling, and one fresh attempt if the first deployment times out.
+      # A cancelled deployment is cleaned up by the action itself, so the
+      # retry starts clean.
       - name: Deploy to GitHub Pages
         id: deployment
+        continue-on-error: true
         uses: actions/deploy-pages@v4
         with:
-          # This step is mostly spent waiting in GitHub's own deployment
-          # queue, and it prints "deployment_queued" once a second while it
-          # does. A run on 6 Aug queued for 7m49s against the 10-minute
-          # default and only just made it, so allow twenty and poll less
-          # noisily. Neither setting affects how fast the site publishes.
-          timeout: 1200000
-          reporting_interval: 10000
+          timeout: 1800000
+          reporting_interval: 15000
+
+      - name: Deploy to GitHub Pages (second attempt)
+        id: deployment_retry
+        if: steps.deployment.outcome == 'failure'
+        uses: actions/deploy-pages@v4
+        with:
+          timeout: 1800000
+          reporting_interval: 15000
