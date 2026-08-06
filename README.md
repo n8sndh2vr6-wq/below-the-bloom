@@ -75,6 +75,7 @@ That is the whole format:
 | `NAME: words` | a line of dialogue |
 | `NAME (quietly): words` | dialogue with a direction |
 | `SOUND: THUMP.` | a sound effect |
+| `KILL: Oyster > Maw \| how` | records a death — see below |
 | `SCENE: INT. CAVE – NIGHT` | a heading inside the scene |
 | `IMAGE: slug \| caption` | a picture |
 | `- something` | a montage beat |
@@ -85,7 +86,23 @@ One line per line of dialogue — no indenting, no guessing. The site lays it ou
 as a proper screenplay when it renders.
 
 `act:` must be one of the acts listed in
-`content/scripts/chapter-1/_index.md`.
+`content/scripts/chapter-1/_index.md`. `place:` is the name of a file in
+`content/locations/`, and is what fills in that location's Scenes dial.
+
+### Recording a death
+
+Put a `KILL:` line where it happens. It does **not** appear in the scene — it
+is what the Kills dials are counted from.
+
+```
+KILL: Oyster > Berserker Froststalker | blade driven up into its throat
+KILL: The Froststalker King > Deadwake invaders x3 | ice-covered claws
+```
+
+`killer > victim`, then anything after `|` as a note, and `x3` on the end of
+the victim if it was more than one. That single line adds to the killer's
+**Kills** dial, the victim's species' **Losses** dial, and the scene's
+**Deaths** dial — and every one of them links back here.
 
 ---
 
@@ -122,9 +139,8 @@ Header fields, all optional except `title`:
 | `image` | the picture, by name |
 | `tags` | the little pills under the title |
 | `aliases` | names to search the scripts for, for the Appearances dial |
-| `kills` | the Kills dial (characters) |
-| `depth` | how deep it sits, 0–10 (creatures, locations) |
-| `scenes` | which scenes it appears in (locations) |
+| `home` | the territory a species holds — it inherits that place's depth |
+| `depth` | how deep a location sits, 0 (orbit) to 10 (the castle floor) |
 
 To link somewhere else in the wiki, use its address:
 
@@ -136,6 +152,29 @@ To link somewhere else in the wiki, use its address:
 
 Links are two-way: anything you link to grows a **Referenced by** list pointing
 back at you.
+
+## The dials
+
+The three gauges at the top of a page are read out of the scripts, never typed
+in. Tap one and it opens what the number is made of, with every row a link.
+
+| Dial | Comes from |
+| --- | --- |
+| Appearances | scenes whose text mentions the `title` or an `alias` |
+| Lines | how many `NAME:` lines that character has, scene by scene |
+| Kills | `KILL:` lines naming them as the killer |
+| Losses | `KILL:` lines naming that species as the victim |
+| Scenes / First seen | scenes whose `place:` is that location |
+| Depth | the location's `depth`, or for a species its `home`'s depth |
+| Deaths | `KILL:` lines in that scene |
+| Speakers | distinct `NAME:` cues in that scene |
+
+`depth` is the one number written by hand, because there is nothing in the
+scripts to work it out from — it is a fact about the world, and it lives in the
+location's own file.
+
+Each needle is scaled against the highest value anything else in its group
+reaches, so it reads as standing rather than an arbitrary fraction.
 
 ---
 

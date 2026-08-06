@@ -2,6 +2,7 @@
 title: Edge of the Trenches
 scene: INT. FROSTSTALKER KINGDOM - EDGE OF THE TRENCHES – DAY
 act: frost
+place: icy-trenches
 number: 15
 summary: Farewells at the border. Beyond the frost, the map runs out.
 ---

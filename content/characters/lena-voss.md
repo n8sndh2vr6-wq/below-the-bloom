@@ -5,7 +5,6 @@ order: 9
 image: lena-voss
 tags: Human, Crew
 aliases: DR. VOSS, VOSS
-kills: 0
 ---
 
 Thirties, calm, assertive, and running the descent. She wants the crew loose and

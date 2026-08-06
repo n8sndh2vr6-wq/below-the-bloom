@@ -5,7 +5,6 @@ order: 3
 image: froststalker-king
 tags: Crown, Ally
 aliases: FROSTSTALKER KING, KING FROSTSTALKER
-kills: 4
 ---
 
 Massive, armoured, wreathed in icy mist, with luminous scars that pulse a faint

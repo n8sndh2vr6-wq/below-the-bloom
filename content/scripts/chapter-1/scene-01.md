@@ -2,6 +2,7 @@
 title: Deep Space Research Vessel
 scene: INT. DEEP SPACE RESEARCH VESSEL – CONTROL ROOM – ORBITING PLANET (REDACTED)
 act: descent
+place: research-vessel
 number: 1
 summary: Banter in orbit turns to sirens as a violet pulse rises off the ocean and drags the ship down.
 ---

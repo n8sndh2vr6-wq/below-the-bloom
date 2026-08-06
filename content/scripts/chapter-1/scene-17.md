@@ -2,6 +2,7 @@
 title: The Ambush in the Dark
 scene: "SCENE: Descent into Maw Territory — “The Ambush in the Dark”"
 act: maw
+place: maw-territory
 number: 17
 summary: An electromagnetic spike blinds Chip. Something with orange eyes separates them.
 ---

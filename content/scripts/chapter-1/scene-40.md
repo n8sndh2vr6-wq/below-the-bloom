@@ -2,6 +2,7 @@
 title: Froststalker King Arrival
 scene: EXT. BATTLE PLATFORM – FROSTSTALKER KING ARRIVAL
 act: game
+place: purple-abyss
 number: 40
 summary: The first crown steps into the arena.
 ---

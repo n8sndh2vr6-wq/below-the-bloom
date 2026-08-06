@@ -2,6 +2,7 @@
 title: Glowing Depths
 scene: INT. THE PURPLE LAND – GLOWING DEPTHS
 act: game
+place: purple-abyss
 number: 37
 summary: "The Bloom explains the food chain as scripture: the Emergent rises, the Maw consumes, the Frost stalks, the Deadwake waits."
 ---

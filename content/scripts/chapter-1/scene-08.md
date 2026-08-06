@@ -2,6 +2,7 @@
 title: Froststalker Cave
 scene: INT. FROSTSTALKER CAVE – CONTINUOUS
 act: frost
+place: icy-trenches
 number: 8
 summary: Captured. The pair are taken into the heart of the ice.
 ---

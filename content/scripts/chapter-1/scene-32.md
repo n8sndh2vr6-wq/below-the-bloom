@@ -2,6 +2,7 @@
 title: Emergent Kingdom
 scene: INT. EMERGENT KINGDOM – DAY (GLOWING UNDERWATER LIGHT)
 act: alliance
+place: emergent-kingdom
 number: 32
 summary: Oyster breaks the deal out loud. The Queen answers with war.
 ---
@@ -47,6 +48,8 @@ CHIP: Already on it!
 They split. Oyster slices through the water, clashing with a Deadwake mid-spin. His oxygen blaster pulses, tearing through fins and muscle. Chip knocks back two smaller Deadwakes with an electric pulse blast.
 
 In the background, the FROSTSTALKER KING takes down three invaders with ice-covered claws, while the EMERGENT KING summons whirlpools of pressure.
+
+KILL: The Froststalker King > Deadwake invaders x3 | ice-covered claws
 
 But then…
 

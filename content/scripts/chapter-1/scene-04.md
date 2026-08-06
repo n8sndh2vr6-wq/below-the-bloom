@@ -2,6 +2,7 @@
 title: Pitch Black Zone
 scene: INT. PITCH BLACK ZONE – UNDERWATER – LATER
 act: frost
+place: pitch-black-zone
 number: 4
 summary: First contact with a berserker Froststalker. Oyster learns what the dark is holding.
 ---
@@ -49,6 +50,8 @@ OYSTER: C’mon… c’mon!
 The Froststalker flings him into the sand. As it pounces again, Chip fires a flash from his projector, blinding it momentarily. Oyster leaps, thrusts his blade upward—deep into its throat.
 
 The beast shudders. Still. Water clouds with dark blood. Its body slowly sinks to the seabed.
+
+KILL: Oyster > Berserker Froststalker | blade driven up into its throat
 
 CHIP: Confirmed neutralized. (beat) You okay?
 

@@ -2,6 +2,7 @@
 title: Emergent King Stage
 scene: EXT. EMERGENT KING STAGE
 act: game
+place: purple-abyss
 number: 42
 summary: The oldest thing in the ocean, made to fight the only people who were kind to it.
 ---

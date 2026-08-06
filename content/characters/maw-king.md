@@ -5,7 +5,6 @@ order: 4
 image: maw-king
 tags: Crown, Antagonist
 aliases: MAW KING
-kills: 1
 ---
 
 Orange eyes, mandibles, claws that click on coral, and a throne of black,

@@ -2,6 +2,7 @@
 title: The Purple Realm
 scene: EXT. THE PURPLE REALM – DEEP OCEAN – NIGHT-LIKE STILLNESS
 act: game
+place: purple-abyss
 number: 38
 summary: "The rules of the game: beat a creature and it joins you. The kings come last."
 ---

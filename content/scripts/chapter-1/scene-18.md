@@ -2,6 +2,7 @@
 title: Cavernous Depths
 scene: INT. MAW TERRITORY – CAVERNOUS DEPTHS
 act: maw
+place: maw-territory
 number: 18
 summary: Alone in the black, Oyster is hunted through the caverns.
 ---

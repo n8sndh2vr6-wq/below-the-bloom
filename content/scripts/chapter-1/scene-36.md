@@ -2,6 +2,7 @@
 title: The Purple Land
 scene: INT. THE PURPLE LAND – DEEP, GLOWING CHAMBER
 act: game
+place: purple-abyss
 number: 36
 summary: “I do not command this world. I am this world.” The Bloom introduces itself and raises the fallen.
 ---

@@ -73,6 +73,7 @@ function imageMap() {
 /* ---------------------------------------------------------------- scenes */
 
 const CUE = /^([A-Z][A-Z0-9 .'’\-]{0,30}?)(?:\s*\(([^)]*)\))?:\s+(\S.*)$/;
+const KILL = /^KILL\s*:\s*([^>]+?)\s*>\s*([^|]+?)\s*(?:\|\s*(.*))?$/i;
 
 function readScenes() {
   const dir = path.join(CONTENT, 'scripts', 'chapter-1');
@@ -88,13 +89,31 @@ function readScenes() {
   const scenes = mdFiles(dir).map((file) => {
     const { data, body } = readDoc(path.join(dir, file));
     const speakers = [];
+    const spoken = new Map();
+    const kills = [];
     let lines = 0;
 
     for (const block of body.split(/\n\s*\n/)) {
       const first = block.trim().split('\n')[0];
+
+      const kill = KILL.exec(first);
+      if (kill) {
+        // "KILL: killer > victim x3 | note" — one entry per body.
+        const victim = kill[2].trim();
+        const many = /\s+x(\d+)$/i.exec(victim);
+        kills.push({
+          killer: kill[1].trim(),
+          victim: many ? victim.slice(0, many.index).trim() : victim,
+          count: many ? Number(many[1]) : 1,
+          note: (kill[3] || '').trim(),
+        });
+        continue;
+      }
+
       const cue = CUE.exec(first);
       if (!cue || /^(SOUND|SCENE|IMAGE)$/i.test(cue[1])) continue;
       lines += 1;
+      spoken.set(cue[1], (spoken.get(cue[1]) || 0) + 1);
       if (!speakers.includes(cue[1])) speakers.push(cue[1]);
     }
 
@@ -102,16 +121,26 @@ function readScenes() {
       slug: path.basename(file, '.md'),
       n: Number(data.number),
       act: data.act,
+      place: data.place || null,
       title: data.title,
       location: data.scene,
       synopsis: data.summary,
       file: `content/scripts/chapter-1/${file}`,
       text: body,
       stats: [
-        { label: 'Speakers', value: speakers.length, max: 6 },
-        { label: 'Lines', value: lines, max: 40 },
+        {
+          label: 'Speakers', value: speakers.length, max: 6,
+          detail: speakers.map((name) => ({ label: name })),
+        },
+        {
+          label: 'Lines', value: lines, max: 40,
+          detail: [...spoken.entries()].sort((a, b) => b[1] - a[1])
+            .map(([name, n]) => ({ label: name, note: `${n} ${n === 1 ? 'line' : 'lines'}` })),
+        },
       ],
       speakers,
+      spoken: [...spoken.entries()],
+      kills,
     };
   }).sort((a, b) => a.n - b.n);
 
@@ -134,8 +163,8 @@ function readSections() {
         image: fm.image || null,
         tags: list(fm.tags),
         aliases: list(fm.aliases),
-        kills: fm.kills !== undefined ? Number(fm.kills) : null,
         depth: fm.depth !== undefined ? Number(fm.depth) : null,
+        home: fm.home || null,
         scenes: numbers(fm.scenes),
         file: `content/${slug}/${file}`,
         text: body,
@@ -167,58 +196,138 @@ function mentions(text, aliases, name) {
 
 function addDials(sections, scenes) {
   const total = scenes.length;
+  const sceneOf = (n) => scenes.find((s) => s.n === n);
+  const link = (scene) => ({
+    label: `Scene ${scene.n}`,
+    note: scene.title,
+    route: `#/story/chapter-1/${scene.slug}`,
+  });
+
+  // Every kill recorded anywhere in the scripts, with where it happened.
+  const ledger = scenes.flatMap((scene) => scene.kills.map((k) => ({ ...k, scene })));
+
+  const named = (entry) => [entry.name, ...entry.aliases]
+    .filter(Boolean).map((s) => s.toLowerCase());
 
   for (const section of sections) {
     for (const entry of section.entries) {
       const seen = scenes.filter((s) => mentions(s.text, entry.aliases, entry.name));
-      const first = seen.length ? seen[0].n : null;
+      const names = named(entry);
 
       if (section.slug === 'characters') {
-        const spoken = scenes.reduce((sum, scene) => sum + scene.speakers
-          .filter((cue) => entry.aliases.some((a) => cue.includes(a) || a.includes(cue))).length, 0);
-        const lines = scenes.reduce((sum, scene) => {
-          let n = 0;
-          for (const block of scene.text.split(/\n\s*\n/)) {
-            const cue = CUE.exec(block.trim().split('\n')[0]);
-            if (cue && entry.aliases.some((a) => cue[1] === a)) n += 1;
-          }
-          return sum + n;
-        }, 0);
-        void spoken;
+        const spoken = scenes
+          .map((scene) => ({
+            scene,
+            n: scene.spoken
+              .filter(([cue]) => entry.aliases.some((a) => cue === a))
+              .reduce((sum, [, n]) => sum + n, 0),
+          }))
+          .filter((row) => row.n > 0);
+
+        const lines = spoken.reduce((sum, row) => sum + row.n, 0);
+        const mine = ledger.filter((k) => names.includes(k.killer.toLowerCase()));
+        const kills = mine.reduce((sum, k) => sum + k.count, 0);
+
         entry.stats = [
-          { label: 'Appearances', value: seen.length, max: total, suffix: `/${total}` },
-          { label: 'Lines', value: lines, max: 150 },
-          { label: 'Kills', value: entry.kills ?? 0, max: 8 },
+          {
+            label: 'Appearances', value: seen.length, max: total, suffix: `/${total}`,
+            detail: seen.map(link),
+          },
+          {
+            label: 'Lines', value: lines, max: 150,
+            detail: spoken.sort((a, b) => b.n - a.n).map(({ scene, n }) => ({
+              ...link(scene), note: `${n} ${n === 1 ? 'line' : 'lines'}`,
+            })),
+          },
+          {
+            label: 'Kills', value: kills, max: 8,
+            detail: mine.map((k) => ({
+              label: k.count > 1 ? `${k.victim} ×${k.count}` : k.victim,
+              note: [k.note, `Scene ${k.scene.n}`].filter(Boolean).join(' · '),
+              route: `#/story/chapter-1/${k.scene.slug}`,
+            })),
+          },
         ];
       } else if (section.slug === 'creatures') {
+        const home = sections.find((s) => s.slug === 'locations')
+          ?.entries.find((e) => e.slug === entry.home);
+        const died = ledger.filter((k) => names.some((n) =>
+          k.victim.toLowerCase().includes(n.replace(/s$/, ''))));
+
         entry.stats = [
-          { label: 'Appearances', value: seen.length, max: total, suffix: `/${total}` },
-          { label: 'First seen', value: first ?? 0, max: total, prefix: 'Sc.' },
-          { label: 'Depth', value: entry.depth ?? 0, max: 10 },
+          {
+            label: 'Appearances', value: seen.length, max: total, suffix: `/${total}`,
+            detail: seen.map(link),
+          },
+          {
+            label: 'Losses', value: died.reduce((sum, k) => sum + k.count, 0), max: 8,
+            detail: died.map((k) => ({
+              label: k.count > 1 ? `${k.victim} ×${k.count}` : k.victim,
+              note: [`killed by ${k.killer}`, `Scene ${k.scene.n}`].join(' · '),
+              route: `#/story/chapter-1/${k.scene.slug}`,
+            })),
+          },
+          {
+            label: 'Depth', value: home?.depth ?? 0, max: 10,
+            detail: home ? [{ label: home.name, note: `Layer ${home.depth} of 10`, route: `#/locations/${home.slug}` }] : [],
+          },
         ];
       } else if (section.slug === 'locations') {
+        const set = scenes.filter((s) => s.place === entry.slug);
+        entry.scenes = set.map((s) => s.n);
         entry.stats = [
-          { label: 'Scenes', value: entry.scenes.length, max: total, suffix: `/${total}` },
-          { label: 'First seen', value: entry.scenes[0] ?? 0, max: total, prefix: 'Sc.' },
-          { label: 'Depth', value: entry.depth ?? 0, max: 10 },
+          {
+            label: 'Scenes', value: set.length, max: total, suffix: `/${total}`,
+            detail: set.map(link),
+          },
+          {
+            label: 'First seen', value: set[0]?.n ?? 0, max: total, prefix: 'Sc.',
+            detail: set[0] ? [link(set[0])] : [],
+          },
+          {
+            label: 'Depth', value: entry.depth ?? 0, max: 10,
+            detail: [{ label: `Layer ${entry.depth ?? 0} of 10`, note: 'Nought is orbit, ten is the castle floor.' }],
+          },
         ];
       } else if (section.slug === 'lore') {
-        const cited = (prefix) =>
-          new Set([...entry.text.matchAll(new RegExp(`#/${prefix}/([a-z0-9-]+)`, 'g'))].map((m) => m[1])).size;
+        const cited = (prefix) => [...new Set(
+          [...entry.text.matchAll(new RegExp(`\\[([^\\]]+)\\]\\(#/${prefix}/([a-z0-9-]+)\\)`, 'g'))]
+            .map((m) => `${m[2]}\u0000${m[1]}`),
+        )].map((pair) => {
+          const [slug, label] = pair.split('\u0000');
+          return { label, route: `#/${prefix}/${slug}` };
+        });
+
+        const inScenes = cited('story/chapter-1');
         entry.stats = [
-          { label: 'Scenes cited', value: cited('story/chapter-1'), max: total },
-          { label: 'Characters', value: cited('characters'), max: 10 },
-          { label: 'Locations', value: cited('locations'), max: 12 },
+          { label: 'Scenes cited', value: inScenes.length, max: total, detail: inScenes },
+          { label: 'Characters', value: cited('characters').length, max: 10, detail: cited('characters') },
+          { label: 'Locations', value: cited('locations').length, max: 12, detail: cited('locations') },
         ];
       }
     }
   }
 
   for (const scene of scenes) {
+    const killed = scene.kills;
     scene.stats = [
-      { label: 'Depth', value: Math.round((scene.n / total) * 100), max: 100, suffix: '%' },
+      {
+        label: 'Depth', value: Math.round((scene.n / total) * 100), max: 100, suffix: '%',
+        detail: [{ label: `Scene ${scene.n} of ${total}`, note: 'How far into the chapter this sits.' }],
+      },
       ...scene.stats,
     ];
+    // Three readings. A scene with deaths in it trades Speakers for them.
+    if (killed.length) {
+      scene.stats[1] = {
+        label: 'Deaths', value: killed.reduce((sum, k) => sum + k.count, 0), max: 4,
+        detail: killed.map((k) => ({
+          label: k.count > 1 ? `${k.victim} ×${k.count}` : k.victim,
+          note: [`killed by ${k.killer}`, k.note].filter(Boolean).join(' · '),
+        })),
+      };
+    }
+    scene.stats = scene.stats.slice(0, 3);
   }
 
   // Scale each dial against the highest value its own set reaches, so a needle
@@ -232,9 +341,7 @@ function addDials(sections, scenes) {
       }
     }
     for (const row of rows) {
-      for (const stat of row.stats || []) {
-        stat.max = Math.max(peaks.get(stat.label) || 1, 1);
-      }
+      for (const stat of row.stats || []) stat.max = Math.max(peaks.get(stat.label) || 1, 1);
     }
   };
 
@@ -286,7 +393,7 @@ const images = imageMap();
 addDials(sections, scenes);
 addBacklinks(sections, scenes);
 
-const strip = ({ text, aliases, speakers, ...rest }) => rest;
+const strip = ({ text, aliases, speakers, spoken, kills, ...rest }) => rest;
 
 const index = {
   site: {

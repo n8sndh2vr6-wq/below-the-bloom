@@ -2,6 +2,7 @@
 title: Twisting Tunnels
 scene: INT. MAW KINGDOM – TWISTING TUNNELS – CONTINUOUS
 act: maw
+place: maw-territory
 number: 22
 summary: Bleeding and one-handed, Oyster runs a maze that is being closed behind him.
 ---

@@ -1447,3 +1447,73 @@ body.booting { overflow: hidden; }
   to   { transform: translate3d(2%, 2%, 0) skewX(1.5deg); }
 }
 @media (prefers-reduced-motion: reduce) { .abyss::after { animation: none; } }
+
+/* ==========================================================================
+   DIAL BREAKDOWNS — what a reading is actually made of
+   ========================================================================== */
+
+.dial-set { margin: 26px 0 0; }
+.dial-set .dials { margin-top: 0; }
+
+button.dial {
+  cursor: pointer;
+  padding: 0;
+  border-radius: 4px;
+  -webkit-tap-highlight-color: transparent;
+  transition: background 0.2s ease;
+}
+button.dial:active { background: rgba(129, 197, 214, 0.05); }
+
+.dial-more {
+  display: block;
+  width: 5px;
+  height: 5px;
+  margin: 7px auto 0;
+  background: var(--accent, var(--cyan));
+  transform: rotate(45deg);
+  opacity: 0.4;
+  transition: opacity 0.2s ease, transform 0.3s ease;
+}
+button.dial[aria-expanded="true"] .dial-more { opacity: 1; transform: rotate(225deg); }
+button.dial[aria-expanded="true"] .dial-label { color: var(--accent, var(--cyan)); }
+
+.breakdown {
+  padding: 4px 0 20px;
+  border-bottom: 1px solid var(--rule-soft);
+  animation: unfold 0.35s cubic-bezier(.2,.9,.25,1) both;
+}
+@keyframes unfold { from { opacity: 0; transform: translateY(-6px); } to { opacity: 1; transform: none; } }
+
+.breakdown-head {
+  margin: 0 0 6px;
+  font-family: var(--face-display);
+  font-size: 0.58rem;
+  letter-spacing: var(--track-m);
+  text-transform: uppercase;
+  color: var(--accent, var(--cyan));
+}
+
+.breakdown ul { list-style: none; margin: 0; padding: 0; }
+.breakdown li { border-top: 1px solid var(--rule-soft); }
+.breakdown li:first-child { border-top: 0; }
+
+.breakdown a, .breakdown span {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: baseline;
+  gap: 4px 12px;
+  padding: 10px 0;
+  color: var(--bone-2);
+  transition: color 0.2s ease, padding-left 0.2s ease;
+}
+.breakdown a:active, .breakdown a:hover { color: var(--bone); padding-left: 6px; }
+.breakdown b {
+  font-family: var(--face-display);
+  font-size: 0.78rem;
+  font-weight: 400;
+  letter-spacing: var(--track-s);
+  text-transform: uppercase;
+}
+.breakdown small { font-size: 0.9rem; font-style: italic; color: var(--bone-3); }
+.breakdown a b { color: var(--bone); }
+.breakdown span b { color: var(--bone-2); }

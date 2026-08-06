@@ -3,7 +3,6 @@ title: The Icy Trenches
 role: The Froststalker kingdom, built in glacier ice
 order: 6
 depth: 4
-scenes: 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15
 ---
 
 Jagged cliffs and crystalline frost formations. Ancient bones set into the walls.

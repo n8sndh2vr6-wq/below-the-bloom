@@ -2,6 +2,7 @@
 title: The Gate to the Castle
 scene: INT. THE GATE TO THE CASTLE – UNDERWATER – SILENCE
 act: castle
+place: the-castle
 number: 46
 summary: The gates open on their own. Two survivors say the quiet part to each other.
 ---

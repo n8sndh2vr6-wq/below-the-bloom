@@ -2,6 +2,7 @@
 title: The Blade
 scene: INT. MAW THRONE ROOM – CONTINUOUS
 act: maw
+place: maw-territory
 number: 21
 summary: The King takes Oyster's right hand — then lets him run, because the running is the entertainment.
 ---
@@ -27,6 +28,8 @@ MAW KING: Finish him.
 Two Maws lunge. Oyster, fueled by rage and adrenaline, suddenly springs up. He drop‑kicks the first Maw in the jaw—its mandibles snap shut on empty air as it reels back, unconscious.
 
 Before the second Maw can react, Oyster grabs his fallen suit knife and slashes across its head. The Maw goes limp instantly, sinking to the floor.
+
+KILL: Oyster > Maw guard | suit knife across the head
 
 The Maw King throws head back and laughs, a cold, hollow sound that echoes through the cavern. He doesn’t lift a claw, merely watches as Oyster breathes heavily, blood staining his suit.
 

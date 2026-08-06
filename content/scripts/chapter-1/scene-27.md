@@ -2,6 +2,7 @@
 title: The Lighted Area
 scene: INT. DEEP UNDERWATER — LIGHTED AREA BELOW MAW TERRITORY
 act: alliance
+place: emergent-kingdom
 number: 27
 summary: Oyster stabs dinner. Dinner becomes an Emergent the size of an iceberg.
 ---

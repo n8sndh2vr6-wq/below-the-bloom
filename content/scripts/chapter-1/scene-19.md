@@ -2,6 +2,7 @@
 title: Twilight Corridor
 scene: INT. MAW KINGDOM – TWILIGHT CORRIDOR – UNKNOWN
 act: maw
+place: maw-territory
 number: 19
 summary: Dragged inward through corridors lit by sick purple light.
 ---

@@ -2,6 +2,7 @@
 title: Underwater Cave
 scene: INT. UNDERWATER CAVE – NIGHT
 act: frost
+place: icy-trenches
 number: 10
 summary: The kingdom moves around them in the dark, indifferent and enormous.
 ---

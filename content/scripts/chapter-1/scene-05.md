@@ -2,6 +2,7 @@
 title: Shortly After the Fight
 scene: INT. DEEP OCEAN — PITCH BLACK ZONE — SHORTLY AFTER THE FIGHT
 act: frost
+place: pitch-black-zone
 number: 5
 summary: A hunting pack passes them by — something has the Froststalkers scared. The icy trenches appear.
 ---

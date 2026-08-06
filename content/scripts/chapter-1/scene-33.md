@@ -2,6 +2,7 @@
 title: Battlefield
 scene: EXT. OCEAN DEPTHS – BATTLEFIELD – CONTINUOUS
 act: alliance
+place: emergent-kingdom
 number: 33
 summary: Frost, Emergent and Deadwake collide in open water.
 ---

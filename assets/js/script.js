@@ -7,6 +7,7 @@
  *   NAME: line                  dialogue
  *   NAME (quietly): line        dialogue with a direction
  *   SOUND: THUMP.               a sound
+ *   KILL: Oyster > Maw | note   records a death (not shown in the scene)
  *   SCENE: INT. CAVE – NIGHT    a heading inside the scene
  *   IMAGE: froststalker-king    a picture, optional  | caption
  *   - beat                      a montage beat
@@ -19,7 +20,7 @@
 import { escapeHtml, renderImage } from './markdown.js';
 
 const DIALOGUE = /^([A-Z][A-Z0-9 .'’\-]{0,30}?)(?:\s*\(([^)]*)\))?:\s+(\S[\s\S]*)$/;
-const MARKER = /^(SOUND|SCENE|IMAGE)\s*:\s*(.*)$/is;
+const MARKER = /^(SOUND|SCENE|IMAGE|KILL)\s*:\s*(.*)$/is;
 const BEAT = /^-\s+(.*)$/;
 const TRANSITION = /^(FADE IN|FADE OUT|FADE TO BLACK|CUT TO|CUT TO BLACK|SMASH CUT|DISSOLVE TO|MATCH CUT|THE END)\b/i;
 
@@ -50,6 +51,8 @@ export function renderScene(body, images = {}) {
       const kind = marker[1].toUpperCase();
       const value = marker[2].trim();
 
+      // KILL: is a record for the dials, not something the scene says.
+      if (kind === 'KILL') continue;
       if (kind === 'SOUND') { out.push(`<p class="sp-sound">${escapeHtml(value)}</p>`); continue; }
       if (kind === 'SCENE') { out.push(`<p class="sp-slug">${escapeHtml(value)}</p>`); continue; }
       out.push(renderImage(value, images));

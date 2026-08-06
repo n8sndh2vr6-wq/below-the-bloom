@@ -2,6 +2,7 @@
 title: Alliance Beneath the Waves
 scene: "Scene: “Alliance Beneath the Waves” Setting: Oyster and Chip swim cautiously through an expansive, softly glowing underwater passage. Bioluminescent coral lines the walls, and the water feels strangely calm."
 act: alliance
+place: emergent-kingdom
 number: 28
 summary: Two kings, once enemies, now allied — and a warning about what lives below even them.
 ---

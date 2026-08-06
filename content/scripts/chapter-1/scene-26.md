@@ -2,6 +2,7 @@
 title: New Biome
 scene: INT. DEEP OCEAN – NEW BIOME – DAY/NIGHT CYCLE BLURRED
 act: alliance
+place: emergent-kingdom
 number: 26
 summary: A layer of the ocean that behaves like nowhere above it. Time stops meaning much.
 ---

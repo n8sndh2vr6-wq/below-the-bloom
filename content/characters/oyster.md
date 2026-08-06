@@ -5,7 +5,6 @@ order: 1
 image: oyster
 tags: Human, Chapter One
 aliases: OYSTER
-kills: 7
 ---
 
 Sixteen years old, lanky, and wearing a pressure suit unzipped at the collar

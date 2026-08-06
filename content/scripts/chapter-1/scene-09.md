@@ -2,6 +2,7 @@
 title: Holding Cave
 scene: INT. HOLDING CAVE – MOMENTS LATER
 act: frost
+place: icy-trenches
 number: 9
 summary: Imprisoned and unarmed, Oyster and Chip take stock of a very short list of options.
 ---

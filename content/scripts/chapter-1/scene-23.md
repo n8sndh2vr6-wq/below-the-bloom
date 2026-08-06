@@ -2,6 +2,7 @@
 title: Dead End
 scene: INT. MAW CAVERN – DEAD END – NIGHTMARE DARKNESS
 act: maw
+place: maw-territory
 number: 23
 summary: Cornered — until a blaster clatters at his feet and Chip's voice comes out of the ceiling.
 ---

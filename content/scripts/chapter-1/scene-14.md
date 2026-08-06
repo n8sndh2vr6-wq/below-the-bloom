@@ -2,6 +2,7 @@
 title: Outer Trenches
 scene: "SCENE: The Froststalker Kingdom - Outer Trenches"
 act: frost
+place: icy-trenches
 number: 14
 summary: A society in the ice — nests, salvage crews, cubs. Every assumption they arrived with quietly dies.
 ---

@@ -3,7 +3,6 @@ title: The Emergent Kingdom
 role: A cityscape of coral, ice and salvaged metal
 order: 8
 depth: 7
-scenes: 26, 27, 28, 32, 33, 34, 35
 ---
 
 Below Maw country the darkness starts to fade and natural light comes up from

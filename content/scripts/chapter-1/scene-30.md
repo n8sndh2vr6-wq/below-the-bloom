@@ -2,6 +2,7 @@
 title: The Deadwake Encounter
 scene: "SCENE: THE DEADWAKE ENCOUNTER – PURPLE PARADISE EDGE"
 act: alliance
+place: purple-paradise
 number: 30
 summary: Surrounded and bleeding, they are collected by the Deadwake Queen herself.
 ---

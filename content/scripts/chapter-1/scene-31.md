@@ -2,6 +2,7 @@
 title: Throne Chamber
 scene: "SCENE: THRONE CHAMBER – DEADWAKE KINGDOM"
 act: alliance
+place: deadwake-kingdom
 number: 31
 summary: "The Queen's terms: lead five royal guards into the Emergent kingdom, or do not leave."
 ---

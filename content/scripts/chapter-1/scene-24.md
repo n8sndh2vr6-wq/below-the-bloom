@@ -2,6 +2,7 @@
 title: Just After the Reunion
 scene: INT. DARK MAW TERRITORY – JUST AFTER THE REUNION
 act: maw
+place: maw-territory
 number: 24
 summary: Chip opens like a toolbox and hands Oyster a new hand. Neural-link capable. Bottle opener included.
 ---

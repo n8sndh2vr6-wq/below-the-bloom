@@ -5,7 +5,7 @@ order: 4
 image: deadwakes
 tags: Purple paradise, Sapient
 aliases: DEADWAKE
-depth: 8
+home: purple-paradise
 ---
 
 Long, eel-like, armoured, and streaked with bioluminescence. They hold the

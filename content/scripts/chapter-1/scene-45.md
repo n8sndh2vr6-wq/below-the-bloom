@@ -2,6 +2,7 @@
 title: Bloom's Domain
 scene: INT. PURPLE ABYSS – BLOOM’S DOMAIN
 act: game
+place: purple-abyss
 number: 45
 summary: Clones, blades, betrayal and a self-destruct. The Bloom dies and takes three crowns with it.
 ---
@@ -40,9 +41,13 @@ CHIP: No… he’s compromised. It’s controlling him!
 
 Before they can stop him, the MAW KING turns—SLICES the DEADWAKE QUEEN in half. Her body floats, limp, her power gone.
 
+KILL: The Maw King > The Deadwake Queen | sliced in half, under the Bloom's control
+
 CHIP: NO!
 
 BLOOM uses the MAW KING like a ragdoll, and with a sickening motion, forces him into its own mouth. Crunch. Gone.
+
+KILL: The Bloom > The Maw King | forced into its own mouth
 
 Silence. Then—BOOM. OYSTER and CHIP are flung back.
 
@@ -60,7 +65,11 @@ BOOM.
 
 BLOOM self-destructs.
 
+KILL: The Emergent King > The Bloom | bit down; it self-destructed rather than be eaten
+
 The EMERGENT KING’S body implodes in a mass of gore and violet light. Everything slows. From the glowing water emerge ghostly, translucent images of the DEADWAKE QUEEN, MAW KING, EMERGENT KING, and the BLOOM himself.
+
+KILL: The Bloom > The Emergent King | the self-destruct took him with it
 
 DEADWAKE QUEEN (spirit): You held your ground, little ones.
 

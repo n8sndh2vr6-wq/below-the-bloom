@@ -5,7 +5,7 @@ order: 2
 image: maws
 tags: Maw territory, Sapient
 aliases: MAW
-depth: 6
+home: maw-territory
 ---
 
 The ambush predators of the [cavernous depths](#/locations/maw-territory), and

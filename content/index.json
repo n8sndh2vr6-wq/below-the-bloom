@@ -30,25 +30,54 @@
           "order": 1,
           "image": null,
           "tags": [],
-          "kills": null,
           "depth": null,
+          "home": null,
           "scenes": [],
           "file": "content/lore/the-bloom-event.md",
           "stats": [
             {
               "label": "Scenes cited",
               "value": 0,
-              "max": 32
+              "max": 32,
+              "detail": []
             },
             {
               "label": "Characters",
               "value": 4,
-              "max": 6
+              "max": 6,
+              "detail": [
+                {
+                  "label": "Dr. Voss",
+                  "route": "#/characters/lena-voss"
+                },
+                {
+                  "label": "Mariq Levi",
+                  "route": "#/characters/mariq-levi"
+                },
+                {
+                  "label": "Maw King",
+                  "route": "#/characters/maw-king"
+                },
+                {
+                  "label": "Bloom",
+                  "route": "#/characters/the-bloom"
+                }
+              ]
             },
             {
               "label": "Locations",
               "value": 2,
-              "max": 5
+              "max": 5,
+              "detail": [
+                {
+                  "label": "wreck",
+                  "route": "#/locations/the-wreck"
+                },
+                {
+                  "label": "Maw territory",
+                  "route": "#/locations/maw-territory"
+                }
+              ]
             }
           ],
           "backlinks": [
@@ -66,25 +95,79 @@
           "order": 2,
           "image": null,
           "tags": [],
-          "kills": null,
           "depth": null,
+          "home": null,
           "scenes": [],
           "file": "content/lore/the-food-chain.md",
           "stats": [
             {
               "label": "Scenes cited",
               "value": 1,
-              "max": 32
+              "max": 32,
+              "detail": [
+                {
+                  "label": "Scene 37",
+                  "route": "#/story/chapter-1/scene-37"
+                }
+              ]
             },
             {
               "label": "Characters",
               "value": 6,
-              "max": 6
+              "max": 6,
+              "detail": [
+                {
+                  "label": "The Bloom",
+                  "route": "#/characters/the-bloom"
+                },
+                {
+                  "label": "The Froststalker King",
+                  "route": "#/characters/froststalker-king"
+                },
+                {
+                  "label": "The Maw King",
+                  "route": "#/characters/maw-king"
+                },
+                {
+                  "label": "The Emergent King",
+                  "route": "#/characters/emergent-king"
+                },
+                {
+                  "label": "The Deadwake Queen",
+                  "route": "#/characters/deadwake-queen"
+                },
+                {
+                  "label": "Squid",
+                  "route": "#/characters/squid"
+                }
+              ]
             },
             {
               "label": "Locations",
               "value": 5,
-              "max": 5
+              "max": 5,
+              "detail": [
+                {
+                  "label": "The icy trenches",
+                  "route": "#/locations/icy-trenches"
+                },
+                {
+                  "label": "Cavernous depths",
+                  "route": "#/locations/maw-territory"
+                },
+                {
+                  "label": "The lighted area",
+                  "route": "#/locations/emergent-kingdom"
+                },
+                {
+                  "label": "Purple paradise",
+                  "route": "#/locations/purple-paradise"
+                },
+                {
+                  "label": "the castle",
+                  "route": "#/locations/the-castle"
+                }
+              ]
             }
           ],
           "backlinks": [
@@ -122,25 +205,42 @@
           "order": 3,
           "image": null,
           "tags": [],
-          "kills": null,
           "depth": null,
+          "home": null,
           "scenes": [],
           "file": "content/lore/the-annual-war.md",
           "stats": [
             {
               "label": "Scenes cited",
               "value": 0,
-              "max": 32
+              "max": 32,
+              "detail": []
             },
             {
               "label": "Characters",
               "value": 2,
-              "max": 6
+              "max": 6,
+              "detail": [
+                {
+                  "label": "Deadwake Queen",
+                  "route": "#/characters/deadwake-queen"
+                },
+                {
+                  "label": "Oyster",
+                  "route": "#/characters/oyster"
+                }
+              ]
             },
             {
               "label": "Locations",
               "value": 1,
-              "max": 5
+              "max": 5,
+              "detail": [
+                {
+                  "label": "Emergent kingdom",
+                  "route": "#/locations/emergent-kingdom"
+                }
+              ]
             }
           ],
           "backlinks": [
@@ -163,25 +263,37 @@
           "order": 4,
           "image": null,
           "tags": [],
-          "kills": null,
           "depth": null,
+          "home": null,
           "scenes": [],
           "file": "content/lore/the-castle-and-the-crown.md",
           "stats": [
             {
               "label": "Scenes cited",
               "value": 0,
-              "max": 32
+              "max": 32,
+              "detail": []
             },
             {
               "label": "Characters",
               "value": 0,
-              "max": 6
+              "max": 6,
+              "detail": []
             },
             {
               "label": "Locations",
               "value": 2,
-              "max": 5
+              "max": 5,
+              "detail": [
+                {
+                  "label": "wreck",
+                  "route": "#/locations/the-wreck"
+                },
+                {
+                  "label": "castle",
+                  "route": "#/locations/the-castle"
+                }
+              ]
             }
           ],
           "backlinks": []
@@ -193,25 +305,38 @@
           "order": 5,
           "image": null,
           "tags": [],
-          "kills": null,
           "depth": null,
+          "home": null,
           "scenes": [],
           "file": "content/lore/the-agency.md",
           "stats": [
             {
               "label": "Scenes cited",
               "value": 0,
-              "max": 32
+              "max": 32,
+              "detail": []
             },
             {
               "label": "Characters",
               "value": 1,
-              "max": 6
+              "max": 6,
+              "detail": [
+                {
+                  "label": "Dr. Voss",
+                  "route": "#/characters/lena-voss"
+                }
+              ]
             },
             {
               "label": "Locations",
               "value": 1,
-              "max": 5
+              "max": 5,
+              "detail": [
+                {
+                  "label": "Planet (Redacted)",
+                  "route": "#/locations/planet-redacted"
+                }
+              ]
             }
           ],
           "backlinks": [
@@ -234,25 +359,157 @@
           "order": 6,
           "image": null,
           "tags": [],
-          "kills": null,
           "depth": null,
+          "home": null,
           "scenes": [],
           "file": "content/lore/timeline.md",
           "stats": [
             {
               "label": "Scenes cited",
               "value": 32,
-              "max": 32
+              "max": 32,
+              "detail": [
+                {
+                  "label": "Scene 1",
+                  "route": "#/story/chapter-1/scene-01"
+                },
+                {
+                  "label": "Scene 2",
+                  "route": "#/story/chapter-1/scene-02"
+                },
+                {
+                  "label": "Scene 3",
+                  "route": "#/story/chapter-1/scene-03"
+                },
+                {
+                  "label": "Scene 4",
+                  "route": "#/story/chapter-1/scene-04"
+                },
+                {
+                  "label": "Scene 5",
+                  "route": "#/story/chapter-1/scene-05"
+                },
+                {
+                  "label": "Scene 6",
+                  "route": "#/story/chapter-1/scene-06"
+                },
+                {
+                  "label": "Scenes 7–11",
+                  "route": "#/story/chapter-1/scene-07"
+                },
+                {
+                  "label": "Scene 11",
+                  "route": "#/story/chapter-1/scene-11"
+                },
+                {
+                  "label": "Scene 12",
+                  "route": "#/story/chapter-1/scene-12"
+                },
+                {
+                  "label": "Scene 14",
+                  "route": "#/story/chapter-1/scene-14"
+                },
+                {
+                  "label": "Scene 15",
+                  "route": "#/story/chapter-1/scene-15"
+                },
+                {
+                  "label": "Scene 16",
+                  "route": "#/story/chapter-1/scene-16"
+                },
+                {
+                  "label": "Scene 17",
+                  "route": "#/story/chapter-1/scene-17"
+                },
+                {
+                  "label": "Scene 20",
+                  "route": "#/story/chapter-1/scene-20"
+                },
+                {
+                  "label": "Scene 21",
+                  "route": "#/story/chapter-1/scene-21"
+                },
+                {
+                  "label": "Scene 23",
+                  "route": "#/story/chapter-1/scene-23"
+                },
+                {
+                  "label": "Scene 24",
+                  "route": "#/story/chapter-1/scene-24"
+                },
+                {
+                  "label": "Scene 27",
+                  "route": "#/story/chapter-1/scene-27"
+                },
+                {
+                  "label": "Scene 28",
+                  "route": "#/story/chapter-1/scene-28"
+                },
+                {
+                  "label": "Scene 29",
+                  "route": "#/story/chapter-1/scene-29"
+                },
+                {
+                  "label": "Scene 31",
+                  "route": "#/story/chapter-1/scene-31"
+                },
+                {
+                  "label": "Scene 32",
+                  "route": "#/story/chapter-1/scene-32"
+                },
+                {
+                  "label": "Scenes 33–35",
+                  "route": "#/story/chapter-1/scene-33"
+                },
+                {
+                  "label": "Scene 36",
+                  "route": "#/story/chapter-1/scene-36"
+                },
+                {
+                  "label": "Scene 37",
+                  "route": "#/story/chapter-1/scene-37"
+                },
+                {
+                  "label": "Scene 38",
+                  "route": "#/story/chapter-1/scene-38"
+                },
+                {
+                  "label": "Scene 39",
+                  "route": "#/story/chapter-1/scene-39"
+                },
+                {
+                  "label": "Scenes 40–43",
+                  "route": "#/story/chapter-1/scene-40"
+                },
+                {
+                  "label": "Scene 45",
+                  "route": "#/story/chapter-1/scene-45"
+                },
+                {
+                  "label": "Scene 46",
+                  "route": "#/story/chapter-1/scene-46"
+                },
+                {
+                  "label": "Scene 47",
+                  "route": "#/story/chapter-1/scene-47"
+                },
+                {
+                  "label": "Scene 48",
+                  "route": "#/story/chapter-1/scene-48"
+                }
+              ]
             },
             {
               "label": "Characters",
               "value": 0,
-              "max": 6
+              "max": 6,
+              "detail": []
             },
             {
               "label": "Locations",
               "value": 0,
-              "max": 5
+              "max": 5,
+              "detail": []
             }
           ],
           "backlinks": []
@@ -278,8 +535,8 @@
             "Human",
             "Chapter One"
           ],
-          "kills": 7,
           "depth": null,
+          "home": null,
           "scenes": [],
           "file": "content/characters/oyster.md",
           "stats": [
@@ -287,17 +544,503 @@
               "label": "Appearances",
               "value": 47,
               "max": 47,
-              "suffix": "/48"
+              "suffix": "/48",
+              "detail": [
+                {
+                  "label": "Scene 1",
+                  "note": "Deep Space Research Vessel",
+                  "route": "#/story/chapter-1/scene-01"
+                },
+                {
+                  "label": "Scene 2",
+                  "note": "Crashed Ship",
+                  "route": "#/story/chapter-1/scene-02"
+                },
+                {
+                  "label": "Scene 3",
+                  "note": "Shallow Waters",
+                  "route": "#/story/chapter-1/scene-03"
+                },
+                {
+                  "label": "Scene 4",
+                  "note": "Pitch Black Zone",
+                  "route": "#/story/chapter-1/scene-04"
+                },
+                {
+                  "label": "Scene 5",
+                  "note": "Shortly After the Fight",
+                  "route": "#/story/chapter-1/scene-05"
+                },
+                {
+                  "label": "Scene 6",
+                  "note": "Edge of the Icey Trenches",
+                  "route": "#/story/chapter-1/scene-06"
+                },
+                {
+                  "label": "Scene 7",
+                  "note": "Icey Trenches",
+                  "route": "#/story/chapter-1/scene-07"
+                },
+                {
+                  "label": "Scene 8",
+                  "note": "Froststalker Cave",
+                  "route": "#/story/chapter-1/scene-08"
+                },
+                {
+                  "label": "Scene 9",
+                  "note": "Holding Cave",
+                  "route": "#/story/chapter-1/scene-09"
+                },
+                {
+                  "label": "Scene 10",
+                  "note": "Underwater Cave",
+                  "route": "#/story/chapter-1/scene-10"
+                },
+                {
+                  "label": "Scene 11",
+                  "note": "Cave Prison",
+                  "route": "#/story/chapter-1/scene-11"
+                },
+                {
+                  "label": "Scene 12",
+                  "note": "Deep Cavern Chamber",
+                  "route": "#/story/chapter-1/scene-12"
+                },
+                {
+                  "label": "Scene 13",
+                  "note": "Cave Cell",
+                  "route": "#/story/chapter-1/scene-13"
+                },
+                {
+                  "label": "Scene 14",
+                  "note": "Outer Trenches",
+                  "route": "#/story/chapter-1/scene-14"
+                },
+                {
+                  "label": "Scene 15",
+                  "note": "Edge of the Trenches",
+                  "route": "#/story/chapter-1/scene-15"
+                },
+                {
+                  "label": "Scene 16",
+                  "note": "Descending into the Depths",
+                  "route": "#/story/chapter-1/scene-16"
+                },
+                {
+                  "label": "Scene 17",
+                  "note": "The Ambush in the Dark",
+                  "route": "#/story/chapter-1/scene-17"
+                },
+                {
+                  "label": "Scene 18",
+                  "note": "Cavernous Depths",
+                  "route": "#/story/chapter-1/scene-18"
+                },
+                {
+                  "label": "Scene 19",
+                  "note": "Twilight Corridor",
+                  "route": "#/story/chapter-1/scene-19"
+                },
+                {
+                  "label": "Scene 20",
+                  "note": "Maw Throne Room",
+                  "route": "#/story/chapter-1/scene-20"
+                },
+                {
+                  "label": "Scene 21",
+                  "note": "The Blade",
+                  "route": "#/story/chapter-1/scene-21"
+                },
+                {
+                  "label": "Scene 22",
+                  "note": "Twisting Tunnels",
+                  "route": "#/story/chapter-1/scene-22"
+                },
+                {
+                  "label": "Scene 23",
+                  "note": "Dead End",
+                  "route": "#/story/chapter-1/scene-23"
+                },
+                {
+                  "label": "Scene 24",
+                  "note": "Just After the Reunion",
+                  "route": "#/story/chapter-1/scene-24"
+                },
+                {
+                  "label": "Scene 25",
+                  "note": "Deeper Ocean Trench",
+                  "route": "#/story/chapter-1/scene-25"
+                },
+                {
+                  "label": "Scene 26",
+                  "note": "New Biome",
+                  "route": "#/story/chapter-1/scene-26"
+                },
+                {
+                  "label": "Scene 27",
+                  "note": "The Lighted Area",
+                  "route": "#/story/chapter-1/scene-27"
+                },
+                {
+                  "label": "Scene 28",
+                  "note": "Alliance Beneath the Waves",
+                  "route": "#/story/chapter-1/scene-28"
+                },
+                {
+                  "label": "Scene 29",
+                  "note": "Purple Paradise and the Deadwake",
+                  "route": "#/story/chapter-1/scene-29"
+                },
+                {
+                  "label": "Scene 30",
+                  "note": "The Deadwake Encounter",
+                  "route": "#/story/chapter-1/scene-30"
+                },
+                {
+                  "label": "Scene 31",
+                  "note": "Throne Chamber",
+                  "route": "#/story/chapter-1/scene-31"
+                },
+                {
+                  "label": "Scene 32",
+                  "note": "Emergent Kingdom",
+                  "route": "#/story/chapter-1/scene-32"
+                },
+                {
+                  "label": "Scene 33",
+                  "note": "Battlefield",
+                  "route": "#/story/chapter-1/scene-33"
+                },
+                {
+                  "label": "Scene 34",
+                  "note": "Battlefield Montage",
+                  "route": "#/story/chapter-1/scene-34"
+                },
+                {
+                  "label": "Scene 35",
+                  "note": "Battlefield Center",
+                  "route": "#/story/chapter-1/scene-35"
+                },
+                {
+                  "label": "Scene 36",
+                  "note": "The Purple Land",
+                  "route": "#/story/chapter-1/scene-36"
+                },
+                {
+                  "label": "Scene 37",
+                  "note": "Glowing Depths",
+                  "route": "#/story/chapter-1/scene-37"
+                },
+                {
+                  "label": "Scene 38",
+                  "note": "The Purple Realm",
+                  "route": "#/story/chapter-1/scene-38"
+                },
+                {
+                  "label": "Scene 39",
+                  "note": "The Game Progresses",
+                  "route": "#/story/chapter-1/scene-39"
+                },
+                {
+                  "label": "Scene 40",
+                  "note": "Froststalker King Arrival",
+                  "route": "#/story/chapter-1/scene-40"
+                },
+                {
+                  "label": "Scene 41",
+                  "note": "Maw King Stage",
+                  "route": "#/story/chapter-1/scene-41"
+                },
+                {
+                  "label": "Scene 43",
+                  "note": "Deadwake Queen Entrance",
+                  "route": "#/story/chapter-1/scene-43"
+                },
+                {
+                  "label": "Scene 44",
+                  "note": "Center of the Abyss",
+                  "route": "#/story/chapter-1/scene-44"
+                },
+                {
+                  "label": "Scene 45",
+                  "note": "Bloom's Domain",
+                  "route": "#/story/chapter-1/scene-45"
+                },
+                {
+                  "label": "Scene 46",
+                  "note": "The Gate to the Castle",
+                  "route": "#/story/chapter-1/scene-46"
+                },
+                {
+                  "label": "Scene 47",
+                  "note": "Castle Hall",
+                  "route": "#/story/chapter-1/scene-47"
+                },
+                {
+                  "label": "Scene 48",
+                  "note": "Castle Throne Room",
+                  "route": "#/story/chapter-1/scene-48"
+                }
+              ]
             },
             {
               "label": "Lines",
               "value": 174,
-              "max": 174
+              "max": 174,
+              "detail": [
+                {
+                  "label": "Scene 2",
+                  "note": "10 lines",
+                  "route": "#/story/chapter-1/scene-02"
+                },
+                {
+                  "label": "Scene 5",
+                  "note": "10 lines",
+                  "route": "#/story/chapter-1/scene-05"
+                },
+                {
+                  "label": "Scene 14",
+                  "note": "9 lines",
+                  "route": "#/story/chapter-1/scene-14"
+                },
+                {
+                  "label": "Scene 26",
+                  "note": "8 lines",
+                  "route": "#/story/chapter-1/scene-26"
+                },
+                {
+                  "label": "Scene 29",
+                  "note": "8 lines",
+                  "route": "#/story/chapter-1/scene-29"
+                },
+                {
+                  "label": "Scene 4",
+                  "note": "7 lines",
+                  "route": "#/story/chapter-1/scene-04"
+                },
+                {
+                  "label": "Scene 10",
+                  "note": "7 lines",
+                  "route": "#/story/chapter-1/scene-10"
+                },
+                {
+                  "label": "Scene 8",
+                  "note": "6 lines",
+                  "route": "#/story/chapter-1/scene-08"
+                },
+                {
+                  "label": "Scene 11",
+                  "note": "6 lines",
+                  "route": "#/story/chapter-1/scene-11"
+                },
+                {
+                  "label": "Scene 18",
+                  "note": "6 lines",
+                  "route": "#/story/chapter-1/scene-18"
+                },
+                {
+                  "label": "Scene 27",
+                  "note": "6 lines",
+                  "route": "#/story/chapter-1/scene-27"
+                },
+                {
+                  "label": "Scene 28",
+                  "note": "6 lines",
+                  "route": "#/story/chapter-1/scene-28"
+                },
+                {
+                  "label": "Scene 1",
+                  "note": "5 lines",
+                  "route": "#/story/chapter-1/scene-01"
+                },
+                {
+                  "label": "Scene 3",
+                  "note": "5 lines",
+                  "route": "#/story/chapter-1/scene-03"
+                },
+                {
+                  "label": "Scene 17",
+                  "note": "5 lines",
+                  "route": "#/story/chapter-1/scene-17"
+                },
+                {
+                  "label": "Scene 23",
+                  "note": "5 lines",
+                  "route": "#/story/chapter-1/scene-23"
+                },
+                {
+                  "label": "Scene 24",
+                  "note": "5 lines",
+                  "route": "#/story/chapter-1/scene-24"
+                },
+                {
+                  "label": "Scene 32",
+                  "note": "5 lines",
+                  "route": "#/story/chapter-1/scene-32"
+                },
+                {
+                  "label": "Scene 45",
+                  "note": "5 lines",
+                  "route": "#/story/chapter-1/scene-45"
+                },
+                {
+                  "label": "Scene 6",
+                  "note": "4 lines",
+                  "route": "#/story/chapter-1/scene-06"
+                },
+                {
+                  "label": "Scene 48",
+                  "note": "4 lines",
+                  "route": "#/story/chapter-1/scene-48"
+                },
+                {
+                  "label": "Scene 13",
+                  "note": "3 lines",
+                  "route": "#/story/chapter-1/scene-13"
+                },
+                {
+                  "label": "Scene 16",
+                  "note": "3 lines",
+                  "route": "#/story/chapter-1/scene-16"
+                },
+                {
+                  "label": "Scene 19",
+                  "note": "3 lines",
+                  "route": "#/story/chapter-1/scene-19"
+                },
+                {
+                  "label": "Scene 25",
+                  "note": "3 lines",
+                  "route": "#/story/chapter-1/scene-25"
+                },
+                {
+                  "label": "Scene 31",
+                  "note": "3 lines",
+                  "route": "#/story/chapter-1/scene-31"
+                },
+                {
+                  "label": "Scene 36",
+                  "note": "3 lines",
+                  "route": "#/story/chapter-1/scene-36"
+                },
+                {
+                  "label": "Scene 7",
+                  "note": "2 lines",
+                  "route": "#/story/chapter-1/scene-07"
+                },
+                {
+                  "label": "Scene 9",
+                  "note": "2 lines",
+                  "route": "#/story/chapter-1/scene-09"
+                },
+                {
+                  "label": "Scene 15",
+                  "note": "2 lines",
+                  "route": "#/story/chapter-1/scene-15"
+                },
+                {
+                  "label": "Scene 22",
+                  "note": "2 lines",
+                  "route": "#/story/chapter-1/scene-22"
+                },
+                {
+                  "label": "Scene 30",
+                  "note": "2 lines",
+                  "route": "#/story/chapter-1/scene-30"
+                },
+                {
+                  "label": "Scene 35",
+                  "note": "2 lines",
+                  "route": "#/story/chapter-1/scene-35"
+                },
+                {
+                  "label": "Scene 37",
+                  "note": "2 lines",
+                  "route": "#/story/chapter-1/scene-37"
+                },
+                {
+                  "label": "Scene 38",
+                  "note": "2 lines",
+                  "route": "#/story/chapter-1/scene-38"
+                },
+                {
+                  "label": "Scene 46",
+                  "note": "2 lines",
+                  "route": "#/story/chapter-1/scene-46"
+                },
+                {
+                  "label": "Scene 12",
+                  "note": "1 line",
+                  "route": "#/story/chapter-1/scene-12"
+                },
+                {
+                  "label": "Scene 20",
+                  "note": "1 line",
+                  "route": "#/story/chapter-1/scene-20"
+                },
+                {
+                  "label": "Scene 21",
+                  "note": "1 line",
+                  "route": "#/story/chapter-1/scene-21"
+                },
+                {
+                  "label": "Scene 33",
+                  "note": "1 line",
+                  "route": "#/story/chapter-1/scene-33"
+                },
+                {
+                  "label": "Scene 40",
+                  "note": "1 line",
+                  "route": "#/story/chapter-1/scene-40"
+                },
+                {
+                  "label": "Scene 47",
+                  "note": "1 line",
+                  "route": "#/story/chapter-1/scene-47"
+                }
+              ]
             },
             {
               "label": "Kills",
               "value": 7,
-              "max": 7
+              "max": 7,
+              "detail": [
+                {
+                  "label": "Berserker Froststalker",
+                  "note": "blade driven up into its throat · Scene 4",
+                  "route": "#/story/chapter-1/scene-04"
+                },
+                {
+                  "label": "Froststalker sentry",
+                  "note": "knife buried in the throat · Scene 6",
+                  "route": "#/story/chapter-1/scene-06"
+                },
+                {
+                  "label": "Froststalker sentry",
+                  "note": "broken fin to the neck, blaster into the jaw · Scene 6",
+                  "route": "#/story/chapter-1/scene-06"
+                },
+                {
+                  "label": "Maw",
+                  "note": "high-pressure oxygen, defending the nursery · Scene 11",
+                  "route": "#/story/chapter-1/scene-11"
+                },
+                {
+                  "label": "Maw guard",
+                  "note": "suit knife across the head · Scene 21",
+                  "route": "#/story/chapter-1/scene-21"
+                },
+                {
+                  "label": "Deadwake",
+                  "note": "blaster rammed into the back of its throat · Scene 29",
+                  "route": "#/story/chapter-1/scene-29"
+                },
+                {
+                  "label": "Deadwake",
+                  "note": "slain and absorbed in the Bloom's game · Scene 39",
+                  "route": "#/story/chapter-1/scene-39"
+                }
+              ]
             }
           ],
           "backlinks": [
@@ -323,8 +1066,8 @@
             "Artificial",
             "Chapter One"
           ],
-          "kills": 0,
           "depth": null,
+          "home": null,
           "scenes": [],
           "file": "content/characters/chip.md",
           "stats": [
@@ -332,17 +1075,432 @@
               "label": "Appearances",
               "value": 44,
               "max": 47,
-              "suffix": "/48"
+              "suffix": "/48",
+              "detail": [
+                {
+                  "label": "Scene 1",
+                  "note": "Deep Space Research Vessel",
+                  "route": "#/story/chapter-1/scene-01"
+                },
+                {
+                  "label": "Scene 2",
+                  "note": "Crashed Ship",
+                  "route": "#/story/chapter-1/scene-02"
+                },
+                {
+                  "label": "Scene 3",
+                  "note": "Shallow Waters",
+                  "route": "#/story/chapter-1/scene-03"
+                },
+                {
+                  "label": "Scene 4",
+                  "note": "Pitch Black Zone",
+                  "route": "#/story/chapter-1/scene-04"
+                },
+                {
+                  "label": "Scene 5",
+                  "note": "Shortly After the Fight",
+                  "route": "#/story/chapter-1/scene-05"
+                },
+                {
+                  "label": "Scene 6",
+                  "note": "Edge of the Icey Trenches",
+                  "route": "#/story/chapter-1/scene-06"
+                },
+                {
+                  "label": "Scene 7",
+                  "note": "Icey Trenches",
+                  "route": "#/story/chapter-1/scene-07"
+                },
+                {
+                  "label": "Scene 8",
+                  "note": "Froststalker Cave",
+                  "route": "#/story/chapter-1/scene-08"
+                },
+                {
+                  "label": "Scene 9",
+                  "note": "Holding Cave",
+                  "route": "#/story/chapter-1/scene-09"
+                },
+                {
+                  "label": "Scene 10",
+                  "note": "Underwater Cave",
+                  "route": "#/story/chapter-1/scene-10"
+                },
+                {
+                  "label": "Scene 11",
+                  "note": "Cave Prison",
+                  "route": "#/story/chapter-1/scene-11"
+                },
+                {
+                  "label": "Scene 12",
+                  "note": "Deep Cavern Chamber",
+                  "route": "#/story/chapter-1/scene-12"
+                },
+                {
+                  "label": "Scene 13",
+                  "note": "Cave Cell",
+                  "route": "#/story/chapter-1/scene-13"
+                },
+                {
+                  "label": "Scene 14",
+                  "note": "Outer Trenches",
+                  "route": "#/story/chapter-1/scene-14"
+                },
+                {
+                  "label": "Scene 15",
+                  "note": "Edge of the Trenches",
+                  "route": "#/story/chapter-1/scene-15"
+                },
+                {
+                  "label": "Scene 16",
+                  "note": "Descending into the Depths",
+                  "route": "#/story/chapter-1/scene-16"
+                },
+                {
+                  "label": "Scene 17",
+                  "note": "The Ambush in the Dark",
+                  "route": "#/story/chapter-1/scene-17"
+                },
+                {
+                  "label": "Scene 18",
+                  "note": "Cavernous Depths",
+                  "route": "#/story/chapter-1/scene-18"
+                },
+                {
+                  "label": "Scene 19",
+                  "note": "Twilight Corridor",
+                  "route": "#/story/chapter-1/scene-19"
+                },
+                {
+                  "label": "Scene 22",
+                  "note": "Twisting Tunnels",
+                  "route": "#/story/chapter-1/scene-22"
+                },
+                {
+                  "label": "Scene 23",
+                  "note": "Dead End",
+                  "route": "#/story/chapter-1/scene-23"
+                },
+                {
+                  "label": "Scene 24",
+                  "note": "Just After the Reunion",
+                  "route": "#/story/chapter-1/scene-24"
+                },
+                {
+                  "label": "Scene 25",
+                  "note": "Deeper Ocean Trench",
+                  "route": "#/story/chapter-1/scene-25"
+                },
+                {
+                  "label": "Scene 26",
+                  "note": "New Biome",
+                  "route": "#/story/chapter-1/scene-26"
+                },
+                {
+                  "label": "Scene 27",
+                  "note": "The Lighted Area",
+                  "route": "#/story/chapter-1/scene-27"
+                },
+                {
+                  "label": "Scene 28",
+                  "note": "Alliance Beneath the Waves",
+                  "route": "#/story/chapter-1/scene-28"
+                },
+                {
+                  "label": "Scene 29",
+                  "note": "Purple Paradise and the Deadwake",
+                  "route": "#/story/chapter-1/scene-29"
+                },
+                {
+                  "label": "Scene 30",
+                  "note": "The Deadwake Encounter",
+                  "route": "#/story/chapter-1/scene-30"
+                },
+                {
+                  "label": "Scene 31",
+                  "note": "Throne Chamber",
+                  "route": "#/story/chapter-1/scene-31"
+                },
+                {
+                  "label": "Scene 32",
+                  "note": "Emergent Kingdom",
+                  "route": "#/story/chapter-1/scene-32"
+                },
+                {
+                  "label": "Scene 33",
+                  "note": "Battlefield",
+                  "route": "#/story/chapter-1/scene-33"
+                },
+                {
+                  "label": "Scene 34",
+                  "note": "Battlefield Montage",
+                  "route": "#/story/chapter-1/scene-34"
+                },
+                {
+                  "label": "Scene 35",
+                  "note": "Battlefield Center",
+                  "route": "#/story/chapter-1/scene-35"
+                },
+                {
+                  "label": "Scene 36",
+                  "note": "The Purple Land",
+                  "route": "#/story/chapter-1/scene-36"
+                },
+                {
+                  "label": "Scene 37",
+                  "note": "Glowing Depths",
+                  "route": "#/story/chapter-1/scene-37"
+                },
+                {
+                  "label": "Scene 38",
+                  "note": "The Purple Realm",
+                  "route": "#/story/chapter-1/scene-38"
+                },
+                {
+                  "label": "Scene 39",
+                  "note": "The Game Progresses",
+                  "route": "#/story/chapter-1/scene-39"
+                },
+                {
+                  "label": "Scene 40",
+                  "note": "Froststalker King Arrival",
+                  "route": "#/story/chapter-1/scene-40"
+                },
+                {
+                  "label": "Scene 43",
+                  "note": "Deadwake Queen Entrance",
+                  "route": "#/story/chapter-1/scene-43"
+                },
+                {
+                  "label": "Scene 44",
+                  "note": "Center of the Abyss",
+                  "route": "#/story/chapter-1/scene-44"
+                },
+                {
+                  "label": "Scene 45",
+                  "note": "Bloom's Domain",
+                  "route": "#/story/chapter-1/scene-45"
+                },
+                {
+                  "label": "Scene 46",
+                  "note": "The Gate to the Castle",
+                  "route": "#/story/chapter-1/scene-46"
+                },
+                {
+                  "label": "Scene 47",
+                  "note": "Castle Hall",
+                  "route": "#/story/chapter-1/scene-47"
+                },
+                {
+                  "label": "Scene 48",
+                  "note": "Castle Throne Room",
+                  "route": "#/story/chapter-1/scene-48"
+                }
+              ]
             },
             {
               "label": "Lines",
               "value": 160,
-              "max": 174
+              "max": 174,
+              "detail": [
+                {
+                  "label": "Scene 2",
+                  "note": "9 lines",
+                  "route": "#/story/chapter-1/scene-02"
+                },
+                {
+                  "label": "Scene 5",
+                  "note": "9 lines",
+                  "route": "#/story/chapter-1/scene-05"
+                },
+                {
+                  "label": "Scene 10",
+                  "note": "8 lines",
+                  "route": "#/story/chapter-1/scene-10"
+                },
+                {
+                  "label": "Scene 14",
+                  "note": "8 lines",
+                  "route": "#/story/chapter-1/scene-14"
+                },
+                {
+                  "label": "Scene 29",
+                  "note": "8 lines",
+                  "route": "#/story/chapter-1/scene-29"
+                },
+                {
+                  "label": "Scene 1",
+                  "note": "7 lines",
+                  "route": "#/story/chapter-1/scene-01"
+                },
+                {
+                  "label": "Scene 6",
+                  "note": "7 lines",
+                  "route": "#/story/chapter-1/scene-06"
+                },
+                {
+                  "label": "Scene 24",
+                  "note": "7 lines",
+                  "route": "#/story/chapter-1/scene-24"
+                },
+                {
+                  "label": "Scene 26",
+                  "note": "7 lines",
+                  "route": "#/story/chapter-1/scene-26"
+                },
+                {
+                  "label": "Scene 28",
+                  "note": "7 lines",
+                  "route": "#/story/chapter-1/scene-28"
+                },
+                {
+                  "label": "Scene 3",
+                  "note": "6 lines",
+                  "route": "#/story/chapter-1/scene-03"
+                },
+                {
+                  "label": "Scene 4",
+                  "note": "6 lines",
+                  "route": "#/story/chapter-1/scene-04"
+                },
+                {
+                  "label": "Scene 11",
+                  "note": "6 lines",
+                  "route": "#/story/chapter-1/scene-11"
+                },
+                {
+                  "label": "Scene 23",
+                  "note": "6 lines",
+                  "route": "#/story/chapter-1/scene-23"
+                },
+                {
+                  "label": "Scene 27",
+                  "note": "6 lines",
+                  "route": "#/story/chapter-1/scene-27"
+                },
+                {
+                  "label": "Scene 45",
+                  "note": "6 lines",
+                  "route": "#/story/chapter-1/scene-45"
+                },
+                {
+                  "label": "Scene 8",
+                  "note": "4 lines",
+                  "route": "#/story/chapter-1/scene-08"
+                },
+                {
+                  "label": "Scene 32",
+                  "note": "4 lines",
+                  "route": "#/story/chapter-1/scene-32"
+                },
+                {
+                  "label": "Scene 13",
+                  "note": "3 lines",
+                  "route": "#/story/chapter-1/scene-13"
+                },
+                {
+                  "label": "Scene 16",
+                  "note": "3 lines",
+                  "route": "#/story/chapter-1/scene-16"
+                },
+                {
+                  "label": "Scene 17",
+                  "note": "3 lines",
+                  "route": "#/story/chapter-1/scene-17"
+                },
+                {
+                  "label": "Scene 25",
+                  "note": "3 lines",
+                  "route": "#/story/chapter-1/scene-25"
+                },
+                {
+                  "label": "Scene 48",
+                  "note": "3 lines",
+                  "route": "#/story/chapter-1/scene-48"
+                },
+                {
+                  "label": "Scene 7",
+                  "note": "2 lines",
+                  "route": "#/story/chapter-1/scene-07"
+                },
+                {
+                  "label": "Scene 9",
+                  "note": "2 lines",
+                  "route": "#/story/chapter-1/scene-09"
+                },
+                {
+                  "label": "Scene 12",
+                  "note": "2 lines",
+                  "route": "#/story/chapter-1/scene-12"
+                },
+                {
+                  "label": "Scene 15",
+                  "note": "2 lines",
+                  "route": "#/story/chapter-1/scene-15"
+                },
+                {
+                  "label": "Scene 18",
+                  "note": "2 lines",
+                  "route": "#/story/chapter-1/scene-18"
+                },
+                {
+                  "label": "Scene 30",
+                  "note": "2 lines",
+                  "route": "#/story/chapter-1/scene-30"
+                },
+                {
+                  "label": "Scene 31",
+                  "note": "2 lines",
+                  "route": "#/story/chapter-1/scene-31"
+                },
+                {
+                  "label": "Scene 35",
+                  "note": "2 lines",
+                  "route": "#/story/chapter-1/scene-35"
+                },
+                {
+                  "label": "Scene 46",
+                  "note": "2 lines",
+                  "route": "#/story/chapter-1/scene-46"
+                },
+                {
+                  "label": "Scene 33",
+                  "note": "1 line",
+                  "route": "#/story/chapter-1/scene-33"
+                },
+                {
+                  "label": "Scene 36",
+                  "note": "1 line",
+                  "route": "#/story/chapter-1/scene-36"
+                },
+                {
+                  "label": "Scene 37",
+                  "note": "1 line",
+                  "route": "#/story/chapter-1/scene-37"
+                },
+                {
+                  "label": "Scene 38",
+                  "note": "1 line",
+                  "route": "#/story/chapter-1/scene-38"
+                },
+                {
+                  "label": "Scene 40",
+                  "note": "1 line",
+                  "route": "#/story/chapter-1/scene-40"
+                },
+                {
+                  "label": "Scene 47",
+                  "note": "1 line",
+                  "route": "#/story/chapter-1/scene-47"
+                }
+              ]
             },
             {
               "label": "Kills",
               "value": 0,
-              "max": 7
+              "max": 7,
+              "detail": []
             }
           ],
           "backlinks": [
@@ -378,8 +1536,8 @@
             "Crown",
             "Ally"
           ],
-          "kills": 4,
           "depth": null,
+          "home": null,
           "scenes": [],
           "file": "content/characters/froststalker-king.md",
           "stats": [
@@ -387,17 +1545,128 @@
               "label": "Appearances",
               "value": 12,
               "max": 47,
-              "suffix": "/48"
+              "suffix": "/48",
+              "detail": [
+                {
+                  "label": "Scene 8",
+                  "note": "Froststalker Cave",
+                  "route": "#/story/chapter-1/scene-08"
+                },
+                {
+                  "label": "Scene 12",
+                  "note": "Deep Cavern Chamber",
+                  "route": "#/story/chapter-1/scene-12"
+                },
+                {
+                  "label": "Scene 15",
+                  "note": "Edge of the Trenches",
+                  "route": "#/story/chapter-1/scene-15"
+                },
+                {
+                  "label": "Scene 28",
+                  "note": "Alliance Beneath the Waves",
+                  "route": "#/story/chapter-1/scene-28"
+                },
+                {
+                  "label": "Scene 32",
+                  "note": "Emergent Kingdom",
+                  "route": "#/story/chapter-1/scene-32"
+                },
+                {
+                  "label": "Scene 33",
+                  "note": "Battlefield",
+                  "route": "#/story/chapter-1/scene-33"
+                },
+                {
+                  "label": "Scene 36",
+                  "note": "The Purple Land",
+                  "route": "#/story/chapter-1/scene-36"
+                },
+                {
+                  "label": "Scene 37",
+                  "note": "Glowing Depths",
+                  "route": "#/story/chapter-1/scene-37"
+                },
+                {
+                  "label": "Scene 40",
+                  "note": "Froststalker King Arrival",
+                  "route": "#/story/chapter-1/scene-40"
+                },
+                {
+                  "label": "Scene 44",
+                  "note": "Center of the Abyss",
+                  "route": "#/story/chapter-1/scene-44"
+                },
+                {
+                  "label": "Scene 45",
+                  "note": "Bloom's Domain",
+                  "route": "#/story/chapter-1/scene-45"
+                },
+                {
+                  "label": "Scene 47",
+                  "note": "Castle Hall",
+                  "route": "#/story/chapter-1/scene-47"
+                }
+              ]
             },
             {
               "label": "Lines",
               "value": 25,
-              "max": 174
+              "max": 174,
+              "detail": [
+                {
+                  "label": "Scene 8",
+                  "note": "8 lines",
+                  "route": "#/story/chapter-1/scene-08"
+                },
+                {
+                  "label": "Scene 12",
+                  "note": "4 lines",
+                  "route": "#/story/chapter-1/scene-12"
+                },
+                {
+                  "label": "Scene 28",
+                  "note": "4 lines",
+                  "route": "#/story/chapter-1/scene-28"
+                },
+                {
+                  "label": "Scene 32",
+                  "note": "3 lines",
+                  "route": "#/story/chapter-1/scene-32"
+                },
+                {
+                  "label": "Scene 45",
+                  "note": "3 lines",
+                  "route": "#/story/chapter-1/scene-45"
+                },
+                {
+                  "label": "Scene 15",
+                  "note": "1 line",
+                  "route": "#/story/chapter-1/scene-15"
+                },
+                {
+                  "label": "Scene 36",
+                  "note": "1 line",
+                  "route": "#/story/chapter-1/scene-36"
+                },
+                {
+                  "label": "Scene 37",
+                  "note": "1 line",
+                  "route": "#/story/chapter-1/scene-37"
+                }
+              ]
             },
             {
               "label": "Kills",
-              "value": 4,
-              "max": 7
+              "value": 3,
+              "max": 7,
+              "detail": [
+                {
+                  "label": "Deadwake invaders ×3",
+                  "note": "ice-covered claws · Scene 32",
+                  "route": "#/story/chapter-1/scene-32"
+                }
+              ]
             }
           ],
           "backlinks": [
@@ -448,8 +1717,8 @@
             "Crown",
             "Antagonist"
           ],
-          "kills": 1,
           "depth": null,
+          "home": null,
           "scenes": [],
           "file": "content/characters/maw-king.md",
           "stats": [
@@ -457,17 +1726,103 @@
               "label": "Appearances",
               "value": 9,
               "max": 47,
-              "suffix": "/48"
+              "suffix": "/48",
+              "detail": [
+                {
+                  "label": "Scene 20",
+                  "note": "Maw Throne Room",
+                  "route": "#/story/chapter-1/scene-20"
+                },
+                {
+                  "label": "Scene 21",
+                  "note": "The Blade",
+                  "route": "#/story/chapter-1/scene-21"
+                },
+                {
+                  "label": "Scene 22",
+                  "note": "Twisting Tunnels",
+                  "route": "#/story/chapter-1/scene-22"
+                },
+                {
+                  "label": "Scene 23",
+                  "note": "Dead End",
+                  "route": "#/story/chapter-1/scene-23"
+                },
+                {
+                  "label": "Scene 33",
+                  "note": "Battlefield",
+                  "route": "#/story/chapter-1/scene-33"
+                },
+                {
+                  "label": "Scene 41",
+                  "note": "Maw King Stage",
+                  "route": "#/story/chapter-1/scene-41"
+                },
+                {
+                  "label": "Scene 44",
+                  "note": "Center of the Abyss",
+                  "route": "#/story/chapter-1/scene-44"
+                },
+                {
+                  "label": "Scene 45",
+                  "note": "Bloom's Domain",
+                  "route": "#/story/chapter-1/scene-45"
+                },
+                {
+                  "label": "Scene 47",
+                  "note": "Castle Hall",
+                  "route": "#/story/chapter-1/scene-47"
+                }
+              ]
             },
             {
               "label": "Lines",
               "value": 14,
-              "max": 174
+              "max": 174,
+              "detail": [
+                {
+                  "label": "Scene 21",
+                  "note": "4 lines",
+                  "route": "#/story/chapter-1/scene-21"
+                },
+                {
+                  "label": "Scene 20",
+                  "note": "3 lines",
+                  "route": "#/story/chapter-1/scene-20"
+                },
+                {
+                  "label": "Scene 23",
+                  "note": "3 lines",
+                  "route": "#/story/chapter-1/scene-23"
+                },
+                {
+                  "label": "Scene 33",
+                  "note": "2 lines",
+                  "route": "#/story/chapter-1/scene-33"
+                },
+                {
+                  "label": "Scene 22",
+                  "note": "1 line",
+                  "route": "#/story/chapter-1/scene-22"
+                },
+                {
+                  "label": "Scene 45",
+                  "note": "1 line",
+                  "route": "#/story/chapter-1/scene-45"
+                }
+              ]
             },
             {
               "label": "Kills",
               "value": 1,
-              "max": 7
+              "max": 7,
+              "detail": [
+                {
+                  "label": "The Deadwake Queen",
+                  "note": "sliced in half, under the Bloom's control · Scene 45",
+                  "route": "#/story/chapter-1/scene-45"
+                }
+              ]
             }
           ],
           "backlinks": [
@@ -518,8 +1873,8 @@
             "Crown",
             "Ally"
           ],
-          "kills": 1,
           "depth": null,
+          "home": null,
           "scenes": [],
           "file": "content/characters/emergent-king.md",
           "stats": [
@@ -527,17 +1882,78 @@
               "label": "Appearances",
               "value": 7,
               "max": 47,
-              "suffix": "/48"
+              "suffix": "/48",
+              "detail": [
+                {
+                  "label": "Scene 28",
+                  "note": "Alliance Beneath the Waves",
+                  "route": "#/story/chapter-1/scene-28"
+                },
+                {
+                  "label": "Scene 32",
+                  "note": "Emergent Kingdom",
+                  "route": "#/story/chapter-1/scene-32"
+                },
+                {
+                  "label": "Scene 33",
+                  "note": "Battlefield",
+                  "route": "#/story/chapter-1/scene-33"
+                },
+                {
+                  "label": "Scene 42",
+                  "note": "Emergent King Stage",
+                  "route": "#/story/chapter-1/scene-42"
+                },
+                {
+                  "label": "Scene 44",
+                  "note": "Center of the Abyss",
+                  "route": "#/story/chapter-1/scene-44"
+                },
+                {
+                  "label": "Scene 45",
+                  "note": "Bloom's Domain",
+                  "route": "#/story/chapter-1/scene-45"
+                },
+                {
+                  "label": "Scene 47",
+                  "note": "Castle Hall",
+                  "route": "#/story/chapter-1/scene-47"
+                }
+              ]
             },
             {
               "label": "Lines",
               "value": 7,
-              "max": 174
+              "max": 174,
+              "detail": [
+                {
+                  "label": "Scene 28",
+                  "note": "4 lines",
+                  "route": "#/story/chapter-1/scene-28"
+                },
+                {
+                  "label": "Scene 32",
+                  "note": "2 lines",
+                  "route": "#/story/chapter-1/scene-32"
+                },
+                {
+                  "label": "Scene 45",
+                  "note": "1 line",
+                  "route": "#/story/chapter-1/scene-45"
+                }
+              ]
             },
             {
               "label": "Kills",
               "value": 1,
-              "max": 7
+              "max": 7,
+              "detail": [
+                {
+                  "label": "The Bloom",
+                  "note": "bit down; it self-destructed rather than be eaten · Scene 45",
+                  "route": "#/story/chapter-1/scene-45"
+                }
+              ]
             }
           ],
           "backlinks": [
@@ -573,8 +1989,8 @@
             "Crown",
             "Antagonist"
           ],
-          "kills": 6,
           "depth": null,
+          "home": null,
           "scenes": [],
           "file": "content/characters/deadwake-queen.md",
           "stats": [
@@ -582,17 +1998,88 @@
               "label": "Appearances",
               "value": 8,
               "max": 47,
-              "suffix": "/48"
+              "suffix": "/48",
+              "detail": [
+                {
+                  "label": "Scene 30",
+                  "note": "The Deadwake Encounter",
+                  "route": "#/story/chapter-1/scene-30"
+                },
+                {
+                  "label": "Scene 31",
+                  "note": "Throne Chamber",
+                  "route": "#/story/chapter-1/scene-31"
+                },
+                {
+                  "label": "Scene 32",
+                  "note": "Emergent Kingdom",
+                  "route": "#/story/chapter-1/scene-32"
+                },
+                {
+                  "label": "Scene 33",
+                  "note": "Battlefield",
+                  "route": "#/story/chapter-1/scene-33"
+                },
+                {
+                  "label": "Scene 43",
+                  "note": "Deadwake Queen Entrance",
+                  "route": "#/story/chapter-1/scene-43"
+                },
+                {
+                  "label": "Scene 44",
+                  "note": "Center of the Abyss",
+                  "route": "#/story/chapter-1/scene-44"
+                },
+                {
+                  "label": "Scene 45",
+                  "note": "Bloom's Domain",
+                  "route": "#/story/chapter-1/scene-45"
+                },
+                {
+                  "label": "Scene 47",
+                  "note": "Castle Hall",
+                  "route": "#/story/chapter-1/scene-47"
+                }
+              ]
             },
             {
               "label": "Lines",
               "value": 9,
-              "max": 174
+              "max": 174,
+              "detail": [
+                {
+                  "label": "Scene 31",
+                  "note": "4 lines",
+                  "route": "#/story/chapter-1/scene-31"
+                },
+                {
+                  "label": "Scene 32",
+                  "note": "2 lines",
+                  "route": "#/story/chapter-1/scene-32"
+                },
+                {
+                  "label": "Scene 45",
+                  "note": "2 lines",
+                  "route": "#/story/chapter-1/scene-45"
+                },
+                {
+                  "label": "Scene 30",
+                  "note": "1 line",
+                  "route": "#/story/chapter-1/scene-30"
+                }
+              ]
             },
             {
               "label": "Kills",
-              "value": 6,
-              "max": 7
+              "value": 1,
+              "max": 7,
+              "detail": [
+                {
+                  "label": "Oyster's allies",
+                  "note": "almost every ally they had earned · Scene 43",
+                  "route": "#/story/chapter-1/scene-43"
+                }
+              ]
             }
           ],
           "backlinks": [
@@ -648,26 +2135,127 @@
             "Entity",
             "Antagonist"
           ],
-          "kills": 5,
           "depth": null,
+          "home": null,
           "scenes": [],
           "file": "content/characters/the-bloom.md",
           "stats": [
             {
               "label": "Appearances",
-              "value": 8,
+              "value": 10,
               "max": 47,
-              "suffix": "/48"
+              "suffix": "/48",
+              "detail": [
+                {
+                  "label": "Scene 2",
+                  "note": "Crashed Ship",
+                  "route": "#/story/chapter-1/scene-02"
+                },
+                {
+                  "label": "Scene 8",
+                  "note": "Froststalker Cave",
+                  "route": "#/story/chapter-1/scene-08"
+                },
+                {
+                  "label": "Scene 36",
+                  "note": "The Purple Land",
+                  "route": "#/story/chapter-1/scene-36"
+                },
+                {
+                  "label": "Scene 37",
+                  "note": "Glowing Depths",
+                  "route": "#/story/chapter-1/scene-37"
+                },
+                {
+                  "label": "Scene 38",
+                  "note": "The Purple Realm",
+                  "route": "#/story/chapter-1/scene-38"
+                },
+                {
+                  "label": "Scene 39",
+                  "note": "The Game Progresses",
+                  "route": "#/story/chapter-1/scene-39"
+                },
+                {
+                  "label": "Scene 44",
+                  "note": "Center of the Abyss",
+                  "route": "#/story/chapter-1/scene-44"
+                },
+                {
+                  "label": "Scene 45",
+                  "note": "Bloom's Domain",
+                  "route": "#/story/chapter-1/scene-45"
+                },
+                {
+                  "label": "Scene 47",
+                  "note": "Castle Hall",
+                  "route": "#/story/chapter-1/scene-47"
+                },
+                {
+                  "label": "Scene 48",
+                  "note": "Castle Throne Room",
+                  "route": "#/story/chapter-1/scene-48"
+                }
+              ]
             },
             {
               "label": "Lines",
               "value": 24,
-              "max": 174
+              "max": 174,
+              "detail": [
+                {
+                  "label": "Scene 36",
+                  "note": "7 lines",
+                  "route": "#/story/chapter-1/scene-36"
+                },
+                {
+                  "label": "Scene 37",
+                  "note": "7 lines",
+                  "route": "#/story/chapter-1/scene-37"
+                },
+                {
+                  "label": "Scene 45",
+                  "note": "5 lines",
+                  "route": "#/story/chapter-1/scene-45"
+                },
+                {
+                  "label": "Scene 38",
+                  "note": "3 lines",
+                  "route": "#/story/chapter-1/scene-38"
+                },
+                {
+                  "label": "Scene 44",
+                  "note": "2 lines",
+                  "route": "#/story/chapter-1/scene-44"
+                }
+              ]
             },
             {
               "label": "Kills",
-              "value": 5,
-              "max": 7
+              "value": 4,
+              "max": 7,
+              "detail": [
+                {
+                  "label": "Mariq Levi",
+                  "note": "lost in the crash · Scene 2",
+                  "route": "#/story/chapter-1/scene-02"
+                },
+                {
+                  "label": "Dr. Lena Voss",
+                  "note": "lost in the crash · Scene 2",
+                  "route": "#/story/chapter-1/scene-02"
+                },
+                {
+                  "label": "The Maw King",
+                  "note": "forced into its own mouth · Scene 45",
+                  "route": "#/story/chapter-1/scene-45"
+                },
+                {
+                  "label": "The Emergent King",
+                  "note": "the self-destruct took him with it · Scene 45",
+                  "route": "#/story/chapter-1/scene-45"
+                }
+              ]
             }
           ],
           "backlinks": [
@@ -718,8 +2306,8 @@
             "Entity",
             "Chapter One"
           ],
-          "kills": 0,
           "depth": null,
+          "home": null,
           "scenes": [],
           "file": "content/characters/squid.md",
           "stats": [
@@ -727,17 +2315,32 @@
               "label": "Appearances",
               "value": 1,
               "max": 47,
-              "suffix": "/48"
+              "suffix": "/48",
+              "detail": [
+                {
+                  "label": "Scene 48",
+                  "note": "Castle Throne Room",
+                  "route": "#/story/chapter-1/scene-48"
+                }
+              ]
             },
             {
               "label": "Lines",
               "value": 9,
-              "max": 174
+              "max": 174,
+              "detail": [
+                {
+                  "label": "Scene 48",
+                  "note": "9 lines",
+                  "route": "#/story/chapter-1/scene-48"
+                }
+              ]
             },
             {
               "label": "Kills",
               "value": 0,
-              "max": 7
+              "max": 7,
+              "detail": []
             }
           ],
           "backlinks": [
@@ -768,26 +2371,46 @@
             "Human",
             "Crew"
           ],
-          "kills": 0,
           "depth": null,
+          "home": null,
           "scenes": [],
           "file": "content/characters/lena-voss.md",
           "stats": [
             {
               "label": "Appearances",
-              "value": 1,
+              "value": 2,
               "max": 47,
-              "suffix": "/48"
+              "suffix": "/48",
+              "detail": [
+                {
+                  "label": "Scene 1",
+                  "note": "Deep Space Research Vessel",
+                  "route": "#/story/chapter-1/scene-01"
+                },
+                {
+                  "label": "Scene 2",
+                  "note": "Crashed Ship",
+                  "route": "#/story/chapter-1/scene-02"
+                }
+              ]
             },
             {
               "label": "Lines",
               "value": 5,
-              "max": 174
+              "max": 174,
+              "detail": [
+                {
+                  "label": "Scene 1",
+                  "note": "5 lines",
+                  "route": "#/story/chapter-1/scene-01"
+                }
+              ]
             },
             {
               "label": "Kills",
               "value": 0,
-              "max": 7
+              "max": 7,
+              "detail": []
             }
           ],
           "backlinks": [
@@ -818,26 +2441,46 @@
             "Human",
             "Crew"
           ],
-          "kills": 0,
           "depth": null,
+          "home": null,
           "scenes": [],
           "file": "content/characters/mariq-levi.md",
           "stats": [
             {
               "label": "Appearances",
-              "value": 1,
+              "value": 2,
               "max": 47,
-              "suffix": "/48"
+              "suffix": "/48",
+              "detail": [
+                {
+                  "label": "Scene 1",
+                  "note": "Deep Space Research Vessel",
+                  "route": "#/story/chapter-1/scene-01"
+                },
+                {
+                  "label": "Scene 2",
+                  "note": "Crashed Ship",
+                  "route": "#/story/chapter-1/scene-02"
+                }
+              ]
             },
             {
               "label": "Lines",
               "value": 6,
-              "max": 174
+              "max": 174,
+              "detail": [
+                {
+                  "label": "Scene 1",
+                  "note": "6 lines",
+                  "route": "#/story/chapter-1/scene-01"
+                }
+              ]
             },
             {
               "label": "Kills",
               "value": 0,
-              "max": 7
+              "max": 7,
+              "detail": []
             }
           ],
           "backlinks": [
@@ -874,8 +2517,8 @@
             "Icy trenches",
             "Sapient"
           ],
-          "kills": null,
-          "depth": 4,
+          "depth": null,
+          "home": "icy-trenches",
           "scenes": [],
           "file": "content/creatures/froststalkers.md",
           "stats": [
@@ -883,18 +2526,158 @@
               "label": "Appearances",
               "value": 23,
               "max": 23,
-              "suffix": "/48"
+              "suffix": "/48",
+              "detail": [
+                {
+                  "label": "Scene 4",
+                  "note": "Pitch Black Zone",
+                  "route": "#/story/chapter-1/scene-04"
+                },
+                {
+                  "label": "Scene 5",
+                  "note": "Shortly After the Fight",
+                  "route": "#/story/chapter-1/scene-05"
+                },
+                {
+                  "label": "Scene 6",
+                  "note": "Edge of the Icey Trenches",
+                  "route": "#/story/chapter-1/scene-06"
+                },
+                {
+                  "label": "Scene 7",
+                  "note": "Icey Trenches",
+                  "route": "#/story/chapter-1/scene-07"
+                },
+                {
+                  "label": "Scene 8",
+                  "note": "Froststalker Cave",
+                  "route": "#/story/chapter-1/scene-08"
+                },
+                {
+                  "label": "Scene 10",
+                  "note": "Underwater Cave",
+                  "route": "#/story/chapter-1/scene-10"
+                },
+                {
+                  "label": "Scene 11",
+                  "note": "Cave Prison",
+                  "route": "#/story/chapter-1/scene-11"
+                },
+                {
+                  "label": "Scene 12",
+                  "note": "Deep Cavern Chamber",
+                  "route": "#/story/chapter-1/scene-12"
+                },
+                {
+                  "label": "Scene 14",
+                  "note": "Outer Trenches",
+                  "route": "#/story/chapter-1/scene-14"
+                },
+                {
+                  "label": "Scene 15",
+                  "note": "Edge of the Trenches",
+                  "route": "#/story/chapter-1/scene-15"
+                },
+                {
+                  "label": "Scene 19",
+                  "note": "Twilight Corridor",
+                  "route": "#/story/chapter-1/scene-19"
+                },
+                {
+                  "label": "Scene 28",
+                  "note": "Alliance Beneath the Waves",
+                  "route": "#/story/chapter-1/scene-28"
+                },
+                {
+                  "label": "Scene 32",
+                  "note": "Emergent Kingdom",
+                  "route": "#/story/chapter-1/scene-32"
+                },
+                {
+                  "label": "Scene 33",
+                  "note": "Battlefield",
+                  "route": "#/story/chapter-1/scene-33"
+                },
+                {
+                  "label": "Scene 36",
+                  "note": "The Purple Land",
+                  "route": "#/story/chapter-1/scene-36"
+                },
+                {
+                  "label": "Scene 37",
+                  "note": "Glowing Depths",
+                  "route": "#/story/chapter-1/scene-37"
+                },
+                {
+                  "label": "Scene 38",
+                  "note": "The Purple Realm",
+                  "route": "#/story/chapter-1/scene-38"
+                },
+                {
+                  "label": "Scene 39",
+                  "note": "The Game Progresses",
+                  "route": "#/story/chapter-1/scene-39"
+                },
+                {
+                  "label": "Scene 40",
+                  "note": "Froststalker King Arrival",
+                  "route": "#/story/chapter-1/scene-40"
+                },
+                {
+                  "label": "Scene 44",
+                  "note": "Center of the Abyss",
+                  "route": "#/story/chapter-1/scene-44"
+                },
+                {
+                  "label": "Scene 45",
+                  "note": "Bloom's Domain",
+                  "route": "#/story/chapter-1/scene-45"
+                },
+                {
+                  "label": "Scene 46",
+                  "note": "The Gate to the Castle",
+                  "route": "#/story/chapter-1/scene-46"
+                },
+                {
+                  "label": "Scene 47",
+                  "note": "Castle Hall",
+                  "route": "#/story/chapter-1/scene-47"
+                }
+              ]
             },
             {
-              "label": "First seen",
-              "value": 4,
-              "max": 29,
-              "prefix": "Sc."
+              "label": "Losses",
+              "value": 3,
+              "max": 6,
+              "detail": [
+                {
+                  "label": "Berserker Froststalker",
+                  "note": "killed by Oyster · Scene 4",
+                  "route": "#/story/chapter-1/scene-04"
+                },
+                {
+                  "label": "Froststalker sentry",
+                  "note": "killed by Oyster · Scene 6",
+                  "route": "#/story/chapter-1/scene-06"
+                },
+                {
+                  "label": "Froststalker sentry",
+                  "note": "killed by Oyster · Scene 6",
+                  "route": "#/story/chapter-1/scene-06"
+                }
+              ]
             },
             {
               "label": "Depth",
               "value": 4,
-              "max": 8
+              "max": 8,
+              "detail": [
+                {
+                  "label": "The Icy Trenches",
+                  "note": "Layer 4 of 10",
+                  "route": "#/locations/icy-trenches"
+                }
+              ]
             }
           ],
           "backlinks": [
@@ -960,8 +2743,8 @@
             "Maw territory",
             "Sapient"
           ],
-          "kills": null,
-          "depth": 6,
+          "depth": null,
+          "home": "maw-territory",
           "scenes": [],
           "file": "content/creatures/maws.md",
           "stats": [
@@ -969,18 +2752,138 @@
               "label": "Appearances",
               "value": 19,
               "max": 23,
-              "suffix": "/48"
+              "suffix": "/48",
+              "detail": [
+                {
+                  "label": "Scene 11",
+                  "note": "Cave Prison",
+                  "route": "#/story/chapter-1/scene-11"
+                },
+                {
+                  "label": "Scene 12",
+                  "note": "Deep Cavern Chamber",
+                  "route": "#/story/chapter-1/scene-12"
+                },
+                {
+                  "label": "Scene 18",
+                  "note": "Cavernous Depths",
+                  "route": "#/story/chapter-1/scene-18"
+                },
+                {
+                  "label": "Scene 19",
+                  "note": "Twilight Corridor",
+                  "route": "#/story/chapter-1/scene-19"
+                },
+                {
+                  "label": "Scene 20",
+                  "note": "Maw Throne Room",
+                  "route": "#/story/chapter-1/scene-20"
+                },
+                {
+                  "label": "Scene 21",
+                  "note": "The Blade",
+                  "route": "#/story/chapter-1/scene-21"
+                },
+                {
+                  "label": "Scene 22",
+                  "note": "Twisting Tunnels",
+                  "route": "#/story/chapter-1/scene-22"
+                },
+                {
+                  "label": "Scene 23",
+                  "note": "Dead End",
+                  "route": "#/story/chapter-1/scene-23"
+                },
+                {
+                  "label": "Scene 27",
+                  "note": "The Lighted Area",
+                  "route": "#/story/chapter-1/scene-27"
+                },
+                {
+                  "label": "Scene 28",
+                  "note": "Alliance Beneath the Waves",
+                  "route": "#/story/chapter-1/scene-28"
+                },
+                {
+                  "label": "Scene 31",
+                  "note": "Throne Chamber",
+                  "route": "#/story/chapter-1/scene-31"
+                },
+                {
+                  "label": "Scene 33",
+                  "note": "Battlefield",
+                  "route": "#/story/chapter-1/scene-33"
+                },
+                {
+                  "label": "Scene 36",
+                  "note": "The Purple Land",
+                  "route": "#/story/chapter-1/scene-36"
+                },
+                {
+                  "label": "Scene 37",
+                  "note": "Glowing Depths",
+                  "route": "#/story/chapter-1/scene-37"
+                },
+                {
+                  "label": "Scene 39",
+                  "note": "The Game Progresses",
+                  "route": "#/story/chapter-1/scene-39"
+                },
+                {
+                  "label": "Scene 41",
+                  "note": "Maw King Stage",
+                  "route": "#/story/chapter-1/scene-41"
+                },
+                {
+                  "label": "Scene 44",
+                  "note": "Center of the Abyss",
+                  "route": "#/story/chapter-1/scene-44"
+                },
+                {
+                  "label": "Scene 45",
+                  "note": "Bloom's Domain",
+                  "route": "#/story/chapter-1/scene-45"
+                },
+                {
+                  "label": "Scene 47",
+                  "note": "Castle Hall",
+                  "route": "#/story/chapter-1/scene-47"
+                }
+              ]
             },
             {
-              "label": "First seen",
-              "value": 11,
-              "max": 29,
-              "prefix": "Sc."
+              "label": "Losses",
+              "value": 3,
+              "max": 6,
+              "detail": [
+                {
+                  "label": "Maw",
+                  "note": "killed by Oyster · Scene 11",
+                  "route": "#/story/chapter-1/scene-11"
+                },
+                {
+                  "label": "Maw guard",
+                  "note": "killed by Oyster · Scene 21",
+                  "route": "#/story/chapter-1/scene-21"
+                },
+                {
+                  "label": "The Maw King",
+                  "note": "killed by The Bloom · Scene 45",
+                  "route": "#/story/chapter-1/scene-45"
+                }
+              ]
             },
             {
               "label": "Depth",
               "value": 6,
-              "max": 8
+              "max": 8,
+              "detail": [
+                {
+                  "label": "Maw Territory",
+                  "note": "Layer 6 of 10",
+                  "route": "#/locations/maw-territory"
+                }
+              ]
             }
           ],
           "backlinks": [
@@ -1016,8 +2919,8 @@
             "Lighted depths",
             "Ancient"
           ],
-          "kills": null,
-          "depth": 7,
+          "depth": null,
+          "home": "emergent-kingdom",
           "scenes": [],
           "file": "content/creatures/emergents.md",
           "stats": [
@@ -1025,18 +2928,88 @@
               "label": "Appearances",
               "value": 11,
               "max": 23,
-              "suffix": "/48"
+              "suffix": "/48",
+              "detail": [
+                {
+                  "label": "Scene 27",
+                  "note": "The Lighted Area",
+                  "route": "#/story/chapter-1/scene-27"
+                },
+                {
+                  "label": "Scene 28",
+                  "note": "Alliance Beneath the Waves",
+                  "route": "#/story/chapter-1/scene-28"
+                },
+                {
+                  "label": "Scene 31",
+                  "note": "Throne Chamber",
+                  "route": "#/story/chapter-1/scene-31"
+                },
+                {
+                  "label": "Scene 32",
+                  "note": "Emergent Kingdom",
+                  "route": "#/story/chapter-1/scene-32"
+                },
+                {
+                  "label": "Scene 33",
+                  "note": "Battlefield",
+                  "route": "#/story/chapter-1/scene-33"
+                },
+                {
+                  "label": "Scene 36",
+                  "note": "The Purple Land",
+                  "route": "#/story/chapter-1/scene-36"
+                },
+                {
+                  "label": "Scene 37",
+                  "note": "Glowing Depths",
+                  "route": "#/story/chapter-1/scene-37"
+                },
+                {
+                  "label": "Scene 42",
+                  "note": "Emergent King Stage",
+                  "route": "#/story/chapter-1/scene-42"
+                },
+                {
+                  "label": "Scene 44",
+                  "note": "Center of the Abyss",
+                  "route": "#/story/chapter-1/scene-44"
+                },
+                {
+                  "label": "Scene 45",
+                  "note": "Bloom's Domain",
+                  "route": "#/story/chapter-1/scene-45"
+                },
+                {
+                  "label": "Scene 47",
+                  "note": "Castle Hall",
+                  "route": "#/story/chapter-1/scene-47"
+                }
+              ]
             },
             {
-              "label": "First seen",
-              "value": 27,
-              "max": 29,
-              "prefix": "Sc."
+              "label": "Losses",
+              "value": 1,
+              "max": 6,
+              "detail": [
+                {
+                  "label": "The Emergent King",
+                  "note": "killed by The Bloom · Scene 45",
+                  "route": "#/story/chapter-1/scene-45"
+                }
+              ]
             },
             {
               "label": "Depth",
               "value": 7,
-              "max": 8
+              "max": 8,
+              "detail": [
+                {
+                  "label": "The Emergent Kingdom",
+                  "note": "Layer 7 of 10",
+                  "route": "#/locations/emergent-kingdom"
+                }
+              ]
             }
           ],
           "backlinks": [
@@ -1087,8 +3060,8 @@
             "Purple paradise",
             "Sapient"
           ],
-          "kills": null,
-          "depth": 8,
+          "depth": null,
+          "home": "purple-paradise",
           "scenes": [],
           "file": "content/creatures/deadwakes.md",
           "stats": [
@@ -1096,18 +3069,123 @@
               "label": "Appearances",
               "value": 15,
               "max": 23,
-              "suffix": "/48"
+              "suffix": "/48",
+              "detail": [
+                {
+                  "label": "Scene 29",
+                  "note": "Purple Paradise and the Deadwake",
+                  "route": "#/story/chapter-1/scene-29"
+                },
+                {
+                  "label": "Scene 30",
+                  "note": "The Deadwake Encounter",
+                  "route": "#/story/chapter-1/scene-30"
+                },
+                {
+                  "label": "Scene 31",
+                  "note": "Throne Chamber",
+                  "route": "#/story/chapter-1/scene-31"
+                },
+                {
+                  "label": "Scene 32",
+                  "note": "Emergent Kingdom",
+                  "route": "#/story/chapter-1/scene-32"
+                },
+                {
+                  "label": "Scene 33",
+                  "note": "Battlefield",
+                  "route": "#/story/chapter-1/scene-33"
+                },
+                {
+                  "label": "Scene 34",
+                  "note": "Battlefield Montage",
+                  "route": "#/story/chapter-1/scene-34"
+                },
+                {
+                  "label": "Scene 35",
+                  "note": "Battlefield Center",
+                  "route": "#/story/chapter-1/scene-35"
+                },
+                {
+                  "label": "Scene 36",
+                  "note": "The Purple Land",
+                  "route": "#/story/chapter-1/scene-36"
+                },
+                {
+                  "label": "Scene 37",
+                  "note": "Glowing Depths",
+                  "route": "#/story/chapter-1/scene-37"
+                },
+                {
+                  "label": "Scene 39",
+                  "note": "The Game Progresses",
+                  "route": "#/story/chapter-1/scene-39"
+                },
+                {
+                  "label": "Scene 42",
+                  "note": "Emergent King Stage",
+                  "route": "#/story/chapter-1/scene-42"
+                },
+                {
+                  "label": "Scene 43",
+                  "note": "Deadwake Queen Entrance",
+                  "route": "#/story/chapter-1/scene-43"
+                },
+                {
+                  "label": "Scene 44",
+                  "note": "Center of the Abyss",
+                  "route": "#/story/chapter-1/scene-44"
+                },
+                {
+                  "label": "Scene 45",
+                  "note": "Bloom's Domain",
+                  "route": "#/story/chapter-1/scene-45"
+                },
+                {
+                  "label": "Scene 47",
+                  "note": "Castle Hall",
+                  "route": "#/story/chapter-1/scene-47"
+                }
+              ]
             },
             {
-              "label": "First seen",
-              "value": 29,
-              "max": 29,
-              "prefix": "Sc."
+              "label": "Losses",
+              "value": 6,
+              "max": 6,
+              "detail": [
+                {
+                  "label": "Deadwake",
+                  "note": "killed by Oyster · Scene 29",
+                  "route": "#/story/chapter-1/scene-29"
+                },
+                {
+                  "label": "Deadwake invaders ×3",
+                  "note": "killed by The Froststalker King · Scene 32",
+                  "route": "#/story/chapter-1/scene-32"
+                },
+                {
+                  "label": "Deadwake",
+                  "note": "killed by Oyster · Scene 39",
+                  "route": "#/story/chapter-1/scene-39"
+                },
+                {
+                  "label": "The Deadwake Queen",
+                  "note": "killed by The Maw King · Scene 45",
+                  "route": "#/story/chapter-1/scene-45"
+                }
+              ]
             },
             {
               "label": "Depth",
               "value": 8,
-              "max": 8
+              "max": 8,
+              "detail": [
+                {
+                  "label": "Purple Paradise",
+                  "note": "Layer 8 of 10",
+                  "route": "#/locations/purple-paradise"
+                }
+              ]
             }
           ],
           "backlinks": [
@@ -1156,76 +3234,49 @@
           "order": 1,
           "image": null,
           "tags": [],
-          "kills": null,
           "depth": 10,
+          "home": null,
           "scenes": [
-            1,
-            2,
-            3,
-            4,
-            5,
-            6,
-            7,
-            8,
-            9,
-            10,
-            11,
-            12,
-            13,
-            14,
-            15,
-            16,
-            17,
-            18,
-            19,
-            20,
-            21,
-            22,
-            23,
-            24,
-            25,
-            26,
-            27,
-            28,
-            29,
-            30,
-            31,
-            32,
-            33,
-            34,
-            35,
-            36,
-            37,
-            38,
-            39,
-            40,
-            41,
-            42,
-            43,
-            44,
-            45,
-            46,
-            47,
-            48
+            16
           ],
           "file": "content/locations/planet-redacted.md",
           "stats": [
             {
               "label": "Scenes",
-              "value": 48,
-              "max": 48,
-              "suffix": "/48"
+              "value": 1,
+              "max": 10,
+              "suffix": "/48",
+              "detail": [
+                {
+                  "label": "Scene 16",
+                  "note": "Descending into the Depths",
+                  "route": "#/story/chapter-1/scene-16"
+                }
+              ]
             },
             {
               "label": "First seen",
-              "value": 1,
+              "value": 16,
               "max": 46,
-              "prefix": "Sc."
+              "prefix": "Sc.",
+              "detail": [
+                {
+                  "label": "Scene 16",
+                  "note": "Descending into the Depths",
+                  "route": "#/story/chapter-1/scene-16"
+                }
+              ]
             },
             {
               "label": "Depth",
               "value": 10,
-              "max": 10
+              "max": 10,
+              "detail": [
+                {
+                  "label": "Layer 10 of 10",
+                  "note": "Nought is orbit, ten is the castle floor."
+                }
+              ]
             }
           ],
           "backlinks": [
@@ -1243,8 +3294,8 @@
           "order": 2,
           "image": null,
           "tags": [],
-          "kills": null,
           "depth": 0,
+          "home": null,
           "scenes": [
             1
           ],
@@ -1253,19 +3304,39 @@
             {
               "label": "Scenes",
               "value": 1,
-              "max": 48,
-              "suffix": "/48"
+              "max": 10,
+              "suffix": "/48",
+              "detail": [
+                {
+                  "label": "Scene 1",
+                  "note": "Deep Space Research Vessel",
+                  "route": "#/story/chapter-1/scene-01"
+                }
+              ]
             },
             {
               "label": "First seen",
               "value": 1,
               "max": 46,
-              "prefix": "Sc."
+              "prefix": "Sc.",
+              "detail": [
+                {
+                  "label": "Scene 1",
+                  "note": "Deep Space Research Vessel",
+                  "route": "#/story/chapter-1/scene-01"
+                }
+              ]
             },
             {
               "label": "Depth",
               "value": 0,
-              "max": 10
+              "max": 10,
+              "detail": [
+                {
+                  "label": "Layer 0 of 10",
+                  "note": "Nought is orbit, ten is the castle floor."
+                }
+              ]
             }
           ],
           "backlinks": []
@@ -1277,8 +3348,8 @@
           "order": 3,
           "image": null,
           "tags": [],
-          "kills": null,
           "depth": 1,
+          "home": null,
           "scenes": [
             2
           ],
@@ -1287,19 +3358,39 @@
             {
               "label": "Scenes",
               "value": 1,
-              "max": 48,
-              "suffix": "/48"
+              "max": 10,
+              "suffix": "/48",
+              "detail": [
+                {
+                  "label": "Scene 2",
+                  "note": "Crashed Ship",
+                  "route": "#/story/chapter-1/scene-02"
+                }
+              ]
             },
             {
               "label": "First seen",
               "value": 2,
               "max": 46,
-              "prefix": "Sc."
+              "prefix": "Sc.",
+              "detail": [
+                {
+                  "label": "Scene 2",
+                  "note": "Crashed Ship",
+                  "route": "#/story/chapter-1/scene-02"
+                }
+              ]
             },
             {
               "label": "Depth",
               "value": 1,
-              "max": 10
+              "max": 10,
+              "detail": [
+                {
+                  "label": "Layer 1 of 10",
+                  "note": "Nought is orbit, ten is the castle floor."
+                }
+              ]
             }
           ],
           "backlinks": [
@@ -1322,8 +3413,8 @@
           "order": 4,
           "image": null,
           "tags": [],
-          "kills": null,
           "depth": 2,
+          "home": null,
           "scenes": [
             3
           ],
@@ -1332,19 +3423,39 @@
             {
               "label": "Scenes",
               "value": 1,
-              "max": 48,
-              "suffix": "/48"
+              "max": 10,
+              "suffix": "/48",
+              "detail": [
+                {
+                  "label": "Scene 3",
+                  "note": "Shallow Waters",
+                  "route": "#/story/chapter-1/scene-03"
+                }
+              ]
             },
             {
               "label": "First seen",
               "value": 3,
               "max": 46,
-              "prefix": "Sc."
+              "prefix": "Sc.",
+              "detail": [
+                {
+                  "label": "Scene 3",
+                  "note": "Shallow Waters",
+                  "route": "#/story/chapter-1/scene-03"
+                }
+              ]
             },
             {
               "label": "Depth",
               "value": 2,
-              "max": 10
+              "max": 10,
+              "detail": [
+                {
+                  "label": "Layer 2 of 10",
+                  "note": "Nought is orbit, ten is the castle floor."
+                }
+              ]
             }
           ],
           "backlinks": [
@@ -1367,8 +3478,8 @@
           "order": 5,
           "image": null,
           "tags": [],
-          "kills": null,
           "depth": 3,
+          "home": null,
           "scenes": [
             4,
             5
@@ -1378,19 +3489,44 @@
             {
               "label": "Scenes",
               "value": 2,
-              "max": 48,
-              "suffix": "/48"
+              "max": 10,
+              "suffix": "/48",
+              "detail": [
+                {
+                  "label": "Scene 4",
+                  "note": "Pitch Black Zone",
+                  "route": "#/story/chapter-1/scene-04"
+                },
+                {
+                  "label": "Scene 5",
+                  "note": "Shortly After the Fight",
+                  "route": "#/story/chapter-1/scene-05"
+                }
+              ]
             },
             {
               "label": "First seen",
               "value": 4,
               "max": 46,
-              "prefix": "Sc."
+              "prefix": "Sc.",
+              "detail": [
+                {
+                  "label": "Scene 4",
+                  "note": "Pitch Black Zone",
+                  "route": "#/story/chapter-1/scene-04"
+                }
+              ]
             },
             {
               "label": "Depth",
               "value": 3,
-              "max": 10
+              "max": 10,
+              "detail": [
+                {
+                  "label": "Layer 3 of 10",
+                  "note": "Nought is orbit, ten is the castle floor."
+                }
+              ]
             }
           ],
           "backlinks": [
@@ -1408,10 +3544,9 @@
           "order": 6,
           "image": null,
           "tags": [],
-          "kills": null,
           "depth": 4,
+          "home": null,
           "scenes": [
-            5,
             6,
             7,
             8,
@@ -1427,20 +3562,85 @@
           "stats": [
             {
               "label": "Scenes",
-              "value": 11,
-              "max": 48,
-              "suffix": "/48"
+              "value": 10,
+              "max": 10,
+              "suffix": "/48",
+              "detail": [
+                {
+                  "label": "Scene 6",
+                  "note": "Edge of the Icey Trenches",
+                  "route": "#/story/chapter-1/scene-06"
+                },
+                {
+                  "label": "Scene 7",
+                  "note": "Icey Trenches",
+                  "route": "#/story/chapter-1/scene-07"
+                },
+                {
+                  "label": "Scene 8",
+                  "note": "Froststalker Cave",
+                  "route": "#/story/chapter-1/scene-08"
+                },
+                {
+                  "label": "Scene 9",
+                  "note": "Holding Cave",
+                  "route": "#/story/chapter-1/scene-09"
+                },
+                {
+                  "label": "Scene 10",
+                  "note": "Underwater Cave",
+                  "route": "#/story/chapter-1/scene-10"
+                },
+                {
+                  "label": "Scene 11",
+                  "note": "Cave Prison",
+                  "route": "#/story/chapter-1/scene-11"
+                },
+                {
+                  "label": "Scene 12",
+                  "note": "Deep Cavern Chamber",
+                  "route": "#/story/chapter-1/scene-12"
+                },
+                {
+                  "label": "Scene 13",
+                  "note": "Cave Cell",
+                  "route": "#/story/chapter-1/scene-13"
+                },
+                {
+                  "label": "Scene 14",
+                  "note": "Outer Trenches",
+                  "route": "#/story/chapter-1/scene-14"
+                },
+                {
+                  "label": "Scene 15",
+                  "note": "Edge of the Trenches",
+                  "route": "#/story/chapter-1/scene-15"
+                }
+              ]
             },
             {
               "label": "First seen",
-              "value": 5,
+              "value": 6,
               "max": 46,
-              "prefix": "Sc."
+              "prefix": "Sc.",
+              "detail": [
+                {
+                  "label": "Scene 6",
+                  "note": "Edge of the Icey Trenches",
+                  "route": "#/story/chapter-1/scene-06"
+                }
+              ]
             },
             {
               "label": "Depth",
               "value": 4,
-              "max": 10
+              "max": 10,
+              "detail": [
+                {
+                  "label": "Layer 4 of 10",
+                  "note": "Nought is orbit, ten is the castle floor."
+                }
+              ]
             }
           ],
           "backlinks": [
@@ -1478,10 +3678,9 @@
           "order": 7,
           "image": null,
           "tags": [],
-          "kills": null,
           "depth": 6,
+          "home": null,
           "scenes": [
-            16,
             17,
             18,
             19,
@@ -1496,20 +3695,80 @@
           "stats": [
             {
               "label": "Scenes",
-              "value": 10,
-              "max": 48,
-              "suffix": "/48"
+              "value": 9,
+              "max": 10,
+              "suffix": "/48",
+              "detail": [
+                {
+                  "label": "Scene 17",
+                  "note": "The Ambush in the Dark",
+                  "route": "#/story/chapter-1/scene-17"
+                },
+                {
+                  "label": "Scene 18",
+                  "note": "Cavernous Depths",
+                  "route": "#/story/chapter-1/scene-18"
+                },
+                {
+                  "label": "Scene 19",
+                  "note": "Twilight Corridor",
+                  "route": "#/story/chapter-1/scene-19"
+                },
+                {
+                  "label": "Scene 20",
+                  "note": "Maw Throne Room",
+                  "route": "#/story/chapter-1/scene-20"
+                },
+                {
+                  "label": "Scene 21",
+                  "note": "The Blade",
+                  "route": "#/story/chapter-1/scene-21"
+                },
+                {
+                  "label": "Scene 22",
+                  "note": "Twisting Tunnels",
+                  "route": "#/story/chapter-1/scene-22"
+                },
+                {
+                  "label": "Scene 23",
+                  "note": "Dead End",
+                  "route": "#/story/chapter-1/scene-23"
+                },
+                {
+                  "label": "Scene 24",
+                  "note": "Just After the Reunion",
+                  "route": "#/story/chapter-1/scene-24"
+                },
+                {
+                  "label": "Scene 25",
+                  "note": "Deeper Ocean Trench",
+                  "route": "#/story/chapter-1/scene-25"
+                }
+              ]
             },
             {
               "label": "First seen",
-              "value": 16,
+              "value": 17,
               "max": 46,
-              "prefix": "Sc."
+              "prefix": "Sc.",
+              "detail": [
+                {
+                  "label": "Scene 17",
+                  "note": "The Ambush in the Dark",
+                  "route": "#/story/chapter-1/scene-17"
+                }
+              ]
             },
             {
               "label": "Depth",
               "value": 6,
-              "max": 10
+              "max": 10,
+              "detail": [
+                {
+                  "label": "Layer 6 of 10",
+                  "note": "Nought is orbit, ten is the castle floor."
+                }
+              ]
             }
           ],
           "backlinks": [
@@ -1557,8 +3816,8 @@
           "order": 8,
           "image": null,
           "tags": [],
-          "kills": null,
           "depth": 7,
+          "home": null,
           "scenes": [
             26,
             27,
@@ -1573,19 +3832,69 @@
             {
               "label": "Scenes",
               "value": 7,
-              "max": 48,
-              "suffix": "/48"
+              "max": 10,
+              "suffix": "/48",
+              "detail": [
+                {
+                  "label": "Scene 26",
+                  "note": "New Biome",
+                  "route": "#/story/chapter-1/scene-26"
+                },
+                {
+                  "label": "Scene 27",
+                  "note": "The Lighted Area",
+                  "route": "#/story/chapter-1/scene-27"
+                },
+                {
+                  "label": "Scene 28",
+                  "note": "Alliance Beneath the Waves",
+                  "route": "#/story/chapter-1/scene-28"
+                },
+                {
+                  "label": "Scene 32",
+                  "note": "Emergent Kingdom",
+                  "route": "#/story/chapter-1/scene-32"
+                },
+                {
+                  "label": "Scene 33",
+                  "note": "Battlefield",
+                  "route": "#/story/chapter-1/scene-33"
+                },
+                {
+                  "label": "Scene 34",
+                  "note": "Battlefield Montage",
+                  "route": "#/story/chapter-1/scene-34"
+                },
+                {
+                  "label": "Scene 35",
+                  "note": "Battlefield Center",
+                  "route": "#/story/chapter-1/scene-35"
+                }
+              ]
             },
             {
               "label": "First seen",
               "value": 26,
               "max": 46,
-              "prefix": "Sc."
+              "prefix": "Sc.",
+              "detail": [
+                {
+                  "label": "Scene 26",
+                  "note": "New Biome",
+                  "route": "#/story/chapter-1/scene-26"
+                }
+              ]
             },
             {
               "label": "Depth",
               "value": 7,
-              "max": 10
+              "max": 10,
+              "detail": [
+                {
+                  "label": "Layer 7 of 10",
+                  "note": "Nought is orbit, ten is the castle floor."
+                }
+              ]
             }
           ],
           "backlinks": [
@@ -1628,8 +3937,8 @@
           "order": 9,
           "image": null,
           "tags": [],
-          "kills": null,
           "depth": 8,
+          "home": null,
           "scenes": [
             29,
             30
@@ -1639,19 +3948,44 @@
             {
               "label": "Scenes",
               "value": 2,
-              "max": 48,
-              "suffix": "/48"
+              "max": 10,
+              "suffix": "/48",
+              "detail": [
+                {
+                  "label": "Scene 29",
+                  "note": "Purple Paradise and the Deadwake",
+                  "route": "#/story/chapter-1/scene-29"
+                },
+                {
+                  "label": "Scene 30",
+                  "note": "The Deadwake Encounter",
+                  "route": "#/story/chapter-1/scene-30"
+                }
+              ]
             },
             {
               "label": "First seen",
               "value": 29,
               "max": 46,
-              "prefix": "Sc."
+              "prefix": "Sc.",
+              "detail": [
+                {
+                  "label": "Scene 29",
+                  "note": "Purple Paradise and the Deadwake",
+                  "route": "#/story/chapter-1/scene-29"
+                }
+              ]
             },
             {
               "label": "Depth",
               "value": 8,
-              "max": 10
+              "max": 10,
+              "detail": [
+                {
+                  "label": "Layer 8 of 10",
+                  "note": "Nought is orbit, ten is the castle floor."
+                }
+              ]
             }
           ],
           "backlinks": [
@@ -1684,30 +4018,49 @@
           "order": 10,
           "image": null,
           "tags": [],
-          "kills": null,
           "depth": 8,
+          "home": null,
           "scenes": [
-            30,
             31
           ],
           "file": "content/locations/deadwake-kingdom.md",
           "stats": [
             {
               "label": "Scenes",
-              "value": 2,
-              "max": 48,
-              "suffix": "/48"
+              "value": 1,
+              "max": 10,
+              "suffix": "/48",
+              "detail": [
+                {
+                  "label": "Scene 31",
+                  "note": "Throne Chamber",
+                  "route": "#/story/chapter-1/scene-31"
+                }
+              ]
             },
             {
               "label": "First seen",
-              "value": 30,
+              "value": 31,
               "max": 46,
-              "prefix": "Sc."
+              "prefix": "Sc.",
+              "detail": [
+                {
+                  "label": "Scene 31",
+                  "note": "Throne Chamber",
+                  "route": "#/story/chapter-1/scene-31"
+                }
+              ]
             },
             {
               "label": "Depth",
               "value": 8,
-              "max": 10
+              "max": 10,
+              "detail": [
+                {
+                  "label": "Layer 8 of 10",
+                  "note": "Nought is orbit, ten is the castle floor."
+                }
+              ]
             }
           ],
           "backlinks": [
@@ -1730,8 +4083,8 @@
           "order": 11,
           "image": null,
           "tags": [],
-          "kills": null,
           "depth": 9,
+          "home": null,
           "scenes": [
             36,
             37,
@@ -1749,19 +4102,84 @@
             {
               "label": "Scenes",
               "value": 10,
-              "max": 48,
-              "suffix": "/48"
+              "max": 10,
+              "suffix": "/48",
+              "detail": [
+                {
+                  "label": "Scene 36",
+                  "note": "The Purple Land",
+                  "route": "#/story/chapter-1/scene-36"
+                },
+                {
+                  "label": "Scene 37",
+                  "note": "Glowing Depths",
+                  "route": "#/story/chapter-1/scene-37"
+                },
+                {
+                  "label": "Scene 38",
+                  "note": "The Purple Realm",
+                  "route": "#/story/chapter-1/scene-38"
+                },
+                {
+                  "label": "Scene 39",
+                  "note": "The Game Progresses",
+                  "route": "#/story/chapter-1/scene-39"
+                },
+                {
+                  "label": "Scene 40",
+                  "note": "Froststalker King Arrival",
+                  "route": "#/story/chapter-1/scene-40"
+                },
+                {
+                  "label": "Scene 41",
+                  "note": "Maw King Stage",
+                  "route": "#/story/chapter-1/scene-41"
+                },
+                {
+                  "label": "Scene 42",
+                  "note": "Emergent King Stage",
+                  "route": "#/story/chapter-1/scene-42"
+                },
+                {
+                  "label": "Scene 43",
+                  "note": "Deadwake Queen Entrance",
+                  "route": "#/story/chapter-1/scene-43"
+                },
+                {
+                  "label": "Scene 44",
+                  "note": "Center of the Abyss",
+                  "route": "#/story/chapter-1/scene-44"
+                },
+                {
+                  "label": "Scene 45",
+                  "note": "Bloom's Domain",
+                  "route": "#/story/chapter-1/scene-45"
+                }
+              ]
             },
             {
               "label": "First seen",
               "value": 36,
               "max": 46,
-              "prefix": "Sc."
+              "prefix": "Sc.",
+              "detail": [
+                {
+                  "label": "Scene 36",
+                  "note": "The Purple Land",
+                  "route": "#/story/chapter-1/scene-36"
+                }
+              ]
             },
             {
               "label": "Depth",
               "value": 9,
-              "max": 10
+              "max": 10,
+              "detail": [
+                {
+                  "label": "Layer 9 of 10",
+                  "note": "Nought is orbit, ten is the castle floor."
+                }
+              ]
             }
           ],
           "backlinks": [
@@ -1779,8 +4197,8 @@
           "order": 12,
           "image": null,
           "tags": [],
-          "kills": null,
           "depth": 10,
+          "home": null,
           "scenes": [
             46,
             47,
@@ -1791,19 +4209,49 @@
             {
               "label": "Scenes",
               "value": 3,
-              "max": 48,
-              "suffix": "/48"
+              "max": 10,
+              "suffix": "/48",
+              "detail": [
+                {
+                  "label": "Scene 46",
+                  "note": "The Gate to the Castle",
+                  "route": "#/story/chapter-1/scene-46"
+                },
+                {
+                  "label": "Scene 47",
+                  "note": "Castle Hall",
+                  "route": "#/story/chapter-1/scene-47"
+                },
+                {
+                  "label": "Scene 48",
+                  "note": "Castle Throne Room",
+                  "route": "#/story/chapter-1/scene-48"
+                }
+              ]
             },
             {
               "label": "First seen",
               "value": 46,
               "max": 46,
-              "prefix": "Sc."
+              "prefix": "Sc.",
+              "detail": [
+                {
+                  "label": "Scene 46",
+                  "note": "The Gate to the Castle",
+                  "route": "#/story/chapter-1/scene-46"
+                }
+              ]
             },
             {
               "label": "Depth",
               "value": 10,
-              "max": 10
+              "max": 10,
+              "detail": [
+                {
+                  "label": "Layer 10 of 10",
+                  "note": "Nought is orbit, ten is the castle floor."
+                }
+              ]
             }
           ],
           "backlinks": [
@@ -1894,6 +4342,7 @@
           "slug": "scene-01",
           "n": 1,
           "act": "descent",
+          "place": "research-vessel",
           "title": "Deep Space Research Vessel",
           "location": "INT. DEEP SPACE RESEARCH VESSEL – CONTROL ROOM – ORBITING PLANET (REDACTED)",
           "synopsis": "Banter in orbit turns to sirens as a violet pulse rises off the ocean and drags the ship down.",
@@ -1903,17 +4352,55 @@
               "label": "Depth",
               "value": 2,
               "max": 100,
-              "suffix": "%"
+              "suffix": "%",
+              "detail": [
+                {
+                  "label": "Scene 1 of 48",
+                  "note": "How far into the chapter this sits."
+                }
+              ]
             },
             {
               "label": "Speakers",
               "value": 4,
-              "max": 7
+              "max": 4,
+              "detail": [
+                {
+                  "label": "MARIQ"
+                },
+                {
+                  "label": "OYSTER"
+                },
+                {
+                  "label": "DR. VOSS"
+                },
+                {
+                  "label": "CHIP"
+                }
+              ]
             },
             {
               "label": "Lines",
               "value": 23,
-              "max": 23
+              "max": 23,
+              "detail": [
+                {
+                  "label": "CHIP",
+                  "note": "7 lines"
+                },
+                {
+                  "label": "MARIQ",
+                  "note": "6 lines"
+                },
+                {
+                  "label": "OYSTER",
+                  "note": "5 lines"
+                },
+                {
+                  "label": "DR. VOSS",
+                  "note": "5 lines"
+                }
+              ]
             }
           ],
           "backlinks": [
@@ -1938,6 +4425,7 @@
           "slug": "scene-02",
           "n": 2,
           "act": "descent",
+          "place": "the-wreck",
           "title": "Crashed Ship",
           "location": "INT. CRASHED SHIP – SUBMERGED INTERIOR – DIMLY LIT – MOMENTS AFTER IMPACT",
           "synopsis": "Oyster wakes to a dead crew and a glow in the water. He and Chip choose the castle over the wreck.",
@@ -1947,17 +4435,43 @@
               "label": "Depth",
               "value": 4,
               "max": 100,
-              "suffix": "%"
+              "suffix": "%",
+              "detail": [
+                {
+                  "label": "Scene 2 of 48",
+                  "note": "How far into the chapter this sits."
+                }
+              ]
             },
             {
-              "label": "Speakers",
+              "label": "Deaths",
               "value": 2,
-              "max": 7
+              "max": 4,
+              "detail": [
+                {
+                  "label": "Mariq Levi",
+                  "note": "killed by The Bloom · lost in the crash"
+                },
+                {
+                  "label": "Dr. Lena Voss",
+                  "note": "killed by The Bloom · lost in the crash"
+                }
+              ]
             },
             {
               "label": "Lines",
               "value": 19,
-              "max": 23
+              "max": 23,
+              "detail": [
+                {
+                  "label": "OYSTER",
+                  "note": "10 lines"
+                },
+                {
+                  "label": "CHIP",
+                  "note": "9 lines"
+                }
+              ]
             }
           ],
           "backlinks": [
@@ -1982,6 +4496,7 @@
           "slug": "scene-03",
           "n": 3,
           "act": "descent",
+          "place": "shallow-reef",
           "title": "Shallow Waters",
           "location": "Scene: Shallow Waters – Early Morning Light Filtering Through",
           "synopsis": "A bioluminescent reef ends at a trench edge that swallows every reading they have.",
@@ -1991,17 +4506,41 @@
               "label": "Depth",
               "value": 6,
               "max": 100,
-              "suffix": "%"
+              "suffix": "%",
+              "detail": [
+                {
+                  "label": "Scene 3 of 48",
+                  "note": "How far into the chapter this sits."
+                }
+              ]
             },
             {
               "label": "Speakers",
               "value": 2,
-              "max": 7
+              "max": 4,
+              "detail": [
+                {
+                  "label": "CHIP"
+                },
+                {
+                  "label": "OYSTER"
+                }
+              ]
             },
             {
               "label": "Lines",
               "value": 11,
-              "max": 23
+              "max": 23,
+              "detail": [
+                {
+                  "label": "CHIP",
+                  "note": "6 lines"
+                },
+                {
+                  "label": "OYSTER",
+                  "note": "5 lines"
+                }
+              ]
             }
           ],
           "backlinks": [
@@ -2026,6 +4565,7 @@
           "slug": "scene-04",
           "n": 4,
           "act": "frost",
+          "place": "pitch-black-zone",
           "title": "Pitch Black Zone",
           "location": "INT. PITCH BLACK ZONE – UNDERWATER – LATER",
           "synopsis": "First contact with a berserker Froststalker. Oyster learns what the dark is holding.",
@@ -2035,17 +4575,39 @@
               "label": "Depth",
               "value": 8,
               "max": 100,
-              "suffix": "%"
+              "suffix": "%",
+              "detail": [
+                {
+                  "label": "Scene 4 of 48",
+                  "note": "How far into the chapter this sits."
+                }
+              ]
             },
             {
-              "label": "Speakers",
-              "value": 2,
-              "max": 7
+              "label": "Deaths",
+              "value": 1,
+              "max": 4,
+              "detail": [
+                {
+                  "label": "Berserker Froststalker",
+                  "note": "killed by Oyster · blade driven up into its throat"
+                }
+              ]
             },
             {
               "label": "Lines",
               "value": 13,
-              "max": 23
+              "max": 23,
+              "detail": [
+                {
+                  "label": "OYSTER",
+                  "note": "7 lines"
+                },
+                {
+                  "label": "CHIP",
+                  "note": "6 lines"
+                }
+              ]
             }
           ],
           "backlinks": [
@@ -2070,6 +4632,7 @@
           "slug": "scene-05",
           "n": 5,
           "act": "frost",
+          "place": "pitch-black-zone",
           "title": "Shortly After the Fight",
           "location": "INT. DEEP OCEAN — PITCH BLACK ZONE — SHORTLY AFTER THE FIGHT",
           "synopsis": "A hunting pack passes them by — something has the Froststalkers scared. The icy trenches appear.",
@@ -2079,17 +4642,41 @@
               "label": "Depth",
               "value": 10,
               "max": 100,
-              "suffix": "%"
+              "suffix": "%",
+              "detail": [
+                {
+                  "label": "Scene 5 of 48",
+                  "note": "How far into the chapter this sits."
+                }
+              ]
             },
             {
               "label": "Speakers",
               "value": 2,
-              "max": 7
+              "max": 4,
+              "detail": [
+                {
+                  "label": "OYSTER"
+                },
+                {
+                  "label": "CHIP"
+                }
+              ]
             },
             {
               "label": "Lines",
               "value": 19,
-              "max": 23
+              "max": 23,
+              "detail": [
+                {
+                  "label": "OYSTER",
+                  "note": "10 lines"
+                },
+                {
+                  "label": "CHIP",
+                  "note": "9 lines"
+                }
+              ]
             }
           ],
           "backlinks": [
@@ -2114,6 +4701,7 @@
           "slug": "scene-06",
           "n": 6,
           "act": "frost",
+          "place": "icy-trenches",
           "title": "Edge of the Icey Trenches",
           "location": "EXT. FROSTSTALKER KINGDOM — EDGE OF THE ICEY TRENCHES",
           "synopsis": "Two sentries attack. Oyster improvises a blade from a severed fin and survives on instinct.",
@@ -2123,17 +4711,43 @@
               "label": "Depth",
               "value": 13,
               "max": 100,
-              "suffix": "%"
+              "suffix": "%",
+              "detail": [
+                {
+                  "label": "Scene 6 of 48",
+                  "note": "How far into the chapter this sits."
+                }
+              ]
             },
             {
-              "label": "Speakers",
+              "label": "Deaths",
               "value": 2,
-              "max": 7
+              "max": 4,
+              "detail": [
+                {
+                  "label": "Froststalker sentry",
+                  "note": "killed by Oyster · knife buried in the throat"
+                },
+                {
+                  "label": "Froststalker sentry",
+                  "note": "killed by Oyster · broken fin to the neck, blaster into the jaw"
+                }
+              ]
             },
             {
               "label": "Lines",
               "value": 11,
-              "max": 23
+              "max": 23,
+              "detail": [
+                {
+                  "label": "CHIP",
+                  "note": "7 lines"
+                },
+                {
+                  "label": "OYSTER",
+                  "note": "4 lines"
+                }
+              ]
             }
           ],
           "backlinks": [
@@ -2153,6 +4767,7 @@
           "slug": "scene-07",
           "n": 7,
           "act": "frost",
+          "place": "icy-trenches",
           "title": "Icey Trenches",
           "location": "INT. ICEY TRENCHES – NIGHT",
           "synopsis": "Deeper into frozen canyons, where the kingdom's structures start to look deliberate.",
@@ -2162,17 +4777,41 @@
               "label": "Depth",
               "value": 15,
               "max": 100,
-              "suffix": "%"
+              "suffix": "%",
+              "detail": [
+                {
+                  "label": "Scene 7 of 48",
+                  "note": "How far into the chapter this sits."
+                }
+              ]
             },
             {
               "label": "Speakers",
               "value": 2,
-              "max": 7
+              "max": 4,
+              "detail": [
+                {
+                  "label": "CHIP"
+                },
+                {
+                  "label": "OYSTER"
+                }
+              ]
             },
             {
               "label": "Lines",
               "value": 4,
-              "max": 23
+              "max": 23,
+              "detail": [
+                {
+                  "label": "CHIP",
+                  "note": "2 lines"
+                },
+                {
+                  "label": "OYSTER",
+                  "note": "2 lines"
+                }
+              ]
             }
           ],
           "backlinks": [
@@ -2187,6 +4826,7 @@
           "slug": "scene-08",
           "n": 8,
           "act": "frost",
+          "place": "icy-trenches",
           "title": "Froststalker Cave",
           "location": "INT. FROSTSTALKER CAVE – CONTINUOUS",
           "synopsis": "Captured. The pair are taken into the heart of the ice.",
@@ -2196,17 +4836,48 @@
               "label": "Depth",
               "value": 17,
               "max": 100,
-              "suffix": "%"
+              "suffix": "%",
+              "detail": [
+                {
+                  "label": "Scene 8 of 48",
+                  "note": "How far into the chapter this sits."
+                }
+              ]
             },
             {
               "label": "Speakers",
               "value": 3,
-              "max": 7
+              "max": 4,
+              "detail": [
+                {
+                  "label": "OYSTER"
+                },
+                {
+                  "label": "CHIP"
+                },
+                {
+                  "label": "FROSTSTALKER KING"
+                }
+              ]
             },
             {
               "label": "Lines",
               "value": 18,
-              "max": 23
+              "max": 23,
+              "detail": [
+                {
+                  "label": "FROSTSTALKER KING",
+                  "note": "8 lines"
+                },
+                {
+                  "label": "OYSTER",
+                  "note": "6 lines"
+                },
+                {
+                  "label": "CHIP",
+                  "note": "4 lines"
+                }
+              ]
             }
           ],
           "backlinks": []
@@ -2215,6 +4886,7 @@
           "slug": "scene-09",
           "n": 9,
           "act": "frost",
+          "place": "icy-trenches",
           "title": "Holding Cave",
           "location": "INT. HOLDING CAVE – MOMENTS LATER",
           "synopsis": "Imprisoned and unarmed, Oyster and Chip take stock of a very short list of options.",
@@ -2224,17 +4896,41 @@
               "label": "Depth",
               "value": 19,
               "max": 100,
-              "suffix": "%"
+              "suffix": "%",
+              "detail": [
+                {
+                  "label": "Scene 9 of 48",
+                  "note": "How far into the chapter this sits."
+                }
+              ]
             },
             {
               "label": "Speakers",
               "value": 2,
-              "max": 7
+              "max": 4,
+              "detail": [
+                {
+                  "label": "CHIP"
+                },
+                {
+                  "label": "OYSTER"
+                }
+              ]
             },
             {
               "label": "Lines",
               "value": 4,
-              "max": 23
+              "max": 23,
+              "detail": [
+                {
+                  "label": "CHIP",
+                  "note": "2 lines"
+                },
+                {
+                  "label": "OYSTER",
+                  "note": "2 lines"
+                }
+              ]
             }
           ],
           "backlinks": [
@@ -2249,6 +4945,7 @@
           "slug": "scene-10",
           "n": 10,
           "act": "frost",
+          "place": "icy-trenches",
           "title": "Underwater Cave",
           "location": "INT. UNDERWATER CAVE – NIGHT",
           "synopsis": "The kingdom moves around them in the dark, indifferent and enormous.",
@@ -2258,17 +4955,41 @@
               "label": "Depth",
               "value": 21,
               "max": 100,
-              "suffix": "%"
+              "suffix": "%",
+              "detail": [
+                {
+                  "label": "Scene 10 of 48",
+                  "note": "How far into the chapter this sits."
+                }
+              ]
             },
             {
               "label": "Speakers",
               "value": 2,
-              "max": 7
+              "max": 4,
+              "detail": [
+                {
+                  "label": "CHIP"
+                },
+                {
+                  "label": "OYSTER"
+                }
+              ]
             },
             {
               "label": "Lines",
               "value": 15,
-              "max": 23
+              "max": 23,
+              "detail": [
+                {
+                  "label": "CHIP",
+                  "note": "8 lines"
+                },
+                {
+                  "label": "OYSTER",
+                  "note": "7 lines"
+                }
+              ]
             }
           ],
           "backlinks": []
@@ -2277,6 +4998,7 @@
           "slug": "scene-11",
           "n": 11,
           "act": "frost",
+          "place": "icy-trenches",
           "title": "Cave Prison",
           "location": "INT. ICEY TRENCHES – CAVE PRISON – NIGHT",
           "synopsis": "Screams echo down the tunnel. Something is inside the nursery that should not be.",
@@ -2286,17 +5008,39 @@
               "label": "Depth",
               "value": 23,
               "max": 100,
-              "suffix": "%"
+              "suffix": "%",
+              "detail": [
+                {
+                  "label": "Scene 11 of 48",
+                  "note": "How far into the chapter this sits."
+                }
+              ]
             },
             {
-              "label": "Speakers",
-              "value": 2,
-              "max": 7
+              "label": "Deaths",
+              "value": 1,
+              "max": 4,
+              "detail": [
+                {
+                  "label": "Maw",
+                  "note": "killed by Oyster · high-pressure oxygen, defending the nursery"
+                }
+              ]
             },
             {
               "label": "Lines",
               "value": 12,
-              "max": 23
+              "max": 23,
+              "detail": [
+                {
+                  "label": "CHIP",
+                  "note": "6 lines"
+                },
+                {
+                  "label": "OYSTER",
+                  "note": "6 lines"
+                }
+              ]
             }
           ],
           "backlinks": [
@@ -2311,6 +5055,7 @@
           "slug": "scene-12",
           "n": 12,
           "act": "frost",
+          "place": "icy-trenches",
           "title": "Deep Cavern Chamber",
           "location": "INT. FROSTSTALKER KINGDOM – DEEP CAVERN CHAMBER – NIGHT",
           "synopsis": "The Froststalker King finds his cubs alive and a dead Maw behind two strangers. Prisoners become guests.",
@@ -2320,17 +5065,48 @@
               "label": "Depth",
               "value": 25,
               "max": 100,
-              "suffix": "%"
+              "suffix": "%",
+              "detail": [
+                {
+                  "label": "Scene 12 of 48",
+                  "note": "How far into the chapter this sits."
+                }
+              ]
             },
             {
               "label": "Speakers",
               "value": 3,
-              "max": 7
+              "max": 4,
+              "detail": [
+                {
+                  "label": "CHIP"
+                },
+                {
+                  "label": "KING FROSTSTALKER"
+                },
+                {
+                  "label": "OYSTER"
+                }
+              ]
             },
             {
               "label": "Lines",
               "value": 7,
-              "max": 23
+              "max": 23,
+              "detail": [
+                {
+                  "label": "KING FROSTSTALKER",
+                  "note": "4 lines"
+                },
+                {
+                  "label": "CHIP",
+                  "note": "2 lines"
+                },
+                {
+                  "label": "OYSTER",
+                  "note": "1 line"
+                }
+              ]
             }
           ],
           "backlinks": [
@@ -2350,6 +5126,7 @@
           "slug": "scene-13",
           "n": 13,
           "act": "frost",
+          "place": "icy-trenches",
           "title": "Cave Cell",
           "location": "INT. FROSTSTALKER CAVE CELL – MOMENTS LATER",
           "synopsis": "The cell door stays open. Oyster and Chip try to understand what just happened to them.",
@@ -2359,17 +5136,41 @@
               "label": "Depth",
               "value": 27,
               "max": 100,
-              "suffix": "%"
+              "suffix": "%",
+              "detail": [
+                {
+                  "label": "Scene 13 of 48",
+                  "note": "How far into the chapter this sits."
+                }
+              ]
             },
             {
               "label": "Speakers",
               "value": 2,
-              "max": 7
+              "max": 4,
+              "detail": [
+                {
+                  "label": "CHIP"
+                },
+                {
+                  "label": "OYSTER"
+                }
+              ]
             },
             {
               "label": "Lines",
               "value": 6,
-              "max": 23
+              "max": 23,
+              "detail": [
+                {
+                  "label": "CHIP",
+                  "note": "3 lines"
+                },
+                {
+                  "label": "OYSTER",
+                  "note": "3 lines"
+                }
+              ]
             }
           ],
           "backlinks": []
@@ -2378,6 +5179,7 @@
           "slug": "scene-14",
           "n": 14,
           "act": "frost",
+          "place": "icy-trenches",
           "title": "Outer Trenches",
           "location": "SCENE: The Froststalker Kingdom - Outer Trenches",
           "synopsis": "A society in the ice — nests, salvage crews, cubs. Every assumption they arrived with quietly dies.",
@@ -2387,17 +5189,41 @@
               "label": "Depth",
               "value": 29,
               "max": 100,
-              "suffix": "%"
+              "suffix": "%",
+              "detail": [
+                {
+                  "label": "Scene 14 of 48",
+                  "note": "How far into the chapter this sits."
+                }
+              ]
             },
             {
               "label": "Speakers",
               "value": 2,
-              "max": 7
+              "max": 4,
+              "detail": [
+                {
+                  "label": "OYSTER"
+                },
+                {
+                  "label": "CHIP"
+                }
+              ]
             },
             {
               "label": "Lines",
               "value": 17,
-              "max": 23
+              "max": 23,
+              "detail": [
+                {
+                  "label": "OYSTER",
+                  "note": "9 lines"
+                },
+                {
+                  "label": "CHIP",
+                  "note": "8 lines"
+                }
+              ]
             }
           ],
           "backlinks": [
@@ -2412,6 +5238,7 @@
           "slug": "scene-15",
           "n": 15,
           "act": "frost",
+          "place": "icy-trenches",
           "title": "Edge of the Trenches",
           "location": "INT. FROSTSTALKER KINGDOM - EDGE OF THE TRENCHES – DAY",
           "synopsis": "Farewells at the border. Beyond the frost, the map runs out.",
@@ -2421,17 +5248,48 @@
               "label": "Depth",
               "value": 31,
               "max": 100,
-              "suffix": "%"
+              "suffix": "%",
+              "detail": [
+                {
+                  "label": "Scene 15 of 48",
+                  "note": "How far into the chapter this sits."
+                }
+              ]
             },
             {
               "label": "Speakers",
               "value": 3,
-              "max": 7
+              "max": 4,
+              "detail": [
+                {
+                  "label": "OYSTER"
+                },
+                {
+                  "label": "FROSTSTALKER KING"
+                },
+                {
+                  "label": "CHIP"
+                }
+              ]
             },
             {
               "label": "Lines",
               "value": 5,
-              "max": 23
+              "max": 23,
+              "detail": [
+                {
+                  "label": "OYSTER",
+                  "note": "2 lines"
+                },
+                {
+                  "label": "CHIP",
+                  "note": "2 lines"
+                },
+                {
+                  "label": "FROSTSTALKER KING",
+                  "note": "1 line"
+                }
+              ]
             }
           ],
           "backlinks": [
@@ -2446,6 +5304,7 @@
           "slug": "scene-16",
           "n": 16,
           "act": "maw",
+          "place": "planet-redacted",
           "title": "Descending into the Depths",
           "location": "EXT. PLANET (REDACTED) – DESCENDING INTO THE DEPTHS",
           "synopsis": "The long fall. Pressure builds, light dies, and the purple glow stops answering.",
@@ -2455,17 +5314,41 @@
               "label": "Depth",
               "value": 33,
               "max": 100,
-              "suffix": "%"
+              "suffix": "%",
+              "detail": [
+                {
+                  "label": "Scene 16 of 48",
+                  "note": "How far into the chapter this sits."
+                }
+              ]
             },
             {
               "label": "Speakers",
               "value": 2,
-              "max": 7
+              "max": 4,
+              "detail": [
+                {
+                  "label": "CHIP"
+                },
+                {
+                  "label": "OYSTER"
+                }
+              ]
             },
             {
               "label": "Lines",
               "value": 6,
-              "max": 23
+              "max": 23,
+              "detail": [
+                {
+                  "label": "CHIP",
+                  "note": "3 lines"
+                },
+                {
+                  "label": "OYSTER",
+                  "note": "3 lines"
+                }
+              ]
             }
           ],
           "backlinks": [
@@ -2485,6 +5368,7 @@
           "slug": "scene-17",
           "n": 17,
           "act": "maw",
+          "place": "maw-territory",
           "title": "The Ambush in the Dark",
           "location": "SCENE: Descent into Maw Territory — “The Ambush in the Dark”",
           "synopsis": "An electromagnetic spike blinds Chip. Something with orange eyes separates them.",
@@ -2494,17 +5378,41 @@
               "label": "Depth",
               "value": 35,
               "max": 100,
-              "suffix": "%"
+              "suffix": "%",
+              "detail": [
+                {
+                  "label": "Scene 17 of 48",
+                  "note": "How far into the chapter this sits."
+                }
+              ]
             },
             {
               "label": "Speakers",
               "value": 2,
-              "max": 7
+              "max": 4,
+              "detail": [
+                {
+                  "label": "OYSTER"
+                },
+                {
+                  "label": "CHIP"
+                }
+              ]
             },
             {
               "label": "Lines",
               "value": 8,
-              "max": 23
+              "max": 23,
+              "detail": [
+                {
+                  "label": "OYSTER",
+                  "note": "5 lines"
+                },
+                {
+                  "label": "CHIP",
+                  "note": "3 lines"
+                }
+              ]
             }
           ],
           "backlinks": [
@@ -2524,6 +5432,7 @@
           "slug": "scene-18",
           "n": 18,
           "act": "maw",
+          "place": "maw-territory",
           "title": "Cavernous Depths",
           "location": "INT. MAW TERRITORY – CAVERNOUS DEPTHS",
           "synopsis": "Alone in the black, Oyster is hunted through the caverns.",
@@ -2533,17 +5442,41 @@
               "label": "Depth",
               "value": 38,
               "max": 100,
-              "suffix": "%"
+              "suffix": "%",
+              "detail": [
+                {
+                  "label": "Scene 18 of 48",
+                  "note": "How far into the chapter this sits."
+                }
+              ]
             },
             {
               "label": "Speakers",
               "value": 2,
-              "max": 7
+              "max": 4,
+              "detail": [
+                {
+                  "label": "OYSTER"
+                },
+                {
+                  "label": "CHIP"
+                }
+              ]
             },
             {
               "label": "Lines",
               "value": 8,
-              "max": 23
+              "max": 23,
+              "detail": [
+                {
+                  "label": "OYSTER",
+                  "note": "6 lines"
+                },
+                {
+                  "label": "CHIP",
+                  "note": "2 lines"
+                }
+              ]
             }
           ],
           "backlinks": []
@@ -2552,6 +5485,7 @@
           "slug": "scene-19",
           "n": 19,
           "act": "maw",
+          "place": "maw-territory",
           "title": "Twilight Corridor",
           "location": "INT. MAW KINGDOM – TWILIGHT CORRIDOR – UNKNOWN",
           "synopsis": "Dragged inward through corridors lit by sick purple light.",
@@ -2561,17 +5495,48 @@
               "label": "Depth",
               "value": 40,
               "max": 100,
-              "suffix": "%"
+              "suffix": "%",
+              "detail": [
+                {
+                  "label": "Scene 19 of 48",
+                  "note": "How far into the chapter this sits."
+                }
+              ]
             },
             {
               "label": "Speakers",
               "value": 3,
-              "max": 7
+              "max": 4,
+              "detail": [
+                {
+                  "label": "OYSTER"
+                },
+                {
+                  "label": "MAW 1"
+                },
+                {
+                  "label": "MAW 2"
+                }
+              ]
             },
             {
               "label": "Lines",
               "value": 5,
-              "max": 23
+              "max": 23,
+              "detail": [
+                {
+                  "label": "OYSTER",
+                  "note": "3 lines"
+                },
+                {
+                  "label": "MAW 1",
+                  "note": "1 line"
+                },
+                {
+                  "label": "MAW 2",
+                  "note": "1 line"
+                }
+              ]
             }
           ],
           "backlinks": []
@@ -2580,6 +5545,7 @@
           "slug": "scene-20",
           "n": 20,
           "act": "maw",
+          "place": "maw-territory",
           "title": "Maw Throne Room",
           "location": "INT. MAW THRONE ROOM – CONTINUOUS",
           "synopsis": "The Maw King speaks fluent English and offers Oyster a choice between a fast death and a slow one.",
@@ -2589,17 +5555,41 @@
               "label": "Depth",
               "value": 42,
               "max": 100,
-              "suffix": "%"
+              "suffix": "%",
+              "detail": [
+                {
+                  "label": "Scene 20 of 48",
+                  "note": "How far into the chapter this sits."
+                }
+              ]
             },
             {
               "label": "Speakers",
               "value": 2,
-              "max": 7
+              "max": 4,
+              "detail": [
+                {
+                  "label": "MAW KING"
+                },
+                {
+                  "label": "OYSTER"
+                }
+              ]
             },
             {
               "label": "Lines",
               "value": 4,
-              "max": 23
+              "max": 23,
+              "detail": [
+                {
+                  "label": "MAW KING",
+                  "note": "3 lines"
+                },
+                {
+                  "label": "OYSTER",
+                  "note": "1 line"
+                }
+              ]
             }
           ],
           "backlinks": [
@@ -2614,6 +5604,7 @@
           "slug": "scene-21",
           "n": 21,
           "act": "maw",
+          "place": "maw-territory",
           "title": "The Blade",
           "location": "INT. MAW THRONE ROOM – CONTINUOUS",
           "synopsis": "The King takes Oyster's right hand — then lets him run, because the running is the entertainment.",
@@ -2623,17 +5614,39 @@
               "label": "Depth",
               "value": 44,
               "max": 100,
-              "suffix": "%"
+              "suffix": "%",
+              "detail": [
+                {
+                  "label": "Scene 21 of 48",
+                  "note": "How far into the chapter this sits."
+                }
+              ]
             },
             {
-              "label": "Speakers",
-              "value": 2,
-              "max": 7
+              "label": "Deaths",
+              "value": 1,
+              "max": 4,
+              "detail": [
+                {
+                  "label": "Maw guard",
+                  "note": "killed by Oyster · suit knife across the head"
+                }
+              ]
             },
             {
               "label": "Lines",
               "value": 5,
-              "max": 23
+              "max": 23,
+              "detail": [
+                {
+                  "label": "MAW KING",
+                  "note": "4 lines"
+                },
+                {
+                  "label": "OYSTER",
+                  "note": "1 line"
+                }
+              ]
             }
           ],
           "backlinks": [
@@ -2653,6 +5666,7 @@
           "slug": "scene-22",
           "n": 22,
           "act": "maw",
+          "place": "maw-territory",
           "title": "Twisting Tunnels",
           "location": "INT. MAW KINGDOM – TWISTING TUNNELS – CONTINUOUS",
           "synopsis": "Bleeding and one-handed, Oyster runs a maze that is being closed behind him.",
@@ -2662,17 +5676,41 @@
               "label": "Depth",
               "value": 46,
               "max": 100,
-              "suffix": "%"
+              "suffix": "%",
+              "detail": [
+                {
+                  "label": "Scene 22 of 48",
+                  "note": "How far into the chapter this sits."
+                }
+              ]
             },
             {
               "label": "Speakers",
               "value": 2,
-              "max": 7
+              "max": 4,
+              "detail": [
+                {
+                  "label": "OYSTER"
+                },
+                {
+                  "label": "MAW KING"
+                }
+              ]
             },
             {
               "label": "Lines",
               "value": 3,
-              "max": 23
+              "max": 23,
+              "detail": [
+                {
+                  "label": "OYSTER",
+                  "note": "2 lines"
+                },
+                {
+                  "label": "MAW KING",
+                  "note": "1 line"
+                }
+              ]
             }
           ],
           "backlinks": []
@@ -2681,6 +5719,7 @@
           "slug": "scene-23",
           "n": 23,
           "act": "maw",
+          "place": "maw-territory",
           "title": "Dead End",
           "location": "INT. MAW CAVERN – DEAD END – NIGHTMARE DARKNESS",
           "synopsis": "Cornered — until a blaster clatters at his feet and Chip's voice comes out of the ceiling.",
@@ -2690,17 +5729,48 @@
               "label": "Depth",
               "value": 48,
               "max": 100,
-              "suffix": "%"
+              "suffix": "%",
+              "detail": [
+                {
+                  "label": "Scene 23 of 48",
+                  "note": "How far into the chapter this sits."
+                }
+              ]
             },
             {
               "label": "Speakers",
               "value": 3,
-              "max": 7
+              "max": 4,
+              "detail": [
+                {
+                  "label": "MAW KING"
+                },
+                {
+                  "label": "OYSTER"
+                },
+                {
+                  "label": "CHIP"
+                }
+              ]
             },
             {
               "label": "Lines",
               "value": 14,
-              "max": 23
+              "max": 23,
+              "detail": [
+                {
+                  "label": "CHIP",
+                  "note": "6 lines"
+                },
+                {
+                  "label": "OYSTER",
+                  "note": "5 lines"
+                },
+                {
+                  "label": "MAW KING",
+                  "note": "3 lines"
+                }
+              ]
             }
           ],
           "backlinks": [
@@ -2715,6 +5785,7 @@
           "slug": "scene-24",
           "n": 24,
           "act": "maw",
+          "place": "maw-territory",
           "title": "Just After the Reunion",
           "location": "INT. DARK MAW TERRITORY – JUST AFTER THE REUNION",
           "synopsis": "Chip opens like a toolbox and hands Oyster a new hand. Neural-link capable. Bottle opener included.",
@@ -2724,17 +5795,41 @@
               "label": "Depth",
               "value": 50,
               "max": 100,
-              "suffix": "%"
+              "suffix": "%",
+              "detail": [
+                {
+                  "label": "Scene 24 of 48",
+                  "note": "How far into the chapter this sits."
+                }
+              ]
             },
             {
               "label": "Speakers",
               "value": 2,
-              "max": 7
+              "max": 4,
+              "detail": [
+                {
+                  "label": "CHIP"
+                },
+                {
+                  "label": "OYSTER"
+                }
+              ]
             },
             {
               "label": "Lines",
               "value": 12,
-              "max": 23
+              "max": 23,
+              "detail": [
+                {
+                  "label": "CHIP",
+                  "note": "7 lines"
+                },
+                {
+                  "label": "OYSTER",
+                  "note": "5 lines"
+                }
+              ]
             }
           ],
           "backlinks": [
@@ -2754,6 +5849,7 @@
           "slug": "scene-25",
           "n": 25,
           "act": "maw",
+          "place": "maw-territory",
           "title": "Deeper Ocean Trench",
           "location": "EXT. DEEPER OCEAN TRENCH – CONTINUOUS",
           "synopsis": "Out of Maw country and still going down, following a purple thread through the water.",
@@ -2763,17 +5859,41 @@
               "label": "Depth",
               "value": 52,
               "max": 100,
-              "suffix": "%"
+              "suffix": "%",
+              "detail": [
+                {
+                  "label": "Scene 25 of 48",
+                  "note": "How far into the chapter this sits."
+                }
+              ]
             },
             {
               "label": "Speakers",
               "value": 2,
-              "max": 7
+              "max": 4,
+              "detail": [
+                {
+                  "label": "CHIP"
+                },
+                {
+                  "label": "OYSTER"
+                }
+              ]
             },
             {
               "label": "Lines",
               "value": 6,
-              "max": 23
+              "max": 23,
+              "detail": [
+                {
+                  "label": "CHIP",
+                  "note": "3 lines"
+                },
+                {
+                  "label": "OYSTER",
+                  "note": "3 lines"
+                }
+              ]
             }
           ],
           "backlinks": []
@@ -2782,6 +5902,7 @@
           "slug": "scene-26",
           "n": 26,
           "act": "alliance",
+          "place": "emergent-kingdom",
           "title": "New Biome",
           "location": "INT. DEEP OCEAN – NEW BIOME – DAY/NIGHT CYCLE BLURRED",
           "synopsis": "A layer of the ocean that behaves like nowhere above it. Time stops meaning much.",
@@ -2791,17 +5912,41 @@
               "label": "Depth",
               "value": 54,
               "max": 100,
-              "suffix": "%"
+              "suffix": "%",
+              "detail": [
+                {
+                  "label": "Scene 26 of 48",
+                  "note": "How far into the chapter this sits."
+                }
+              ]
             },
             {
               "label": "Speakers",
               "value": 2,
-              "max": 7
+              "max": 4,
+              "detail": [
+                {
+                  "label": "OYSTER"
+                },
+                {
+                  "label": "CHIP"
+                }
+              ]
             },
             {
               "label": "Lines",
               "value": 15,
-              "max": 23
+              "max": 23,
+              "detail": [
+                {
+                  "label": "OYSTER",
+                  "note": "8 lines"
+                },
+                {
+                  "label": "CHIP",
+                  "note": "7 lines"
+                }
+              ]
             }
           ],
           "backlinks": []
@@ -2810,6 +5955,7 @@
           "slug": "scene-27",
           "n": 27,
           "act": "alliance",
+          "place": "emergent-kingdom",
           "title": "The Lighted Area",
           "location": "INT. DEEP UNDERWATER — LIGHTED AREA BELOW MAW TERRITORY",
           "synopsis": "Oyster stabs dinner. Dinner becomes an Emergent the size of an iceberg.",
@@ -2819,17 +5965,41 @@
               "label": "Depth",
               "value": 56,
               "max": 100,
-              "suffix": "%"
+              "suffix": "%",
+              "detail": [
+                {
+                  "label": "Scene 27 of 48",
+                  "note": "How far into the chapter this sits."
+                }
+              ]
             },
             {
               "label": "Speakers",
               "value": 2,
-              "max": 7
+              "max": 4,
+              "detail": [
+                {
+                  "label": "OYSTER"
+                },
+                {
+                  "label": "CHIP"
+                }
+              ]
             },
             {
               "label": "Lines",
               "value": 12,
-              "max": 23
+              "max": 23,
+              "detail": [
+                {
+                  "label": "OYSTER",
+                  "note": "6 lines"
+                },
+                {
+                  "label": "CHIP",
+                  "note": "6 lines"
+                }
+              ]
             }
           ],
           "backlinks": [
@@ -2849,6 +6019,7 @@
           "slug": "scene-28",
           "n": 28,
           "act": "alliance",
+          "place": "emergent-kingdom",
           "title": "Alliance Beneath the Waves",
           "location": "Scene: “Alliance Beneath the Waves” Setting: Oyster and Chip swim cautiously through an expansive, softly glowing underwater passage. Bioluminescent coral lines the walls, and the water feels strangely calm.",
           "synopsis": "Two kings, once enemies, now allied — and a warning about what lives below even them.",
@@ -2858,17 +6029,55 @@
               "label": "Depth",
               "value": 58,
               "max": 100,
-              "suffix": "%"
+              "suffix": "%",
+              "detail": [
+                {
+                  "label": "Scene 28 of 48",
+                  "note": "How far into the chapter this sits."
+                }
+              ]
             },
             {
               "label": "Speakers",
               "value": 4,
-              "max": 7
+              "max": 4,
+              "detail": [
+                {
+                  "label": "CHIP"
+                },
+                {
+                  "label": "OYSTER"
+                },
+                {
+                  "label": "FROSTSTALKER KING"
+                },
+                {
+                  "label": "EMERGENT KING"
+                }
+              ]
             },
             {
               "label": "Lines",
               "value": 21,
-              "max": 23
+              "max": 23,
+              "detail": [
+                {
+                  "label": "CHIP",
+                  "note": "7 lines"
+                },
+                {
+                  "label": "OYSTER",
+                  "note": "6 lines"
+                },
+                {
+                  "label": "FROSTSTALKER KING",
+                  "note": "4 lines"
+                },
+                {
+                  "label": "EMERGENT KING",
+                  "note": "4 lines"
+                }
+              ]
             }
           ],
           "backlinks": [
@@ -2888,6 +6097,7 @@
           "slug": "scene-29",
           "n": 29,
           "act": "alliance",
+          "place": "purple-paradise",
           "title": "Purple Paradise and the Deadwake",
           "location": "Scene: Beneath the Bloom – Purple Paradise and the Deadwake",
           "synopsis": "The most beautiful place they have seen kills the fastest. Poison in the water calls a dozen more.",
@@ -2897,17 +6107,39 @@
               "label": "Depth",
               "value": 60,
               "max": 100,
-              "suffix": "%"
+              "suffix": "%",
+              "detail": [
+                {
+                  "label": "Scene 29 of 48",
+                  "note": "How far into the chapter this sits."
+                }
+              ]
             },
             {
-              "label": "Speakers",
-              "value": 2,
-              "max": 7
+              "label": "Deaths",
+              "value": 1,
+              "max": 4,
+              "detail": [
+                {
+                  "label": "Deadwake",
+                  "note": "killed by Oyster · blaster rammed into the back of its throat"
+                }
+              ]
             },
             {
               "label": "Lines",
               "value": 16,
-              "max": 23
+              "max": 23,
+              "detail": [
+                {
+                  "label": "OYSTER",
+                  "note": "8 lines"
+                },
+                {
+                  "label": "CHIP",
+                  "note": "8 lines"
+                }
+              ]
             }
           ],
           "backlinks": [
@@ -2932,6 +6164,7 @@
           "slug": "scene-30",
           "n": 30,
           "act": "alliance",
+          "place": "purple-paradise",
           "title": "The Deadwake Encounter",
           "location": "SCENE: THE DEADWAKE ENCOUNTER – PURPLE PARADISE EDGE",
           "synopsis": "Surrounded and bleeding, they are collected by the Deadwake Queen herself.",
@@ -2941,17 +6174,48 @@
               "label": "Depth",
               "value": 63,
               "max": 100,
-              "suffix": "%"
+              "suffix": "%",
+              "detail": [
+                {
+                  "label": "Scene 30 of 48",
+                  "note": "How far into the chapter this sits."
+                }
+              ]
             },
             {
               "label": "Speakers",
               "value": 3,
-              "max": 7
+              "max": 4,
+              "detail": [
+                {
+                  "label": "OYSTER"
+                },
+                {
+                  "label": "CHIP"
+                },
+                {
+                  "label": "DEADWAKE QUEEN"
+                }
+              ]
             },
             {
               "label": "Lines",
               "value": 5,
-              "max": 23
+              "max": 23,
+              "detail": [
+                {
+                  "label": "OYSTER",
+                  "note": "2 lines"
+                },
+                {
+                  "label": "CHIP",
+                  "note": "2 lines"
+                },
+                {
+                  "label": "DEADWAKE QUEEN",
+                  "note": "1 line"
+                }
+              ]
             }
           ],
           "backlinks": []
@@ -2960,6 +6224,7 @@
           "slug": "scene-31",
           "n": 31,
           "act": "alliance",
+          "place": "deadwake-kingdom",
           "title": "Throne Chamber",
           "location": "SCENE: THRONE CHAMBER – DEADWAKE KINGDOM",
           "synopsis": "The Queen's terms: lead five royal guards into the Emergent kingdom, or do not leave.",
@@ -2969,17 +6234,48 @@
               "label": "Depth",
               "value": 65,
               "max": 100,
-              "suffix": "%"
+              "suffix": "%",
+              "detail": [
+                {
+                  "label": "Scene 31 of 48",
+                  "note": "How far into the chapter this sits."
+                }
+              ]
             },
             {
               "label": "Speakers",
               "value": 3,
-              "max": 7
+              "max": 4,
+              "detail": [
+                {
+                  "label": "DEADWAKE QUEEN"
+                },
+                {
+                  "label": "OYSTER"
+                },
+                {
+                  "label": "CHIP"
+                }
+              ]
             },
             {
               "label": "Lines",
               "value": 9,
-              "max": 23
+              "max": 23,
+              "detail": [
+                {
+                  "label": "DEADWAKE QUEEN",
+                  "note": "4 lines"
+                },
+                {
+                  "label": "OYSTER",
+                  "note": "3 lines"
+                },
+                {
+                  "label": "CHIP",
+                  "note": "2 lines"
+                }
+              ]
             }
           ],
           "backlinks": [
@@ -2999,6 +6295,7 @@
           "slug": "scene-32",
           "n": 32,
           "act": "alliance",
+          "place": "emergent-kingdom",
           "title": "Emergent Kingdom",
           "location": "INT. EMERGENT KINGDOM – DAY (GLOWING UNDERWATER LIGHT)",
           "synopsis": "Oyster breaks the deal out loud. The Queen answers with war.",
@@ -3008,17 +6305,51 @@
               "label": "Depth",
               "value": 67,
               "max": 100,
-              "suffix": "%"
+              "suffix": "%",
+              "detail": [
+                {
+                  "label": "Scene 32 of 48",
+                  "note": "How far into the chapter this sits."
+                }
+              ]
             },
             {
-              "label": "Speakers",
-              "value": 5,
-              "max": 7
+              "label": "Deaths",
+              "value": 3,
+              "max": 4,
+              "detail": [
+                {
+                  "label": "Deadwake invaders ×3",
+                  "note": "killed by The Froststalker King · ice-covered claws"
+                }
+              ]
             },
             {
               "label": "Lines",
               "value": 16,
-              "max": 23
+              "max": 23,
+              "detail": [
+                {
+                  "label": "OYSTER",
+                  "note": "5 lines"
+                },
+                {
+                  "label": "CHIP",
+                  "note": "4 lines"
+                },
+                {
+                  "label": "FROSTSTALKER KING",
+                  "note": "3 lines"
+                },
+                {
+                  "label": "EMERGENT KING",
+                  "note": "2 lines"
+                },
+                {
+                  "label": "DEADWAKE QUEEN",
+                  "note": "2 lines"
+                }
+              ]
             }
           ],
           "backlinks": [
@@ -3043,6 +6374,7 @@
           "slug": "scene-33",
           "n": 33,
           "act": "alliance",
+          "place": "emergent-kingdom",
           "title": "Battlefield",
           "location": "EXT. OCEAN DEPTHS – BATTLEFIELD – CONTINUOUS",
           "synopsis": "Frost, Emergent and Deadwake collide in open water.",
@@ -3052,17 +6384,48 @@
               "label": "Depth",
               "value": 69,
               "max": 100,
-              "suffix": "%"
+              "suffix": "%",
+              "detail": [
+                {
+                  "label": "Scene 33 of 48",
+                  "note": "How far into the chapter this sits."
+                }
+              ]
             },
             {
               "label": "Speakers",
               "value": 3,
-              "max": 7
+              "max": 4,
+              "detail": [
+                {
+                  "label": "MAW KING"
+                },
+                {
+                  "label": "OYSTER"
+                },
+                {
+                  "label": "CHIP"
+                }
+              ]
             },
             {
               "label": "Lines",
               "value": 4,
-              "max": 23
+              "max": 23,
+              "detail": [
+                {
+                  "label": "MAW KING",
+                  "note": "2 lines"
+                },
+                {
+                  "label": "OYSTER",
+                  "note": "1 line"
+                },
+                {
+                  "label": "CHIP",
+                  "note": "1 line"
+                }
+              ]
             }
           ],
           "backlinks": [
@@ -3077,6 +6440,7 @@
           "slug": "scene-34",
           "n": 34,
           "act": "alliance",
+          "place": "emergent-kingdom",
           "title": "Battlefield Montage",
           "location": "EXT. OCEAN BATTLEFIELD – MONTAGE – VARIOUS",
           "synopsis": "The war seen in fragments — no side winning, everything losing.",
@@ -3086,17 +6450,25 @@
               "label": "Depth",
               "value": 71,
               "max": 100,
-              "suffix": "%"
+              "suffix": "%",
+              "detail": [
+                {
+                  "label": "Scene 34 of 48",
+                  "note": "How far into the chapter this sits."
+                }
+              ]
             },
             {
               "label": "Speakers",
               "value": 0,
-              "max": 7
+              "max": 4,
+              "detail": []
             },
             {
               "label": "Lines",
               "value": 0,
-              "max": 23
+              "max": 23,
+              "detail": []
             }
           ],
           "backlinks": []
@@ -3105,6 +6477,7 @@
           "slug": "scene-35",
           "n": 35,
           "act": "alliance",
+          "place": "emergent-kingdom",
           "title": "Battlefield Center",
           "location": "EXT. BATTLEFIELD CENTER – MOMENTS LATER",
           "synopsis": "In the middle of the killing, the water goes still. Something is watching from underneath.",
@@ -3114,17 +6487,41 @@
               "label": "Depth",
               "value": 73,
               "max": 100,
-              "suffix": "%"
+              "suffix": "%",
+              "detail": [
+                {
+                  "label": "Scene 35 of 48",
+                  "note": "How far into the chapter this sits."
+                }
+              ]
             },
             {
               "label": "Speakers",
               "value": 2,
-              "max": 7
+              "max": 4,
+              "detail": [
+                {
+                  "label": "OYSTER"
+                },
+                {
+                  "label": "CHIP"
+                }
+              ]
             },
             {
               "label": "Lines",
               "value": 4,
-              "max": 23
+              "max": 23,
+              "detail": [
+                {
+                  "label": "OYSTER",
+                  "note": "2 lines"
+                },
+                {
+                  "label": "CHIP",
+                  "note": "2 lines"
+                }
+              ]
             }
           ],
           "backlinks": [
@@ -3139,6 +6536,7 @@
           "slug": "scene-36",
           "n": 36,
           "act": "game",
+          "place": "purple-abyss",
           "title": "The Purple Land",
           "location": "INT. THE PURPLE LAND – DEEP, GLOWING CHAMBER",
           "synopsis": "“I do not command this world. I am this world.” The Bloom introduces itself and raises the fallen.",
@@ -3148,17 +6546,55 @@
               "label": "Depth",
               "value": 75,
               "max": 100,
-              "suffix": "%"
+              "suffix": "%",
+              "detail": [
+                {
+                  "label": "Scene 36 of 48",
+                  "note": "How far into the chapter this sits."
+                }
+              ]
             },
             {
               "label": "Speakers",
               "value": 4,
-              "max": 7
+              "max": 4,
+              "detail": [
+                {
+                  "label": "THE BLOOM"
+                },
+                {
+                  "label": "OYSTER"
+                },
+                {
+                  "label": "CHIP"
+                },
+                {
+                  "label": "FROSTSTALKER KING"
+                }
+              ]
             },
             {
               "label": "Lines",
               "value": 12,
-              "max": 23
+              "max": 23,
+              "detail": [
+                {
+                  "label": "THE BLOOM",
+                  "note": "7 lines"
+                },
+                {
+                  "label": "OYSTER",
+                  "note": "3 lines"
+                },
+                {
+                  "label": "CHIP",
+                  "note": "1 line"
+                },
+                {
+                  "label": "FROSTSTALKER KING",
+                  "note": "1 line"
+                }
+              ]
             }
           ],
           "backlinks": [
@@ -3178,6 +6614,7 @@
           "slug": "scene-37",
           "n": 37,
           "act": "game",
+          "place": "purple-abyss",
           "title": "Glowing Depths",
           "location": "INT. THE PURPLE LAND – GLOWING DEPTHS",
           "synopsis": "The Bloom explains the food chain as scripture: the Emergent rises, the Maw consumes, the Frost stalks, the Deadwake waits.",
@@ -3187,17 +6624,55 @@
               "label": "Depth",
               "value": 77,
               "max": 100,
-              "suffix": "%"
+              "suffix": "%",
+              "detail": [
+                {
+                  "label": "Scene 37 of 48",
+                  "note": "How far into the chapter this sits."
+                }
+              ]
             },
             {
               "label": "Speakers",
               "value": 4,
-              "max": 7
+              "max": 4,
+              "detail": [
+                {
+                  "label": "THE BLOOM"
+                },
+                {
+                  "label": "OYSTER"
+                },
+                {
+                  "label": "FROSTSTALKER KING"
+                },
+                {
+                  "label": "CHIP"
+                }
+              ]
             },
             {
               "label": "Lines",
               "value": 11,
-              "max": 23
+              "max": 23,
+              "detail": [
+                {
+                  "label": "THE BLOOM",
+                  "note": "7 lines"
+                },
+                {
+                  "label": "OYSTER",
+                  "note": "2 lines"
+                },
+                {
+                  "label": "FROSTSTALKER KING",
+                  "note": "1 line"
+                },
+                {
+                  "label": "CHIP",
+                  "note": "1 line"
+                }
+              ]
             }
           ],
           "backlinks": [
@@ -3217,6 +6692,7 @@
           "slug": "scene-38",
           "n": 38,
           "act": "game",
+          "place": "purple-abyss",
           "title": "The Purple Realm",
           "location": "EXT. THE PURPLE REALM – DEEP OCEAN – NIGHT-LIKE STILLNESS",
           "synopsis": "The rules of the game: beat a creature and it joins you. The kings come last.",
@@ -3226,17 +6702,48 @@
               "label": "Depth",
               "value": 79,
               "max": 100,
-              "suffix": "%"
+              "suffix": "%",
+              "detail": [
+                {
+                  "label": "Scene 38 of 48",
+                  "note": "How far into the chapter this sits."
+                }
+              ]
             },
             {
               "label": "Speakers",
               "value": 3,
-              "max": 7
+              "max": 4,
+              "detail": [
+                {
+                  "label": "THE BLOOM"
+                },
+                {
+                  "label": "OYSTER"
+                },
+                {
+                  "label": "CHIP"
+                }
+              ]
             },
             {
               "label": "Lines",
               "value": 6,
-              "max": 23
+              "max": 23,
+              "detail": [
+                {
+                  "label": "THE BLOOM",
+                  "note": "3 lines"
+                },
+                {
+                  "label": "OYSTER",
+                  "note": "2 lines"
+                },
+                {
+                  "label": "CHIP",
+                  "note": "1 line"
+                }
+              ]
             }
           ],
           "backlinks": [
@@ -3251,6 +6758,7 @@
           "slug": "scene-39",
           "n": 39,
           "act": "game",
+          "place": "purple-abyss",
           "title": "The Game Progresses",
           "location": "MONTAGE – THE BLOOM’S GAME PROGRESSES",
           "synopsis": "Wave after wave. Their side grows. Some of it dies.",
@@ -3260,17 +6768,30 @@
               "label": "Depth",
               "value": 81,
               "max": 100,
-              "suffix": "%"
+              "suffix": "%",
+              "detail": [
+                {
+                  "label": "Scene 39 of 48",
+                  "note": "How far into the chapter this sits."
+                }
+              ]
             },
             {
-              "label": "Speakers",
-              "value": 0,
-              "max": 7
+              "label": "Deaths",
+              "value": 1,
+              "max": 4,
+              "detail": [
+                {
+                  "label": "Deadwake",
+                  "note": "killed by Oyster · slain and absorbed in the Bloom's game"
+                }
+              ]
             },
             {
               "label": "Lines",
               "value": 0,
-              "max": 23
+              "max": 23,
+              "detail": []
             }
           ],
           "backlinks": [
@@ -3285,6 +6806,7 @@
           "slug": "scene-40",
           "n": 40,
           "act": "game",
+          "place": "purple-abyss",
           "title": "Froststalker King Arrival",
           "location": "EXT. BATTLE PLATFORM – FROSTSTALKER KING ARRIVAL",
           "synopsis": "The first crown steps into the arena.",
@@ -3294,17 +6816,41 @@
               "label": "Depth",
               "value": 83,
               "max": 100,
-              "suffix": "%"
+              "suffix": "%",
+              "detail": [
+                {
+                  "label": "Scene 40 of 48",
+                  "note": "How far into the chapter this sits."
+                }
+              ]
             },
             {
               "label": "Speakers",
               "value": 2,
-              "max": 7
+              "max": 4,
+              "detail": [
+                {
+                  "label": "CHIP"
+                },
+                {
+                  "label": "OYSTER"
+                }
+              ]
             },
             {
               "label": "Lines",
               "value": 2,
-              "max": 23
+              "max": 23,
+              "detail": [
+                {
+                  "label": "CHIP",
+                  "note": "1 line"
+                },
+                {
+                  "label": "OYSTER",
+                  "note": "1 line"
+                }
+              ]
             }
           ],
           "backlinks": [
@@ -3319,6 +6865,7 @@
           "slug": "scene-41",
           "n": 41,
           "act": "game",
+          "place": "purple-abyss",
           "title": "Maw King Stage",
           "location": "EXT. MAW KING STAGE",
           "synopsis": "The hand-taker, face to face, with nothing between them.",
@@ -3328,17 +6875,25 @@
               "label": "Depth",
               "value": 85,
               "max": 100,
-              "suffix": "%"
+              "suffix": "%",
+              "detail": [
+                {
+                  "label": "Scene 41 of 48",
+                  "note": "How far into the chapter this sits."
+                }
+              ]
             },
             {
               "label": "Speakers",
               "value": 0,
-              "max": 7
+              "max": 4,
+              "detail": []
             },
             {
               "label": "Lines",
               "value": 0,
-              "max": 23
+              "max": 23,
+              "detail": []
             }
           ],
           "backlinks": []
@@ -3347,6 +6902,7 @@
           "slug": "scene-42",
           "n": 42,
           "act": "game",
+          "place": "purple-abyss",
           "title": "Emergent King Stage",
           "location": "EXT. EMERGENT KING STAGE",
           "synopsis": "The oldest thing in the ocean, made to fight the only people who were kind to it.",
@@ -3356,17 +6912,34 @@
               "label": "Depth",
               "value": 88,
               "max": 100,
-              "suffix": "%"
+              "suffix": "%",
+              "detail": [
+                {
+                  "label": "Scene 42 of 48",
+                  "note": "How far into the chapter this sits."
+                }
+              ]
             },
             {
               "label": "Speakers",
               "value": 1,
-              "max": 7
+              "max": 4,
+              "detail": [
+                {
+                  "label": "DEADWAKE WARRIOR"
+                }
+              ]
             },
             {
               "label": "Lines",
               "value": 1,
-              "max": 23
+              "max": 23,
+              "detail": [
+                {
+                  "label": "DEADWAKE WARRIOR",
+                  "note": "1 line"
+                }
+              ]
             }
           ],
           "backlinks": []
@@ -3375,6 +6948,7 @@
           "slug": "scene-43",
           "n": 43,
           "act": "game",
+          "place": "purple-abyss",
           "title": "Deadwake Queen Entrance",
           "location": "EXT. FINAL ARENA – DEADWAKE QUEEN ENTRANCE",
           "synopsis": "The Queen arrives last of the four, and she remembers being defied.",
@@ -3384,17 +6958,30 @@
               "label": "Depth",
               "value": 90,
               "max": 100,
-              "suffix": "%"
+              "suffix": "%",
+              "detail": [
+                {
+                  "label": "Scene 43 of 48",
+                  "note": "How far into the chapter this sits."
+                }
+              ]
             },
             {
-              "label": "Speakers",
-              "value": 0,
-              "max": 7
+              "label": "Deaths",
+              "value": 1,
+              "max": 4,
+              "detail": [
+                {
+                  "label": "Oyster's allies",
+                  "note": "killed by The Deadwake Queen · almost every ally they had earned"
+                }
+              ]
             },
             {
               "label": "Lines",
               "value": 0,
-              "max": 23
+              "max": 23,
+              "detail": []
             }
           ],
           "backlinks": []
@@ -3403,6 +6990,7 @@
           "slug": "scene-44",
           "n": 44,
           "act": "game",
+          "place": "purple-abyss",
           "title": "Center of the Abyss",
           "location": "EXT. CENTER OF THE ABYSS – FINAL STAGE",
           "synopsis": "Four crowns at Oyster's back. One fish across the water. “The tide has always been mine.”",
@@ -3412,17 +7000,34 @@
               "label": "Depth",
               "value": 92,
               "max": 100,
-              "suffix": "%"
+              "suffix": "%",
+              "detail": [
+                {
+                  "label": "Scene 44 of 48",
+                  "note": "How far into the chapter this sits."
+                }
+              ]
             },
             {
               "label": "Speakers",
               "value": 1,
-              "max": 7
+              "max": 4,
+              "detail": [
+                {
+                  "label": "THE BLOOM"
+                }
+              ]
             },
             {
               "label": "Lines",
               "value": 2,
-              "max": 23
+              "max": 23,
+              "detail": [
+                {
+                  "label": "THE BLOOM",
+                  "note": "2 lines"
+                }
+              ]
             }
           ],
           "backlinks": []
@@ -3431,6 +7036,7 @@
           "slug": "scene-45",
           "n": 45,
           "act": "game",
+          "place": "purple-abyss",
           "title": "Bloom's Domain",
           "location": "INT. PURPLE ABYSS – BLOOM’S DOMAIN",
           "synopsis": "Clones, blades, betrayal and a self-destruct. The Bloom dies and takes three crowns with it.",
@@ -3440,17 +7046,71 @@
               "label": "Depth",
               "value": 94,
               "max": 100,
-              "suffix": "%"
+              "suffix": "%",
+              "detail": [
+                {
+                  "label": "Scene 45 of 48",
+                  "note": "How far into the chapter this sits."
+                }
+              ]
             },
             {
-              "label": "Speakers",
-              "value": 7,
-              "max": 7
+              "label": "Deaths",
+              "value": 4,
+              "max": 4,
+              "detail": [
+                {
+                  "label": "The Deadwake Queen",
+                  "note": "killed by The Maw King · sliced in half, under the Bloom's control"
+                },
+                {
+                  "label": "The Maw King",
+                  "note": "killed by The Bloom · forced into its own mouth"
+                },
+                {
+                  "label": "The Bloom",
+                  "note": "killed by The Emergent King · bit down; it self-destructed rather than be eaten"
+                },
+                {
+                  "label": "The Emergent King",
+                  "note": "killed by The Bloom · the self-destruct took him with it"
+                }
+              ]
             },
             {
               "label": "Lines",
               "value": 23,
-              "max": 23
+              "max": 23,
+              "detail": [
+                {
+                  "label": "CHIP",
+                  "note": "6 lines"
+                },
+                {
+                  "label": "BLOOM",
+                  "note": "5 lines"
+                },
+                {
+                  "label": "OYSTER",
+                  "note": "5 lines"
+                },
+                {
+                  "label": "FROSTSTALKER KING",
+                  "note": "3 lines"
+                },
+                {
+                  "label": "DEADWAKE QUEEN",
+                  "note": "2 lines"
+                },
+                {
+                  "label": "MAW KING",
+                  "note": "1 line"
+                },
+                {
+                  "label": "EMERGENT KING",
+                  "note": "1 line"
+                }
+              ]
             }
           ],
           "backlinks": [
@@ -3475,6 +7135,7 @@
           "slug": "scene-46",
           "n": 46,
           "act": "castle",
+          "place": "the-castle",
           "title": "The Gate to the Castle",
           "location": "INT. THE GATE TO THE CASTLE – UNDERWATER – SILENCE",
           "synopsis": "The gates open on their own. Two survivors say the quiet part to each other.",
@@ -3484,17 +7145,41 @@
               "label": "Depth",
               "value": 96,
               "max": 100,
-              "suffix": "%"
+              "suffix": "%",
+              "detail": [
+                {
+                  "label": "Scene 46 of 48",
+                  "note": "How far into the chapter this sits."
+                }
+              ]
             },
             {
               "label": "Speakers",
               "value": 2,
-              "max": 7
+              "max": 4,
+              "detail": [
+                {
+                  "label": "OYSTER"
+                },
+                {
+                  "label": "CHIP"
+                }
+              ]
             },
             {
               "label": "Lines",
               "value": 4,
-              "max": 23
+              "max": 23,
+              "detail": [
+                {
+                  "label": "OYSTER",
+                  "note": "2 lines"
+                },
+                {
+                  "label": "CHIP",
+                  "note": "2 lines"
+                }
+              ]
             }
           ],
           "backlinks": [
@@ -3514,6 +7199,7 @@
           "slug": "scene-47",
           "n": 47,
           "act": "castle",
+          "place": "the-castle",
           "title": "Castle Hall",
           "location": "INT. CASTLE HALL – MOMENTS LATER",
           "synopsis": "Statues of everything they fought. At the end of the row, something small and serene.",
@@ -3523,17 +7209,41 @@
               "label": "Depth",
               "value": 98,
               "max": 100,
-              "suffix": "%"
+              "suffix": "%",
+              "detail": [
+                {
+                  "label": "Scene 47 of 48",
+                  "note": "How far into the chapter this sits."
+                }
+              ]
             },
             {
               "label": "Speakers",
               "value": 2,
-              "max": 7
+              "max": 4,
+              "detail": [
+                {
+                  "label": "OYSTER"
+                },
+                {
+                  "label": "CHIP"
+                }
+              ]
             },
             {
               "label": "Lines",
               "value": 2,
-              "max": 23
+              "max": 23,
+              "detail": [
+                {
+                  "label": "OYSTER",
+                  "note": "1 line"
+                },
+                {
+                  "label": "CHIP",
+                  "note": "1 line"
+                }
+              ]
             }
           ],
           "backlinks": [
@@ -3548,6 +7258,7 @@
           "slug": "scene-48",
           "n": 48,
           "act": "castle",
+          "place": "the-castle",
           "title": "Castle Throne Room",
           "location": "INT. CASTLE THRONE ROOM – CONTINUOUS",
           "synopsis": "Squid welcomes them, thanks them, and takes their faces, their ship and their names.",
@@ -3557,17 +7268,48 @@
               "label": "Depth",
               "value": 100,
               "max": 100,
-              "suffix": "%"
+              "suffix": "%",
+              "detail": [
+                {
+                  "label": "Scene 48 of 48",
+                  "note": "How far into the chapter this sits."
+                }
+              ]
             },
             {
               "label": "Speakers",
               "value": 3,
-              "max": 7
+              "max": 4,
+              "detail": [
+                {
+                  "label": "SQUID"
+                },
+                {
+                  "label": "OYSTER"
+                },
+                {
+                  "label": "CHIP"
+                }
+              ]
             },
             {
               "label": "Lines",
               "value": 16,
-              "max": 23
+              "max": 23,
+              "detail": [
+                {
+                  "label": "SQUID",
+                  "note": "9 lines"
+                },
+                {
+                  "label": "OYSTER",
+                  "note": "4 lines"
+                },
+                {
+                  "label": "CHIP",
+                  "note": "3 lines"
+                }
+              ]
             }
           ],
           "backlinks": [

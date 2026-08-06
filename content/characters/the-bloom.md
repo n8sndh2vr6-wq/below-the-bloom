@@ -5,7 +5,6 @@ order: 7
 image: the-bloom
 tags: Entity, Antagonist
 aliases: THE BLOOM, BLOOM
-kills: 5
 ---
 
 A small, sleek, glowing fish whose scales ripple like thoughts. It speaks

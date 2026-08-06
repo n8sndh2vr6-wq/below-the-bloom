@@ -2,6 +2,7 @@
 title: Purple Paradise and the Deadwake
 scene: "Scene: Beneath the Bloom – Purple Paradise and the Deadwake"
 act: alliance
+place: purple-paradise
 number: 29
 summary: The most beautiful place they have seen kills the fastest. Poison in the water calls a dozen more.
 ---
@@ -55,6 +56,8 @@ CHIP: Hey sushi-face! You forgot the AI!
 Together they engage the beast—OYSTER ducking and weaving, slashing, CHIP distracting and slamming. Finally, OYSTER maneuvers behind the creature, rams the blaster into the back of its throat, and FIRES.
 
 The DEADWAKE convulses, lets out a horrific SCREECH, and goes still. But then—
+
+KILL: Oyster > Deadwake | blaster rammed into the back of its throat
 
 PURPLE POISON begins to leak from its body into the water.
 

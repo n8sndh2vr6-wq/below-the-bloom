@@ -2,6 +2,7 @@
 title: Battlefield Montage
 scene: EXT. OCEAN BATTLEFIELD – MONTAGE – VARIOUS
 act: alliance
+place: emergent-kingdom
 number: 34
 summary: The war seen in fragments — no side winning, everything losing.
 ---

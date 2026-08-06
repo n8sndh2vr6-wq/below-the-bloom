@@ -2,6 +2,7 @@
 title: Icey Trenches
 scene: INT. ICEY TRENCHES – NIGHT
 act: frost
+place: icy-trenches
 number: 7
 summary: Deeper into frozen canyons, where the kingdom's structures start to look deliberate.
 ---

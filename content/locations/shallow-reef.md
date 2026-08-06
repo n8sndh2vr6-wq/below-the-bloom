@@ -3,7 +3,6 @@ title: The Shallow Reef
 role: The only safe water in the chapter
 order: 4
 depth: 2
-scenes: 3
 ---
 
 A vast coral-reef region in early morning light, with bioluminescent plants

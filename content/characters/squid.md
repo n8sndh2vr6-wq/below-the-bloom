@@ -5,7 +5,6 @@ order: 8
 image: squid
 tags: Entity, Chapter One
 aliases: SQUID
-kills: 0
 ---
 
 The body of a man, the head of a squid, tendrils moving calmly in the water. He

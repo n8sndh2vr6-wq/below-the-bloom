@@ -3,7 +3,6 @@ title: The Wreck
 role: Flickering lights, a cracked viewport, a glow a long way off
 order: 3
 depth: 1
-scenes: 2
 ---
 
 Flickering lights. Alarms humming faintly. Water dripping from above. Low

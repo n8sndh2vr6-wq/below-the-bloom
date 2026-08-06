@@ -2,6 +2,7 @@
 title: Castle Throne Room
 scene: INT. CASTLE THRONE ROOM – CONTINUOUS
 act: castle
+place: the-castle
 number: 48
 summary: Squid welcomes them, thanks them, and takes their faces, their ship and their names.
 ---

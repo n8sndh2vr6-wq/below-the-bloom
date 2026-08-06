@@ -5,7 +5,7 @@ order: 1
 image: froststalkers
 tags: Icy trenches, Sapient
 aliases: FROSTSTALKER
-depth: 4
+home: icy-trenches
 ---
 
 Fast, armoured predators that hold the [icy trenches](#/locations/icy-trenches)

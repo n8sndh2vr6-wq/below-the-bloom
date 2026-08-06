@@ -2,6 +2,7 @@
 title: Shallow Waters
 scene: "Scene: Shallow Waters – Early Morning Light Filtering Through"
 act: descent
+place: shallow-reef
 number: 3
 summary: A bioluminescent reef ends at a trench edge that swallows every reading they have.
 ---

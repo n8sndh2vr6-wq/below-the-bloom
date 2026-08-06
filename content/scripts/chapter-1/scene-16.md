@@ -2,6 +2,7 @@
 title: Descending into the Depths
 scene: EXT. PLANET (REDACTED) – DESCENDING INTO THE DEPTHS
 act: maw
+place: planet-redacted
 number: 16
 summary: The long fall. Pressure builds, light dies, and the purple glow stops answering.
 ---

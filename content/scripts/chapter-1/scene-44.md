@@ -2,6 +2,7 @@
 title: Center of the Abyss
 scene: EXT. CENTER OF THE ABYSS – FINAL STAGE
 act: game
+place: purple-abyss
 number: 44
 summary: Four crowns at Oyster's back. One fish across the water. “The tide has always been mine.”
 ---

@@ -3,7 +3,6 @@ title: Maw Territory
 role: Cavernous depths and a throne of black coral
 order: 7
 depth: 6
-scenes: 16, 17, 18, 19, 20, 21, 22, 23, 24, 25
 ---
 
 The descent past the [icy trenches](#/locations/icy-trenches) goes murky grey,

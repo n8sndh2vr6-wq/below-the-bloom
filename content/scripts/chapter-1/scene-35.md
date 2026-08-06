@@ -2,6 +2,7 @@
 title: Battlefield Center
 scene: EXT. BATTLEFIELD CENTER – MOMENTS LATER
 act: alliance
+place: emergent-kingdom
 number: 35
 summary: In the middle of the killing, the water goes still. Something is watching from underneath.
 ---

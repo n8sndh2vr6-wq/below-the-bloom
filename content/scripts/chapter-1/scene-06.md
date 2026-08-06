@@ -2,6 +2,7 @@
 title: Edge of the Icey Trenches
 scene: EXT. FROSTSTALKER KINGDOM — EDGE OF THE ICEY TRENCHES
 act: frost
+place: icy-trenches
 number: 6
 summary: Two sentries attack. Oyster improvises a blade from a severed fin and survives on instinct.
 ---
@@ -26,6 +27,8 @@ Oyster launches forward, slashing at the first Froststalker’s face with his kn
 
 The Froststalker reels back—then Oyster charges and buries the knife into its throat. It twitches, floats limp. No time to breathe.
 
+KILL: Oyster > Froststalker sentry | knife buried in the throat
+
 CHIP: Behind you!
 
 The second one lunges—Oyster grabs the dead creature’s fin, yanks it hard, and breaks it free with a grunt. The fin is jagged, edged with ice-hardened cartilage. He turns and swings it like a blade, slamming it across the second Froststalker’s face.
@@ -33,6 +36,8 @@ The second one lunges—Oyster grabs the dead creature’s fin, yanks it hard, a
 OYSTER (gritted teeth): Come on then.
 
 The creature charges again—Oyster stabs it in the neck with the broken fin and fires the blaster into its open jaw. The creature screams in a low, watery rumble, then floats down, lifeless.
+
+KILL: Oyster > Froststalker sentry | broken fin to the neck, blaster into the jaw
 
 Oyster hovers in silence, breathing heavily.
 

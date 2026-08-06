@@ -2,6 +2,7 @@
 title: Maw Throne Room
 scene: INT. MAW THRONE ROOM – CONTINUOUS
 act: maw
+place: maw-territory
 number: 20
 summary: The Maw King speaks fluent English and offers Oyster a choice between a fast death and a slow one.
 ---

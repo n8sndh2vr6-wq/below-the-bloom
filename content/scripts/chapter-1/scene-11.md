@@ -2,6 +2,7 @@
 title: Cave Prison
 scene: INT. ICEY TRENCHES – CAVE PRISON – NIGHT
 act: frost
+place: icy-trenches
 number: 11
 summary: Screams echo down the tunnel. Something is inside the nursery that should not be.
 ---
@@ -45,6 +46,8 @@ OYSTER (furious): No you don’t.
 He dives between them, pulling out his knife. The Maw clamps down, nearly catching his leg—but he thrusts the blade up under its jaw. A final oxygen blast follows, directly into the wound.
 
 The Maw lets out a final, distorted groan and goes limp, its body floating lifeless in the chamber.
+
+KILL: Oyster > Maw | high-pressure oxygen, defending the nursery
 
 Silence returns—except for the soft whimpers of the baby Froststalkers.
 

@@ -71,13 +71,16 @@ function ticks() {
 }
 
 /** One analogue gauge. The needle and the numeral are animated on reveal. */
-function dial(stat) {
+function dial(stat, index) {
   const max = Math.max(stat.max || 1, 1);
   const fraction = Math.max(0, Math.min(1, stat.value / max));
   const [sx, sy] = point(START);
 
+  const detail = stat.detail || [];
+
   return `
-    <div class="dial" data-value="${stat.value}" data-fraction="${fraction}"
+    <${detail.length ? 'button type="button" class="dial" aria-expanded="false"' : 'div class="dial"'}
+         data-value="${stat.value}" data-fraction="${fraction}" data-index="${index}"
          data-prefix="${escapeHtml(stat.prefix || '')}" data-suffix="${escapeHtml(stat.suffix || '')}">
       <svg viewBox="0 0 100 100" role="img"
            aria-label="${escapeHtml(stat.label)}: ${stat.value}${escapeHtml(stat.suffix || '')}">
@@ -89,12 +92,30 @@ function dial(stat) {
       </svg>
       <b class="dial-value">0</b>
       <span class="dial-label">${escapeHtml(stat.label)}</span>
-    </div>`;
+      ${detail.length ? '<span class="dial-more" aria-hidden="true"></span>' : ''}
+    </${detail.length ? 'button' : 'div'}>`;
 }
 
-const dials = (stats) => (stats && stats.length
-  ? `<div class="dials">${stats.map(dial).join('')}</div>`
-  : '');
+/** The list a dial opens: what the reading is actually made of. */
+function breakdown(stat) {
+  const rows = (stat.detail || []).map((row) => {
+    const inner = `<b>${escapeHtml(row.label)}</b>${row.note ? `<small>${escapeHtml(row.note)}</small>` : ''}`;
+    return `<li>${row.route ? `<a href="${row.route}">${inner}</a>` : `<span>${inner}</span>`}</li>`;
+  }).join('');
+
+  return `<div class="breakdown" hidden>
+    <p class="breakdown-head">${escapeHtml(stat.label)}</p>
+    ${rows ? `<ul>${rows}</ul>` : '<p class="note">Nothing recorded in the scripts.</p>'}
+  </div>`;
+}
+
+function dials(stats) {
+  if (!stats || !stats.length) return '';
+  return `<div class="dial-set">
+    <div class="dials">${stats.map(dial).join('')}</div>
+    ${stats.map(breakdown).join('')}
+  </div>`;
+}
 
 function runDial(node) {
   const target = Number(node.dataset.fraction);
@@ -179,7 +200,29 @@ function paint(html) {
   void view.offsetWidth;
   view.classList.add('enter');
   watchReveals();
+  wireDials();
   trackScroll();
+}
+
+/** Clicking a dial opens what the reading is made of, and closes any other. */
+function wireDials() {
+  for (const set of view.querySelectorAll('.dial-set')) {
+    const panels = [...set.querySelectorAll('.breakdown')];
+    for (const button of set.querySelectorAll('button.dial')) {
+      button.addEventListener('click', () => {
+        const panel = panels[Number(button.dataset.index)];
+        const open = button.getAttribute('aria-expanded') === 'true';
+
+        for (const other of set.querySelectorAll('button.dial')) other.setAttribute('aria-expanded', 'false');
+        for (const other of panels) other.hidden = true;
+
+        if (!open) {
+          button.setAttribute('aria-expanded', 'true');
+          panel.hidden = false;
+        }
+      });
+    }
+  }
 }
 
 function trackScroll() {

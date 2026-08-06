@@ -2,6 +2,7 @@
 title: Deeper Ocean Trench
 scene: EXT. DEEPER OCEAN TRENCH – CONTINUOUS
 act: maw
+place: maw-territory
 number: 25
 summary: Out of Maw country and still going down, following a purple thread through the water.
 ---

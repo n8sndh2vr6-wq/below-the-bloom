@@ -5,7 +5,7 @@ order: 3
 image: emergents
 tags: Lighted depths, Ancient
 aliases: EMERGENT
-depth: 7
+home: emergent-kingdom
 ---
 
 The oldest beings on the planet, and the most dangerous thing in the ocean to

@@ -2,6 +2,7 @@
 title: Castle Hall
 scene: INT. CASTLE HALL – MOMENTS LATER
 act: castle
+place: the-castle
 number: 47
 summary: Statues of everything they fought. At the end of the row, something small and serene.
 ---

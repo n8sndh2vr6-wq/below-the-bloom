@@ -2,6 +2,7 @@
 title: Cave Cell
 scene: INT. FROSTSTALKER CAVE CELL – MOMENTS LATER
 act: frost
+place: icy-trenches
 number: 13
 summary: The cell door stays open. Oyster and Chip try to understand what just happened to them.
 ---

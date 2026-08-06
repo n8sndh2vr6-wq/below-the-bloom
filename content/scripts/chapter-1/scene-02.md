@@ -2,6 +2,7 @@
 title: Crashed Ship
 scene: INT. CRASHED SHIP – SUBMERGED INTERIOR – DIMLY LIT – MOMENTS AFTER IMPACT
 act: descent
+place: the-wreck
 number: 2
 summary: Oyster wakes to a dead crew and a glow in the water. He and Chip choose the castle over the wreck.
 ---
@@ -19,6 +20,10 @@ CHIP: You got smacked by cosmic weirdness and decided a metal floor was a good p
 OYSTER (blinking hard, looking around): The others…?
 
 CHIP (somberly): Most of the biosignatures are gone, or… way too faint. I think we’re it.
+
+KILL: The Bloom > Mariq Levi | lost in the crash
+
+KILL: The Bloom > Dr. Lena Voss | lost in the crash
 
 OYSTER (quietly): No. No no no…
 

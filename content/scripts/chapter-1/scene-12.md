@@ -2,6 +2,7 @@
 title: Deep Cavern Chamber
 scene: INT. FROSTSTALKER KINGDOM – DEEP CAVERN CHAMBER – NIGHT
 act: frost
+place: icy-trenches
 number: 12
 summary: The Froststalker King finds his cubs alive and a dead Maw behind two strangers. Prisoners become guests.
 ---
