@@ -3,7 +3,7 @@ title: The Maw King
 role: Ruler of the cavernous depths
 order: 4
 image: maw-king
-tags: Crown, Antagonist
+tags: Crown, Ally
 aliases: MAW KING
 ---
 
@@ -54,3 +54,33 @@ His spirit rises out of the water with the others, and says four words that
 recontextualise everything he did.
 
 > **MAW KING (spirit):** And defied the monster I once was.
+
+## Chapter Two: the apology, kept
+
+Alive again — Squid's doing, unexplained, the same as everyone else's second
+chance — and back on his throne when Oyster and Chip come looking. He is the
+one who tells them what happened to the other three kingdoms while they were
+locked away, plainly, without softening any of it.
+
+> **MAW KING:** Only us now. Maws stayed. Watched the world rot.
+
+The apology from the Bloom's arena becomes an actual promise: two days with a
+Froststalker search team, then he'll shadow them from a distance.
+
+> **MAW KING:** Two days. That's all I need. I'm part of a search team — looking
+> for the Froststalker remnants. Once I report back, I'll vanish with the tides.
+
+He keeps it, and then some. He's the one who breaks the
+[Piercer Queen](#/characters/piercer-queen)'s hold on the fight — a blindside
+kick to the face and a claw through her eye — and takes a puncture wound to the
+chest doing it. Patched up, he goes straight back into the next fight and gets
+knocked off a ledge by the [Acidic King](#/characters/acidic-king) protecting
+Oyster from a poison he can't see coming.
+
+> **MAW KING:** You fight like the ocean itself.
+
+He leaves before [the monument](#/locations/the-monument), the moment the
+[Froststalker King](#/characters/froststalker-king) dies, to carry the news home
+himself.
+
+> **MAW KING (firmly):** I must tell my kingdom…

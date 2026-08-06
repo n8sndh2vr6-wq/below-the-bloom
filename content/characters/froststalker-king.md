@@ -64,3 +64,35 @@ Then he turns for the dark with his army behind him, and leaves the survivors
 with the closest thing to a blessing anyone offers them.
 
 > **FROSTSTALKER KING:** Take care of the light, surface-dwellers.
+
+## Chapter Two: an empty kingdom, then a full one
+
+Oyster and Chip find his kingdom deserted and go looking. What they find instead
+is a wasteland under siege — the [Piercers](#/creatures/piercers) and
+[Acidics](#/creatures/acidics) attacking in force, his people scattered and
+outnumbered. He is not gone. He was regrouping.
+
+> **FROSTSTALKER KING:** We hold the line.
+
+He plans the siege's only working strategy — split the Piercer swarm into
+one-on-one duels his people can win, and hold the Acidics himself.
+
+> **FROSTSTALKER KING:** We live to fight smart. Not die proud.
+
+He loses his crown twice this chapter. The [Piercer Queen](#/characters/piercer-queen)
+breaks it with one wing for standing between her and [Pic](#/characters/pic);
+[Pic](#/characters/pic) glues it back together out of her own blood-soaked
+feathers minutes later.
+
+## How he dies
+
+Cornered with Oyster at the foot of [the monument](#/locations/the-monument),
+outmatched, he makes the same call he made against the Bloom — launch himself
+straight at the thing that's about to kill someone he's chosen to protect. He
+takes the [Acidic King](#/characters/acidic-king) up onto the monument's spire
+with him. Neither comes down.
+
+> **OYSTER:** NO — Your Majesty!
+
+He is the second king this story loses to a charge of his own making, and the
+first one nobody gets to see coming back.

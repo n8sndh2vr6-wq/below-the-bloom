@@ -2,6 +2,7 @@
 title: An Old Enemy's Blade
 scene: INT. GRAND CHAMBER – CONTINUOUS
 act: monument
+place: the-monument
 number: 33
 summary: Oyster is stabbed from behind, and the silhouette finally introduces himself — Mach.
 ---

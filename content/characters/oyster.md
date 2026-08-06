@@ -3,7 +3,7 @@ title: Oyster
 role: Survivor, sixteen
 order: 1
 image: oyster
-tags: Human, Chapter One
+tags: Human
 aliases: OYSTER
 ---
 
@@ -63,3 +63,35 @@ It starts a war, and it is the single most important thing he does.
 
 On a throne, in the dark, behind sealed doors — while something wearing his face
 walks out of the castle with his name, his ship and his best friend's voice.
+
+## Chapter Two: back out the doors
+
+The castle's gates open on their own — Squid's doing, never explained — and
+Oyster spends exactly two scenes breathing free air before deciding to go back
+down. Squid mentioned "ancient powers" once, in passing, before revealing what
+he really was. Oyster believes it anyway, and believes it's worth finding before
+Squid does.
+
+> **OYSTER:** That peace? It won't last if Squid ever comes back. We need to be
+> ready.
+
+He names [Pic](#/characters/pic) out of a swarm that nearly kills them both, and
+the instinct to protect him surfaces every time it's tested — beheading the
+Piercer that grabs him, throwing himself at a queen twice his size to stand
+between her and her own child.
+
+> **OYSTER:** If you want him… you'll have to go through us.
+
+The rage has a ceiling this chapter, and it shows it when
+[Mach](#/characters/mach) destroys Chip in front of him. Oyster drops every
+defensive instinct he has and carves a path through an Acidic wave alone,
+scaring Chip more than the enemy does.
+
+> **CHIP:** Oyster! You can't—
+
+He loses the [Froststalker King](#/characters/froststalker-king) at the
+monument's spire, takes a katana through the chest from behind for his trouble,
+and still reaches the orb — battered, one-upped by an assassin twice, and
+finishing exactly what he came back down to finish.
+
+> **ALL (in unison):** Squid… we'll find you.

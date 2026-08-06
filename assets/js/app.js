@@ -375,7 +375,7 @@ function storyIndex() {
     return `
       <h1 class="chapter-heading fade">${escapeHtml(book.title)}${book.subtitle ? `<small>${escapeHtml(book.subtitle)}</small>` : ''}</h1>
       <div class="ledger" style="margin-top:26px">
-        <a class="ledger-row fade" href="#/lore/timeline">
+        <a class="ledger-row fade" href="#/lore/${book.timeline || 'timeline'}">
           <span>
             <b class="ledger-name">${escapeHtml(book.title)} — Timeline</b>
             <small class="ledger-note">The whole run in order, beat by beat.</small>
@@ -514,7 +514,7 @@ async function sceneView(chapterId, slug) {
       ${pager(
         previous && { href: neighbours.previous, label: `Scene ${previous.n}`, name: previous.title },
         next ? { href: neighbours.next, label: `Scene ${next.n}`, name: next.title }
-             : { href: '#/lore/timeline', label: 'End of chapter', name: 'The timeline' },
+             : { href: `#/lore/${book.timeline || 'timeline'}`, label: 'End of chapter', name: 'The timeline' },
       )}
     </article>`);
 }

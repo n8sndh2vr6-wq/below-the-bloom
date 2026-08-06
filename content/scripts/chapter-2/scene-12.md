@@ -2,6 +2,7 @@
 title: A Rocket Made of Acid
 scene: INT. INSIDE THE EMERGENT KING – ABOVE THE ACID PIT – CONTINUOUS
 act: emergent
+place: emergent-kingdom
 number: 12
 summary: Oyster free-falls, then fires himself back up through the King's own throat to blast them free.
 ---

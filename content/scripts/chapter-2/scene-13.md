@@ -2,6 +2,7 @@
 title: Nightmare Zone
 scene: EXT. DEEP SEA – NIGHTMARE ZONE – CONTINUOUS
 act: emergent
+place: emergent-kingdom
 number: 13
 summary: They tumble free into open water and watch the Emergent Kingdom sink for the last time.
 ---

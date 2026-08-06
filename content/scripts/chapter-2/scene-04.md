@@ -2,6 +2,7 @@
 title: Whispers of Power
 scene: EXT. FLOATING AT THE SHIPWRECK – NIGHT
 act: power
+place: the-surface
 number: 4
 summary: Oyster convinces Chip to go looking for Squid's "ancient powers" before Squid can use them first.
 ---

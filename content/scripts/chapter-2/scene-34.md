@@ -2,6 +2,7 @@
 title: The Duel for the Orb
 scene: INT. MONUMENT CHAMBER – CONTINUOUS
 act: monument
+place: the-monument
 number: 34
 summary: Pic, Chip, and Oyster fight Mach to a standstill at the foot of the pedestal.
 ---

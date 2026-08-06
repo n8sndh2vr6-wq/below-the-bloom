@@ -2,6 +2,7 @@
 title: The Spire
 scene: EXT. MONUMENT SPIRE – SAME
 act: monument
+place: the-monument
 number: 35
 summary: Mach slips away, alive, and reappears where the Froststalker King fell.
 ---

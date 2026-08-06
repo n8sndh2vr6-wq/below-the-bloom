@@ -513,6 +513,160 @@
             }
           ],
           "backlinks": []
+        },
+        {
+          "slug": "chapter-2-timeline",
+          "name": "Chapter Two — Timeline",
+          "role": "The whole return, from the castle's doors to the orb",
+          "order": 7,
+          "image": null,
+          "tags": [],
+          "depth": null,
+          "home": null,
+          "scenes": [],
+          "file": "content/lore/chapter-2-timeline.md",
+          "stats": [
+            {
+              "label": "Scenes cited",
+              "value": 30,
+              "max": 32,
+              "detail": [
+                {
+                  "label": "Scene 1",
+                  "route": "#/story/chapter-2/scene-01"
+                },
+                {
+                  "label": "Scene 2",
+                  "route": "#/story/chapter-2/scene-02"
+                },
+                {
+                  "label": "Scene 3",
+                  "route": "#/story/chapter-2/scene-03"
+                },
+                {
+                  "label": "Scene 4",
+                  "route": "#/story/chapter-2/scene-04"
+                },
+                {
+                  "label": "Scene 5",
+                  "route": "#/story/chapter-2/scene-05"
+                },
+                {
+                  "label": "Scene 6",
+                  "route": "#/story/chapter-2/scene-06"
+                },
+                {
+                  "label": "Scene 7",
+                  "route": "#/story/chapter-2/scene-07"
+                },
+                {
+                  "label": "Scene 8",
+                  "route": "#/story/chapter-2/scene-08"
+                },
+                {
+                  "label": "Scene 9",
+                  "route": "#/story/chapter-2/scene-09"
+                },
+                {
+                  "label": "Scene 10",
+                  "route": "#/story/chapter-2/scene-10"
+                },
+                {
+                  "label": "Scene 11",
+                  "route": "#/story/chapter-2/scene-11"
+                },
+                {
+                  "label": "Scene 12",
+                  "route": "#/story/chapter-2/scene-12"
+                },
+                {
+                  "label": "Scene 13",
+                  "route": "#/story/chapter-2/scene-13"
+                },
+                {
+                  "label": "Scene 14",
+                  "route": "#/story/chapter-2/scene-14"
+                },
+                {
+                  "label": "Scene 15",
+                  "route": "#/story/chapter-2/scene-15"
+                },
+                {
+                  "label": "Scene 16",
+                  "route": "#/story/chapter-2/scene-16"
+                },
+                {
+                  "label": "Scene 17",
+                  "route": "#/story/chapter-2/scene-17"
+                },
+                {
+                  "label": "Scenes 18–19",
+                  "route": "#/story/chapter-2/scene-18"
+                },
+                {
+                  "label": "Scenes 20–23",
+                  "route": "#/story/chapter-2/scene-20"
+                },
+                {
+                  "label": "Scene 24",
+                  "route": "#/story/chapter-2/scene-24"
+                },
+                {
+                  "label": "Scene 26",
+                  "route": "#/story/chapter-2/scene-26"
+                },
+                {
+                  "label": "Scene 27",
+                  "route": "#/story/chapter-2/scene-27"
+                },
+                {
+                  "label": "Scene 28",
+                  "route": "#/story/chapter-2/scene-28"
+                },
+                {
+                  "label": "Scene 29",
+                  "route": "#/story/chapter-2/scene-29"
+                },
+                {
+                  "label": "Scene 30",
+                  "route": "#/story/chapter-2/scene-30"
+                },
+                {
+                  "label": "Scene 31",
+                  "route": "#/story/chapter-2/scene-31"
+                },
+                {
+                  "label": "Scene 32",
+                  "route": "#/story/chapter-2/scene-32"
+                },
+                {
+                  "label": "Scene 33",
+                  "route": "#/story/chapter-2/scene-33"
+                },
+                {
+                  "label": "Scene 34",
+                  "route": "#/story/chapter-2/scene-34"
+                },
+                {
+                  "label": "Scene 35",
+                  "route": "#/story/chapter-2/scene-35"
+                }
+              ]
+            },
+            {
+              "label": "Characters",
+              "value": 0,
+              "max": 6,
+              "detail": []
+            },
+            {
+              "label": "Locations",
+              "value": 0,
+              "max": 5,
+              "detail": []
+            }
+          ],
+          "backlinks": []
         }
       ]
     },
@@ -532,8 +686,7 @@
           "order": 1,
           "image": "oyster",
           "tags": [
-            "Human",
-            "Chapter One"
+            "Human"
           ],
           "depth": null,
           "home": null,
@@ -1408,8 +1561,7 @@
           "order": 2,
           "image": "chip",
           "tags": [
-            "Artificial",
-            "Chapter One"
+            "Artificial"
           ],
           "depth": null,
           "home": null,
@@ -2441,6 +2593,16 @@
               "kind": "Lore & Canon"
             },
             {
+              "route": "#/characters/oyster",
+              "name": "Oyster",
+              "kind": "Characters"
+            },
+            {
+              "route": "#/characters/maw-king",
+              "name": "The Maw King",
+              "kind": "Characters"
+            },
+            {
               "route": "#/characters/emergent-king",
               "name": "The Emergent King",
               "kind": "Characters"
@@ -2448,6 +2610,26 @@
             {
               "route": "#/characters/the-bloom",
               "name": "The Bloom",
+              "kind": "Characters"
+            },
+            {
+              "route": "#/characters/pic",
+              "name": "Pic",
+              "kind": "Characters"
+            },
+            {
+              "route": "#/characters/mach",
+              "name": "Mach",
+              "kind": "Characters"
+            },
+            {
+              "route": "#/characters/piercer-queen",
+              "name": "The Piercer Queen",
+              "kind": "Characters"
+            },
+            {
+              "route": "#/characters/acidic-king",
+              "name": "The Acidic King",
               "kind": "Characters"
             },
             {
@@ -2464,11 +2646,6 @@
               "route": "#/locations/purple-abyss",
               "name": "The Purple Abyss",
               "kind": "Worlds & Locations"
-            },
-            {
-              "route": "#/locations/the-castle",
-              "name": "The Castle",
-              "kind": "Worlds & Locations"
             }
           ]
         },
@@ -2480,7 +2657,7 @@
           "image": "maw-king",
           "tags": [
             "Crown",
-            "Antagonist"
+            "Ally"
           ],
           "depth": null,
           "home": null,
@@ -2672,6 +2849,16 @@
               "kind": "Characters"
             },
             {
+              "route": "#/characters/piercer-queen",
+              "name": "The Piercer Queen",
+              "kind": "Characters"
+            },
+            {
+              "route": "#/characters/acidic-king",
+              "name": "The Acidic King",
+              "kind": "Characters"
+            },
+            {
               "route": "#/creatures/maws",
               "name": "Maws",
               "kind": "Creatures & Species"
@@ -2696,7 +2883,7 @@
           "image": "emergent-king",
           "tags": [
             "Crown",
-            "Ally"
+            "Antagonist"
           ],
           "depth": null,
           "home": null,
@@ -2806,6 +2993,11 @@
               "route": "#/characters/the-bloom",
               "name": "The Bloom",
               "kind": "Characters"
+            },
+            {
+              "route": "#/creatures/skywalkers",
+              "name": "Skywalkers",
+              "kind": "Creatures & Species"
             },
             {
               "route": "#/locations/the-castle",
@@ -3385,6 +3577,475 @@
               "kind": "Worlds & Locations"
             }
           ]
+        },
+        {
+          "slug": "pic",
+          "name": "Pic",
+          "role": "A Piercer who never learned to be one",
+          "order": 11,
+          "image": "pic",
+          "tags": [
+            "Piercer",
+            "Ally"
+          ],
+          "depth": null,
+          "home": null,
+          "scenes": [],
+          "file": "content/characters/pic.md",
+          "stats": [
+            {
+              "label": "Appearances",
+              "value": 27,
+              "max": 81,
+              "suffix": "/84",
+              "detail": [
+                {
+                  "label": "Scene 8",
+                  "note": "Naming Pic",
+                  "route": "#/story/chapter-2/scene-08"
+                },
+                {
+                  "label": "Scene 9",
+                  "note": "A Loose Stone",
+                  "route": "#/story/chapter-2/scene-09"
+                },
+                {
+                  "label": "Scene 10",
+                  "note": "The Emergent King's Ruin",
+                  "route": "#/story/chapter-2/scene-10"
+                },
+                {
+                  "label": "Scene 11",
+                  "note": "Inside the Emergent King",
+                  "route": "#/story/chapter-2/scene-11"
+                },
+                {
+                  "label": "Scene 12",
+                  "note": "A Rocket Made of Acid",
+                  "route": "#/story/chapter-2/scene-12"
+                },
+                {
+                  "label": "Scene 13",
+                  "note": "Nightmare Zone",
+                  "route": "#/story/chapter-2/scene-13"
+                },
+                {
+                  "label": "Scene 14",
+                  "note": "The Froststalkers Remember",
+                  "route": "#/story/chapter-2/scene-14"
+                },
+                {
+                  "label": "Scene 15",
+                  "note": "A Story Interrupted",
+                  "route": "#/story/chapter-2/scene-15"
+                },
+                {
+                  "label": "Scene 16",
+                  "note": "We Hold the Line",
+                  "route": "#/story/chapter-2/scene-16"
+                },
+                {
+                  "label": "Scene 17",
+                  "note": "Split the Sky",
+                  "route": "#/story/chapter-2/scene-17"
+                },
+                {
+                  "label": "Scene 18",
+                  "note": "The Tide Turns",
+                  "route": "#/story/chapter-2/scene-18"
+                },
+                {
+                  "label": "Scene 19",
+                  "note": "Center of the Wasteland",
+                  "route": "#/story/chapter-2/scene-19"
+                },
+                {
+                  "label": "Scene 20",
+                  "note": "Into the Trench",
+                  "route": "#/story/chapter-2/scene-20"
+                },
+                {
+                  "label": "Scene 22",
+                  "note": "The Ambush",
+                  "route": "#/story/chapter-2/scene-22"
+                },
+                {
+                  "label": "Scene 23",
+                  "note": "Sealed In",
+                  "route": "#/story/chapter-2/scene-23"
+                },
+                {
+                  "label": "Scene 24",
+                  "note": "Piercers to the Rescue",
+                  "route": "#/story/chapter-2/scene-24"
+                },
+                {
+                  "label": "Scene 25",
+                  "note": "A Calm Below the Chaos",
+                  "route": "#/story/chapter-2/scene-25"
+                },
+                {
+                  "label": "Scene 26",
+                  "note": "The Piercer Queen's Ultimatum",
+                  "route": "#/story/chapter-2/scene-26"
+                },
+                {
+                  "label": "Scene 27",
+                  "note": "The Queen Falls",
+                  "route": "#/story/chapter-2/scene-27"
+                },
+                {
+                  "label": "Scene 28",
+                  "note": "The Silhouette Speaks",
+                  "route": "#/story/chapter-2/scene-28"
+                },
+                {
+                  "label": "Scene 29",
+                  "note": "One More Fight",
+                  "route": "#/story/chapter-2/scene-29"
+                },
+                {
+                  "label": "Scene 30",
+                  "note": "Skywalkers",
+                  "route": "#/story/chapter-2/scene-30"
+                },
+                {
+                  "label": "Scene 31",
+                  "note": "The King's Last Stand",
+                  "route": "#/story/chapter-2/scene-31"
+                },
+                {
+                  "label": "Scene 32",
+                  "note": "The Monument Hallway",
+                  "route": "#/story/chapter-2/scene-32"
+                },
+                {
+                  "label": "Scene 33",
+                  "note": "An Old Enemy's Blade",
+                  "route": "#/story/chapter-2/scene-33"
+                },
+                {
+                  "label": "Scene 34",
+                  "note": "The Duel for the Orb",
+                  "route": "#/story/chapter-2/scene-34"
+                },
+                {
+                  "label": "Scene 36",
+                  "note": "Squid, We'll Find You",
+                  "route": "#/story/chapter-2/scene-36"
+                }
+              ]
+            },
+            {
+              "label": "Lines",
+              "value": 0,
+              "max": 299,
+              "detail": []
+            },
+            {
+              "label": "Kills",
+              "value": 0,
+              "max": 9,
+              "detail": []
+            }
+          ],
+          "backlinks": [
+            {
+              "route": "#/characters/oyster",
+              "name": "Oyster",
+              "kind": "Characters"
+            },
+            {
+              "route": "#/characters/chip",
+              "name": "Chip",
+              "kind": "Characters"
+            },
+            {
+              "route": "#/characters/froststalker-king",
+              "name": "The Froststalker King",
+              "kind": "Characters"
+            },
+            {
+              "route": "#/characters/mach",
+              "name": "Mach",
+              "kind": "Characters"
+            },
+            {
+              "route": "#/characters/piercer-queen",
+              "name": "The Piercer Queen",
+              "kind": "Characters"
+            },
+            {
+              "route": "#/characters/acidic-king",
+              "name": "The Acidic King",
+              "kind": "Characters"
+            },
+            {
+              "route": "#/creatures/piercers",
+              "name": "Piercers",
+              "kind": "Creatures & Species"
+            }
+          ]
+        },
+        {
+          "slug": "mach",
+          "name": "Mach",
+          "role": "Squid's bounty hunter",
+          "order": 12,
+          "image": "mach",
+          "tags": [
+            "Assassin",
+            "Antagonist"
+          ],
+          "depth": null,
+          "home": null,
+          "scenes": [],
+          "file": "content/characters/mach.md",
+          "stats": [
+            {
+              "label": "Appearances",
+              "value": 5,
+              "max": 81,
+              "suffix": "/84",
+              "detail": [
+                {
+                  "label": "Scene 28",
+                  "note": "The Silhouette Speaks",
+                  "route": "#/story/chapter-2/scene-28"
+                },
+                {
+                  "label": "Scene 29",
+                  "note": "One More Fight",
+                  "route": "#/story/chapter-2/scene-29"
+                },
+                {
+                  "label": "Scene 33",
+                  "note": "An Old Enemy's Blade",
+                  "route": "#/story/chapter-2/scene-33"
+                },
+                {
+                  "label": "Scene 34",
+                  "note": "The Duel for the Orb",
+                  "route": "#/story/chapter-2/scene-34"
+                },
+                {
+                  "label": "Scene 35",
+                  "note": "The Spire",
+                  "route": "#/story/chapter-2/scene-35"
+                }
+              ]
+            },
+            {
+              "label": "Lines",
+              "value": 7,
+              "max": 299,
+              "detail": [
+                {
+                  "label": "Scene 33",
+                  "note": "3 lines",
+                  "route": "#/story/chapter-2/scene-33"
+                },
+                {
+                  "label": "Scene 28",
+                  "note": "2 lines",
+                  "route": "#/story/chapter-2/scene-28"
+                },
+                {
+                  "label": "Scene 34",
+                  "note": "2 lines",
+                  "route": "#/story/chapter-2/scene-34"
+                }
+              ]
+            },
+            {
+              "label": "Kills",
+              "value": 0,
+              "max": 9,
+              "detail": []
+            }
+          ],
+          "backlinks": [
+            {
+              "route": "#/characters/oyster",
+              "name": "Oyster",
+              "kind": "Characters"
+            },
+            {
+              "route": "#/characters/pic",
+              "name": "Pic",
+              "kind": "Characters"
+            },
+            {
+              "route": "#/characters/piercer-queen",
+              "name": "The Piercer Queen",
+              "kind": "Characters"
+            },
+            {
+              "route": "#/locations/the-monument",
+              "name": "The Monument",
+              "kind": "Worlds & Locations"
+            }
+          ]
+        },
+        {
+          "slug": "piercer-queen",
+          "name": "The Piercer Queen",
+          "role": "Pic's mother, and absolute about it",
+          "order": 13,
+          "image": "piercer-queen",
+          "tags": [
+            "Crown",
+            "Antagonist"
+          ],
+          "depth": null,
+          "home": null,
+          "scenes": [],
+          "file": "content/characters/piercer-queen.md",
+          "stats": [
+            {
+              "label": "Appearances",
+              "value": 3,
+              "max": 81,
+              "suffix": "/84",
+              "detail": [
+                {
+                  "label": "Scene 26",
+                  "note": "The Piercer Queen's Ultimatum",
+                  "route": "#/story/chapter-2/scene-26"
+                },
+                {
+                  "label": "Scene 27",
+                  "note": "The Queen Falls",
+                  "route": "#/story/chapter-2/scene-27"
+                },
+                {
+                  "label": "Scene 28",
+                  "note": "The Silhouette Speaks",
+                  "route": "#/story/chapter-2/scene-28"
+                }
+              ]
+            },
+            {
+              "label": "Lines",
+              "value": 6,
+              "max": 299,
+              "detail": [
+                {
+                  "label": "Scene 26",
+                  "note": "5 lines",
+                  "route": "#/story/chapter-2/scene-26"
+                },
+                {
+                  "label": "Scene 27",
+                  "note": "1 line",
+                  "route": "#/story/chapter-2/scene-27"
+                }
+              ]
+            },
+            {
+              "label": "Kills",
+              "value": 0,
+              "max": 9,
+              "detail": []
+            }
+          ],
+          "backlinks": [
+            {
+              "route": "#/characters/froststalker-king",
+              "name": "The Froststalker King",
+              "kind": "Characters"
+            },
+            {
+              "route": "#/characters/maw-king",
+              "name": "The Maw King",
+              "kind": "Characters"
+            },
+            {
+              "route": "#/characters/pic",
+              "name": "Pic",
+              "kind": "Characters"
+            },
+            {
+              "route": "#/characters/mach",
+              "name": "Mach",
+              "kind": "Characters"
+            },
+            {
+              "route": "#/creatures/piercers",
+              "name": "Piercers",
+              "kind": "Creatures & Species"
+            }
+          ]
+        },
+        {
+          "slug": "acidic-king",
+          "name": "The Acidic King",
+          "role": "What's left when a kingdom finally answers back",
+          "order": 14,
+          "image": "acidic-king",
+          "tags": [
+            "Crown",
+            "Antagonist"
+          ],
+          "depth": null,
+          "home": null,
+          "scenes": [],
+          "file": "content/characters/acidic-king.md",
+          "stats": [
+            {
+              "label": "Appearances",
+              "value": 1,
+              "max": 81,
+              "suffix": "/84",
+              "detail": [
+                {
+                  "label": "Scene 31",
+                  "note": "The King's Last Stand",
+                  "route": "#/story/chapter-2/scene-31"
+                }
+              ]
+            },
+            {
+              "label": "Lines",
+              "value": 5,
+              "max": 299,
+              "detail": [
+                {
+                  "label": "Scene 31",
+                  "note": "5 lines",
+                  "route": "#/story/chapter-2/scene-31"
+                }
+              ]
+            },
+            {
+              "label": "Kills",
+              "value": 0,
+              "max": 9,
+              "detail": []
+            }
+          ],
+          "backlinks": [
+            {
+              "route": "#/characters/froststalker-king",
+              "name": "The Froststalker King",
+              "kind": "Characters"
+            },
+            {
+              "route": "#/characters/maw-king",
+              "name": "The Maw King",
+              "kind": "Characters"
+            },
+            {
+              "route": "#/creatures/acidics",
+              "name": "Acidics",
+              "kind": "Creatures & Species"
+            },
+            {
+              "route": "#/locations/the-monument",
+              "name": "The Monument",
+              "kind": "Worlds & Locations"
+            }
+          ]
         }
       ]
     },
@@ -3689,6 +4350,11 @@
             {
               "route": "#/characters/emergent-king",
               "name": "The Emergent King",
+              "kind": "Characters"
+            },
+            {
+              "route": "#/characters/pic",
+              "name": "Pic",
               "kind": "Characters"
             },
             {
@@ -4280,6 +4946,322 @@
               "kind": "Worlds & Locations"
             }
           ]
+        },
+        {
+          "slug": "piercers",
+          "name": "Piercers",
+          "role": "Car-sized swarm hunters with blades for organs",
+          "order": 5,
+          "image": "piercers",
+          "tags": [
+            "Emergent ruins",
+            "Swarm"
+          ],
+          "depth": null,
+          "home": "emergent-kingdom",
+          "scenes": [],
+          "file": "content/creatures/piercers.md",
+          "stats": [
+            {
+              "label": "Appearances",
+              "value": 12,
+              "max": 43,
+              "suffix": "/84",
+              "detail": [
+                {
+                  "label": "Scene 7",
+                  "note": "The Buried Emergent Kingdom",
+                  "route": "#/story/chapter-2/scene-07"
+                },
+                {
+                  "label": "Scene 8",
+                  "note": "Naming Pic",
+                  "route": "#/story/chapter-2/scene-08"
+                },
+                {
+                  "label": "Scene 16",
+                  "note": "We Hold the Line",
+                  "route": "#/story/chapter-2/scene-16"
+                },
+                {
+                  "label": "Scene 17",
+                  "note": "Split the Sky",
+                  "route": "#/story/chapter-2/scene-17"
+                },
+                {
+                  "label": "Scene 18",
+                  "note": "The Tide Turns",
+                  "route": "#/story/chapter-2/scene-18"
+                },
+                {
+                  "label": "Scene 19",
+                  "note": "Center of the Wasteland",
+                  "route": "#/story/chapter-2/scene-19"
+                },
+                {
+                  "label": "Scene 24",
+                  "note": "Piercers to the Rescue",
+                  "route": "#/story/chapter-2/scene-24"
+                },
+                {
+                  "label": "Scene 26",
+                  "note": "The Piercer Queen's Ultimatum",
+                  "route": "#/story/chapter-2/scene-26"
+                },
+                {
+                  "label": "Scene 27",
+                  "note": "The Queen Falls",
+                  "route": "#/story/chapter-2/scene-27"
+                },
+                {
+                  "label": "Scene 28",
+                  "note": "The Silhouette Speaks",
+                  "route": "#/story/chapter-2/scene-28"
+                },
+                {
+                  "label": "Scene 32",
+                  "note": "The Monument Hallway",
+                  "route": "#/story/chapter-2/scene-32"
+                },
+                {
+                  "label": "Scene 33",
+                  "note": "An Old Enemy's Blade",
+                  "route": "#/story/chapter-2/scene-33"
+                }
+              ]
+            },
+            {
+              "label": "Losses",
+              "value": 2,
+              "max": 6,
+              "detail": [
+                {
+                  "label": "Piercer raider",
+                  "note": "killed by Oyster · Scene 8",
+                  "route": "#/story/chapter-2/scene-08"
+                },
+                {
+                  "label": "The Piercer Queen",
+                  "note": "killed by Oyster · Scene 27",
+                  "route": "#/story/chapter-2/scene-27"
+                }
+              ]
+            },
+            {
+              "label": "Depth",
+              "value": 7,
+              "max": 8,
+              "detail": [
+                {
+                  "label": "The Emergent Kingdom",
+                  "note": "Layer 7 of 10",
+                  "route": "#/locations/emergent-kingdom"
+                }
+              ]
+            }
+          ],
+          "backlinks": [
+            {
+              "route": "#/characters/froststalker-king",
+              "name": "The Froststalker King",
+              "kind": "Characters"
+            }
+          ]
+        },
+        {
+          "slug": "acidics",
+          "name": "Acidics",
+          "role": "Black, eyeless, and dissolving whatever they touch",
+          "order": 6,
+          "image": "acidics",
+          "tags": [
+            "Icy trenches",
+            "Corrosive"
+          ],
+          "depth": null,
+          "home": "icy-trenches",
+          "scenes": [],
+          "file": "content/creatures/acidics.md",
+          "stats": [
+            {
+              "label": "Appearances",
+              "value": 14,
+              "max": 43,
+              "suffix": "/84",
+              "detail": [
+                {
+                  "label": "Scene 15",
+                  "note": "A Story Interrupted",
+                  "route": "#/story/chapter-2/scene-15"
+                },
+                {
+                  "label": "Scene 16",
+                  "note": "We Hold the Line",
+                  "route": "#/story/chapter-2/scene-16"
+                },
+                {
+                  "label": "Scene 17",
+                  "note": "Split the Sky",
+                  "route": "#/story/chapter-2/scene-17"
+                },
+                {
+                  "label": "Scene 18",
+                  "note": "The Tide Turns",
+                  "route": "#/story/chapter-2/scene-18"
+                },
+                {
+                  "label": "Scene 19",
+                  "note": "Center of the Wasteland",
+                  "route": "#/story/chapter-2/scene-19"
+                },
+                {
+                  "label": "Scene 20",
+                  "note": "Into the Trench",
+                  "route": "#/story/chapter-2/scene-20"
+                },
+                {
+                  "label": "Scene 21",
+                  "note": "Behind the Ridge",
+                  "route": "#/story/chapter-2/scene-21"
+                },
+                {
+                  "label": "Scene 22",
+                  "note": "The Ambush",
+                  "route": "#/story/chapter-2/scene-22"
+                },
+                {
+                  "label": "Scene 23",
+                  "note": "Sealed In",
+                  "route": "#/story/chapter-2/scene-23"
+                },
+                {
+                  "label": "Scene 24",
+                  "note": "Piercers to the Rescue",
+                  "route": "#/story/chapter-2/scene-24"
+                },
+                {
+                  "label": "Scene 29",
+                  "note": "One More Fight",
+                  "route": "#/story/chapter-2/scene-29"
+                },
+                {
+                  "label": "Scene 30",
+                  "note": "Skywalkers",
+                  "route": "#/story/chapter-2/scene-30"
+                },
+                {
+                  "label": "Scene 31",
+                  "note": "The King's Last Stand",
+                  "route": "#/story/chapter-2/scene-31"
+                },
+                {
+                  "label": "Scene 32",
+                  "note": "The Monument Hallway",
+                  "route": "#/story/chapter-2/scene-32"
+                }
+              ]
+            },
+            {
+              "label": "Losses",
+              "value": 1,
+              "max": 6,
+              "detail": [
+                {
+                  "label": "The Acidic King",
+                  "note": "killed by The Froststalker King · Scene 31",
+                  "route": "#/story/chapter-2/scene-31"
+                }
+              ]
+            },
+            {
+              "label": "Depth",
+              "value": 4,
+              "max": 8,
+              "detail": [
+                {
+                  "label": "The Icy Trenches",
+                  "note": "Layer 4 of 10",
+                  "route": "#/locations/icy-trenches"
+                }
+              ]
+            }
+          ],
+          "backlinks": [
+            {
+              "route": "#/characters/froststalker-king",
+              "name": "The Froststalker King",
+              "kind": "Characters"
+            },
+            {
+              "route": "#/characters/acidic-king",
+              "name": "The Acidic King",
+              "kind": "Characters"
+            },
+            {
+              "route": "#/creatures/skywalkers",
+              "name": "Skywalkers",
+              "kind": "Creatures & Species"
+            }
+          ]
+        },
+        {
+          "slug": "skywalkers",
+          "name": "Skywalkers",
+          "role": "Legs the size of towers, and nothing else anyone has seen",
+          "order": 7,
+          "image": "skywalkers",
+          "tags": [
+            "Unknown depths",
+            "Colossal"
+          ],
+          "depth": null,
+          "home": null,
+          "scenes": [],
+          "file": "content/creatures/skywalkers.md",
+          "stats": [
+            {
+              "label": "Appearances",
+              "value": 2,
+              "max": 43,
+              "suffix": "/84",
+              "detail": [
+                {
+                  "label": "Scene 30",
+                  "note": "Skywalkers",
+                  "route": "#/story/chapter-2/scene-30"
+                },
+                {
+                  "label": "Scene 31",
+                  "note": "The King's Last Stand",
+                  "route": "#/story/chapter-2/scene-31"
+                }
+              ]
+            },
+            {
+              "label": "Losses",
+              "value": 0,
+              "max": 6,
+              "detail": []
+            },
+            {
+              "label": "Depth",
+              "value": 0,
+              "max": 8,
+              "detail": []
+            }
+          ],
+          "backlinks": [
+            {
+              "route": "#/characters/acidic-king",
+              "name": "The Acidic King",
+              "kind": "Characters"
+            },
+            {
+              "route": "#/locations/the-monument",
+              "name": "The Monument",
+              "kind": "Worlds & Locations"
+            }
+          ]
         }
       ]
     },
@@ -4833,6 +5815,16 @@
               "kind": "Creatures & Species"
             },
             {
+              "route": "#/creatures/piercers",
+              "name": "Piercers",
+              "kind": "Creatures & Species"
+            },
+            {
+              "route": "#/creatures/acidics",
+              "name": "Acidics",
+              "kind": "Creatures & Species"
+            },
+            {
               "route": "#/locations/planet-redacted",
               "name": "Planet (Redacted)",
               "kind": "Worlds & Locations"
@@ -5006,14 +5998,17 @@
             34,
             35,
             7,
+            9,
             10,
-            11
+            11,
+            12,
+            13
           ],
           "file": "content/locations/emergent-kingdom.md",
           "stats": [
             {
               "label": "Scenes",
-              "value": 10,
+              "value": 13,
               "max": 28,
               "suffix": "/84",
               "detail": [
@@ -5058,6 +6053,11 @@
                   "route": "#/story/chapter-2/scene-07"
                 },
                 {
+                  "label": "Scene 9",
+                  "note": "A Loose Stone",
+                  "route": "#/story/chapter-2/scene-09"
+                },
+                {
                   "label": "Scene 10",
                   "note": "The Emergent King's Ruin",
                   "route": "#/story/chapter-2/scene-10"
@@ -5066,6 +6066,16 @@
                   "label": "Scene 11",
                   "note": "Inside the Emergent King",
                   "route": "#/story/chapter-2/scene-11"
+                },
+                {
+                  "label": "Scene 12",
+                  "note": "A Rocket Made of Acid",
+                  "route": "#/story/chapter-2/scene-12"
+                },
+                {
+                  "label": "Scene 13",
+                  "note": "Nightmare Zone",
+                  "route": "#/story/chapter-2/scene-13"
                 }
               ]
             },
@@ -5118,6 +6128,11 @@
             {
               "route": "#/creatures/emergents",
               "name": "Emergents",
+              "kind": "Creatures & Species"
+            },
+            {
+              "route": "#/creatures/piercers",
+              "name": "Piercers",
               "kind": "Creatures & Species"
             },
             {
@@ -5483,6 +6498,171 @@
               "route": "#/locations/icy-trenches",
               "name": "The Icy Trenches",
               "kind": "Worlds & Locations"
+            },
+            {
+              "route": "#/locations/the-surface",
+              "name": "The Surface",
+              "kind": "Worlds & Locations"
+            }
+          ]
+        },
+        {
+          "slug": "the-surface",
+          "name": "The Surface",
+          "role": "Air, moonlight, and the wreck they left behind",
+          "order": 13,
+          "image": null,
+          "tags": [],
+          "depth": 0,
+          "home": null,
+          "scenes": [
+            3,
+            4
+          ],
+          "file": "content/locations/the-surface.md",
+          "stats": [
+            {
+              "label": "Scenes",
+              "value": 2,
+              "max": 28,
+              "suffix": "/84",
+              "detail": [
+                {
+                  "label": "Scene 3",
+                  "note": "Breaking the Surface",
+                  "route": "#/story/chapter-2/scene-03"
+                },
+                {
+                  "label": "Scene 4",
+                  "note": "Whispers of Power",
+                  "route": "#/story/chapter-2/scene-04"
+                }
+              ]
+            },
+            {
+              "label": "First seen",
+              "value": 3,
+              "max": 46,
+              "prefix": "Sc.",
+              "detail": [
+                {
+                  "label": "Scene 3",
+                  "note": "Breaking the Surface",
+                  "route": "#/story/chapter-2/scene-03"
+                }
+              ]
+            },
+            {
+              "label": "Depth",
+              "value": 0,
+              "max": 10,
+              "detail": [
+                {
+                  "label": "Layer 0 of 10",
+                  "note": "Nought is orbit, ten is the castle floor."
+                }
+              ]
+            }
+          ],
+          "backlinks": []
+        },
+        {
+          "slug": "the-monument",
+          "name": "The Monument",
+          "role": "The thing Squid told them was buried",
+          "order": 14,
+          "image": null,
+          "tags": [],
+          "depth": 10,
+          "home": null,
+          "scenes": [
+            31,
+            32,
+            33,
+            34,
+            35,
+            36
+          ],
+          "file": "content/locations/the-monument.md",
+          "stats": [
+            {
+              "label": "Scenes",
+              "value": 6,
+              "max": 28,
+              "suffix": "/84",
+              "detail": [
+                {
+                  "label": "Scene 31",
+                  "note": "The King's Last Stand",
+                  "route": "#/story/chapter-2/scene-31"
+                },
+                {
+                  "label": "Scene 32",
+                  "note": "The Monument Hallway",
+                  "route": "#/story/chapter-2/scene-32"
+                },
+                {
+                  "label": "Scene 33",
+                  "note": "An Old Enemy's Blade",
+                  "route": "#/story/chapter-2/scene-33"
+                },
+                {
+                  "label": "Scene 34",
+                  "note": "The Duel for the Orb",
+                  "route": "#/story/chapter-2/scene-34"
+                },
+                {
+                  "label": "Scene 35",
+                  "note": "The Spire",
+                  "route": "#/story/chapter-2/scene-35"
+                },
+                {
+                  "label": "Scene 36",
+                  "note": "Squid, We'll Find You",
+                  "route": "#/story/chapter-2/scene-36"
+                }
+              ]
+            },
+            {
+              "label": "First seen",
+              "value": 31,
+              "max": 46,
+              "prefix": "Sc.",
+              "detail": [
+                {
+                  "label": "Scene 31",
+                  "note": "The King's Last Stand",
+                  "route": "#/story/chapter-2/scene-31"
+                }
+              ]
+            },
+            {
+              "label": "Depth",
+              "value": 10,
+              "max": 10,
+              "detail": [
+                {
+                  "label": "Layer 10 of 10",
+                  "note": "Nought is orbit, ten is the castle floor."
+                }
+              ]
+            }
+          ],
+          "backlinks": [
+            {
+              "route": "#/characters/froststalker-king",
+              "name": "The Froststalker King",
+              "kind": "Characters"
+            },
+            {
+              "route": "#/characters/maw-king",
+              "name": "The Maw King",
+              "kind": "Characters"
+            },
+            {
+              "route": "#/characters/acidic-king",
+              "name": "The Acidic King",
+              "kind": "Characters"
             }
           ]
         }
@@ -5514,6 +6694,7 @@
       "id": "chapter-1",
       "title": "Chapter One",
       "subtitle": "Below the Bloom",
+      "timeline": "timeline",
       "acts": [
         {
           "id": "descent",
@@ -8535,6 +9716,7 @@
       "id": "chapter-2",
       "title": "Chapter Two",
       "subtitle": "The Return to Surface",
+      "timeline": "chapter-2-timeline",
       "acts": [
         {
           "id": "return",
@@ -8634,7 +9816,13 @@
               ]
             }
           ],
-          "backlinks": []
+          "backlinks": [
+            {
+              "route": "#/lore/chapter-2-timeline",
+              "name": "Chapter Two — Timeline",
+              "kind": "Lore & Canon"
+            }
+          ]
         },
         {
           "slug": "scene-02",
@@ -8687,13 +9875,19 @@
               ]
             }
           ],
-          "backlinks": []
+          "backlinks": [
+            {
+              "route": "#/lore/chapter-2-timeline",
+              "name": "Chapter Two — Timeline",
+              "kind": "Lore & Canon"
+            }
+          ]
         },
         {
           "slug": "scene-03",
           "n": 3,
           "act": "return",
-          "place": null,
+          "place": "the-surface",
           "title": "Breaking the Surface",
           "location": "EXT. SURFACE – NIGHT",
           "synopsis": "Two years under, and they finally breathe open air beside the wreck of the ship that brought them here.",
@@ -8740,13 +9934,24 @@
               ]
             }
           ],
-          "backlinks": []
+          "backlinks": [
+            {
+              "route": "#/lore/chapter-2-timeline",
+              "name": "Chapter Two — Timeline",
+              "kind": "Lore & Canon"
+            },
+            {
+              "route": "#/locations/the-surface",
+              "name": "The Surface",
+              "kind": "Worlds & Locations"
+            }
+          ]
         },
         {
           "slug": "scene-04",
           "n": 4,
           "act": "power",
-          "place": null,
+          "place": "the-surface",
           "title": "Whispers of Power",
           "location": "EXT. FLOATING AT THE SHIPWRECK – NIGHT",
           "synopsis": "Oyster convinces Chip to go looking for Squid's \"ancient powers\" before Squid can use them first.",
@@ -8793,7 +9998,13 @@
               ]
             }
           ],
-          "backlinks": []
+          "backlinks": [
+            {
+              "route": "#/lore/chapter-2-timeline",
+              "name": "Chapter Two — Timeline",
+              "kind": "Lore & Canon"
+            }
+          ]
         },
         {
           "slug": "scene-05",
@@ -8846,7 +10057,18 @@
               ]
             }
           ],
-          "backlinks": []
+          "backlinks": [
+            {
+              "route": "#/lore/chapter-2-timeline",
+              "name": "Chapter Two — Timeline",
+              "kind": "Lore & Canon"
+            },
+            {
+              "route": "#/characters/mach",
+              "name": "Mach",
+              "kind": "Characters"
+            }
+          ]
         },
         {
           "slug": "scene-06",
@@ -8906,7 +10128,13 @@
               ]
             }
           ],
-          "backlinks": []
+          "backlinks": [
+            {
+              "route": "#/lore/chapter-2-timeline",
+              "name": "Chapter Two — Timeline",
+              "kind": "Lore & Canon"
+            }
+          ]
         },
         {
           "slug": "scene-07",
@@ -8959,7 +10187,28 @@
               ]
             }
           ],
-          "backlinks": []
+          "backlinks": [
+            {
+              "route": "#/lore/chapter-2-timeline",
+              "name": "Chapter Two — Timeline",
+              "kind": "Lore & Canon"
+            },
+            {
+              "route": "#/characters/pic",
+              "name": "Pic",
+              "kind": "Characters"
+            },
+            {
+              "route": "#/characters/mach",
+              "name": "Mach",
+              "kind": "Characters"
+            },
+            {
+              "route": "#/creatures/piercers",
+              "name": "Piercers",
+              "kind": "Creatures & Species"
+            }
+          ]
         },
         {
           "slug": "scene-08",
@@ -9010,13 +10259,19 @@
               ]
             }
           ],
-          "backlinks": []
+          "backlinks": [
+            {
+              "route": "#/lore/chapter-2-timeline",
+              "name": "Chapter Two — Timeline",
+              "kind": "Lore & Canon"
+            }
+          ]
         },
         {
           "slug": "scene-09",
           "n": 9,
           "act": "emergent",
-          "place": null,
+          "place": "emergent-kingdom",
           "title": "A Loose Stone",
           "location": "INT. DEEP SEA CREVICE – NIGHT",
           "synopsis": "A rest stop turns up a hidden tunnel when Oyster's elbow finds a stone that isn't a stone.",
@@ -9063,7 +10318,13 @@
               ]
             }
           ],
-          "backlinks": []
+          "backlinks": [
+            {
+              "route": "#/lore/chapter-2-timeline",
+              "name": "Chapter Two — Timeline",
+              "kind": "Lore & Canon"
+            }
+          ]
         },
         {
           "slug": "scene-10",
@@ -9123,7 +10384,13 @@
               ]
             }
           ],
-          "backlinks": []
+          "backlinks": [
+            {
+              "route": "#/lore/chapter-2-timeline",
+              "name": "Chapter Two — Timeline",
+              "kind": "Lore & Canon"
+            }
+          ]
         },
         {
           "slug": "scene-11",
@@ -9176,13 +10443,19 @@
               ]
             }
           ],
-          "backlinks": []
+          "backlinks": [
+            {
+              "route": "#/lore/chapter-2-timeline",
+              "name": "Chapter Two — Timeline",
+              "kind": "Lore & Canon"
+            }
+          ]
         },
         {
           "slug": "scene-12",
           "n": 12,
           "act": "emergent",
-          "place": null,
+          "place": "emergent-kingdom",
           "title": "A Rocket Made of Acid",
           "location": "INT. INSIDE THE EMERGENT KING – ABOVE THE ACID PIT – CONTINUOUS",
           "synopsis": "Oyster free-falls, then fires himself back up through the King's own throat to blast them free.",
@@ -9229,13 +10502,19 @@
               ]
             }
           ],
-          "backlinks": []
+          "backlinks": [
+            {
+              "route": "#/lore/chapter-2-timeline",
+              "name": "Chapter Two — Timeline",
+              "kind": "Lore & Canon"
+            }
+          ]
         },
         {
           "slug": "scene-13",
           "n": 13,
           "act": "emergent",
-          "place": null,
+          "place": "emergent-kingdom",
           "title": "Nightmare Zone",
           "location": "EXT. DEEP SEA – NIGHTMARE ZONE – CONTINUOUS",
           "synopsis": "They tumble free into open water and watch the Emergent Kingdom sink for the last time.",
@@ -9282,7 +10561,13 @@
               ]
             }
           ],
-          "backlinks": []
+          "backlinks": [
+            {
+              "route": "#/lore/chapter-2-timeline",
+              "name": "Chapter Two — Timeline",
+              "kind": "Lore & Canon"
+            }
+          ]
         },
         {
           "slug": "scene-14",
@@ -9342,7 +10627,13 @@
               ]
             }
           ],
-          "backlinks": []
+          "backlinks": [
+            {
+              "route": "#/lore/chapter-2-timeline",
+              "name": "Chapter Two — Timeline",
+              "kind": "Lore & Canon"
+            }
+          ]
         },
         {
           "slug": "scene-15",
@@ -9395,7 +10686,18 @@
               ]
             }
           ],
-          "backlinks": []
+          "backlinks": [
+            {
+              "route": "#/lore/chapter-2-timeline",
+              "name": "Chapter Two — Timeline",
+              "kind": "Lore & Canon"
+            },
+            {
+              "route": "#/creatures/acidics",
+              "name": "Acidics",
+              "kind": "Creatures & Species"
+            }
+          ]
         },
         {
           "slug": "scene-16",
@@ -9455,7 +10757,18 @@
               ]
             }
           ],
-          "backlinks": []
+          "backlinks": [
+            {
+              "route": "#/lore/chapter-2-timeline",
+              "name": "Chapter Two — Timeline",
+              "kind": "Lore & Canon"
+            },
+            {
+              "route": "#/creatures/acidics",
+              "name": "Acidics",
+              "kind": "Creatures & Species"
+            }
+          ]
         },
         {
           "slug": "scene-17",
@@ -9515,7 +10828,13 @@
               ]
             }
           ],
-          "backlinks": []
+          "backlinks": [
+            {
+              "route": "#/lore/chapter-2-timeline",
+              "name": "Chapter Two — Timeline",
+              "kind": "Lore & Canon"
+            }
+          ]
         },
         {
           "slug": "scene-18",
@@ -9561,7 +10880,13 @@
               ]
             }
           ],
-          "backlinks": []
+          "backlinks": [
+            {
+              "route": "#/lore/chapter-2-timeline",
+              "name": "Chapter Two — Timeline",
+              "kind": "Lore & Canon"
+            }
+          ]
         },
         {
           "slug": "scene-19",
@@ -9667,7 +10992,13 @@
               ]
             }
           ],
-          "backlinks": []
+          "backlinks": [
+            {
+              "route": "#/lore/chapter-2-timeline",
+              "name": "Chapter Two — Timeline",
+              "kind": "Lore & Canon"
+            }
+          ]
         },
         {
           "slug": "scene-21",
@@ -9865,7 +11196,18 @@
               ]
             }
           ],
-          "backlinks": []
+          "backlinks": [
+            {
+              "route": "#/lore/chapter-2-timeline",
+              "name": "Chapter Two — Timeline",
+              "kind": "Lore & Canon"
+            },
+            {
+              "route": "#/creatures/piercers",
+              "name": "Piercers",
+              "kind": "Creatures & Species"
+            }
+          ]
         },
         {
           "slug": "scene-25",
@@ -9978,7 +11320,13 @@
               ]
             }
           ],
-          "backlinks": []
+          "backlinks": [
+            {
+              "route": "#/lore/chapter-2-timeline",
+              "name": "Chapter Two — Timeline",
+              "kind": "Lore & Canon"
+            }
+          ]
         },
         {
           "slug": "scene-27",
@@ -10033,7 +11381,23 @@
               ]
             }
           ],
-          "backlinks": []
+          "backlinks": [
+            {
+              "route": "#/lore/chapter-2-timeline",
+              "name": "Chapter Two — Timeline",
+              "kind": "Lore & Canon"
+            },
+            {
+              "route": "#/characters/piercer-queen",
+              "name": "The Piercer Queen",
+              "kind": "Characters"
+            },
+            {
+              "route": "#/creatures/piercers",
+              "name": "Piercers",
+              "kind": "Creatures & Species"
+            }
+          ]
         },
         {
           "slug": "scene-28",
@@ -10093,7 +11457,18 @@
               ]
             }
           ],
-          "backlinks": []
+          "backlinks": [
+            {
+              "route": "#/lore/chapter-2-timeline",
+              "name": "Chapter Two — Timeline",
+              "kind": "Lore & Canon"
+            },
+            {
+              "route": "#/characters/chip",
+              "name": "Chip",
+              "kind": "Characters"
+            }
+          ]
         },
         {
           "slug": "scene-29",
@@ -10160,7 +11535,13 @@
               ]
             }
           ],
-          "backlinks": []
+          "backlinks": [
+            {
+              "route": "#/lore/chapter-2-timeline",
+              "name": "Chapter Two — Timeline",
+              "kind": "Lore & Canon"
+            }
+          ]
         },
         {
           "slug": "scene-30",
@@ -10227,13 +11608,29 @@
               ]
             }
           ],
-          "backlinks": []
+          "backlinks": [
+            {
+              "route": "#/lore/chapter-2-timeline",
+              "name": "Chapter Two — Timeline",
+              "kind": "Lore & Canon"
+            },
+            {
+              "route": "#/creatures/skywalkers",
+              "name": "Skywalkers",
+              "kind": "Creatures & Species"
+            },
+            {
+              "route": "#/locations/the-monument",
+              "name": "The Monument",
+              "kind": "Worlds & Locations"
+            }
+          ]
         },
         {
           "slug": "scene-31",
           "n": 31,
           "act": "monument",
-          "place": null,
+          "place": "the-monument",
           "title": "The King's Last Stand",
           "location": "INT. DEEP TRENCH – APPROACHING THE MONUMENT – NIGHT",
           "synopsis": "The Acidic King corners them at the monument's foot, and the Froststalker King pays the final price.",
@@ -10286,13 +11683,24 @@
               ]
             }
           ],
-          "backlinks": []
+          "backlinks": [
+            {
+              "route": "#/lore/chapter-2-timeline",
+              "name": "Chapter Two — Timeline",
+              "kind": "Lore & Canon"
+            },
+            {
+              "route": "#/creatures/acidics",
+              "name": "Acidics",
+              "kind": "Creatures & Species"
+            }
+          ]
         },
         {
           "slug": "scene-32",
           "n": 32,
           "act": "monument",
-          "place": null,
+          "place": "the-monument",
           "title": "The Monument Hallway",
           "location": "INT. MONUMENT HALLWAY – CONTINUOUS",
           "synopsis": "A quiet walk down memory lane, right up to the doors of the grand chamber.",
@@ -10339,13 +11747,19 @@
               ]
             }
           ],
-          "backlinks": []
+          "backlinks": [
+            {
+              "route": "#/lore/chapter-2-timeline",
+              "name": "Chapter Two — Timeline",
+              "kind": "Lore & Canon"
+            }
+          ]
         },
         {
           "slug": "scene-33",
           "n": 33,
           "act": "monument",
-          "place": null,
+          "place": "the-monument",
           "title": "An Old Enemy's Blade",
           "location": "INT. GRAND CHAMBER – CONTINUOUS",
           "synopsis": "Oyster is stabbed from behind, and the silhouette finally introduces himself — Mach.",
@@ -10399,13 +11813,19 @@
               ]
             }
           ],
-          "backlinks": []
+          "backlinks": [
+            {
+              "route": "#/lore/chapter-2-timeline",
+              "name": "Chapter Two — Timeline",
+              "kind": "Lore & Canon"
+            }
+          ]
         },
         {
           "slug": "scene-34",
           "n": 34,
           "act": "monument",
-          "place": null,
+          "place": "the-monument",
           "title": "The Duel for the Orb",
           "location": "INT. MONUMENT CHAMBER – CONTINUOUS",
           "synopsis": "Pic, Chip, and Oyster fight Mach to a standstill at the foot of the pedestal.",
@@ -10459,13 +11879,19 @@
               ]
             }
           ],
-          "backlinks": []
+          "backlinks": [
+            {
+              "route": "#/lore/chapter-2-timeline",
+              "name": "Chapter Two — Timeline",
+              "kind": "Lore & Canon"
+            }
+          ]
         },
         {
           "slug": "scene-35",
           "n": 35,
           "act": "monument",
-          "place": null,
+          "place": "the-monument",
           "title": "The Spire",
           "location": "EXT. MONUMENT SPIRE – SAME",
           "synopsis": "Mach slips away, alive, and reappears where the Froststalker King fell.",
@@ -10496,13 +11922,19 @@
               "detail": []
             }
           ],
-          "backlinks": []
+          "backlinks": [
+            {
+              "route": "#/lore/chapter-2-timeline",
+              "name": "Chapter Two — Timeline",
+              "kind": "Lore & Canon"
+            }
+          ]
         },
         {
           "slug": "scene-36",
           "n": 36,
           "act": "monument",
-          "place": null,
+          "place": "the-monument",
           "title": "Squid, We'll Find You",
           "location": "INT. MONUMENT CHAMBER – CONTINUOUS",
           "synopsis": "Oyster reaches the orb at last, and the three of them step into the portal after Squid.",

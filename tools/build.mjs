@@ -438,6 +438,7 @@ const index = {
     id: book.id,
     title: book.meta.title,
     subtitle: book.meta.subtitle,
+    timeline: book.meta.timeline || 'timeline',
     acts: book.acts,
     scenes: book.scenes.map(strip),
   })),

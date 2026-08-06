@@ -3,7 +3,7 @@ title: Chip
 role: AI companion
 order: 2
 image: chip
-tags: Artificial, Chapter One
+tags: Artificial
 aliases: CHIP
 ---
 
@@ -61,3 +61,26 @@ At the castle gate, with everything behind them, the joke finally drops.
 > **OYSTER:** Without you, I wouldn't have made it past the Froststalker caverns.
 >
 > **CHIP:** And without you, I wouldn't have existed past that shipwreck.
+
+## Chapter Two: shattered, twice
+
+New form: a force-field projector, thrown up around [Pic](#/characters/pic)
+mid-duel to soak a flurry of Mach's knives. New scar: an X-ray mode, used the
+instant Mach vanishes to work out what they're actually dealing with.
+
+> **CHIP:** Its bone structure… identical to a human's, but with a squid-like
+> head. Yet — its build is slimmer and shorter than mine.
+
+The vulnerability isn't electromagnetic this time — it's a blade. Mach cuts his
+screen out cold with a single pass in [Scene 28](#/story/chapter-2/scene-28),
+and it's the only time all chapter Oyster's control genuinely breaks.
+
+> **OYSTER:** CHIP!
+
+Oyster fixes him by hand, wire by wire, with no toolbox drop-in this time.
+
+> **CHIP (voice crackling back to life):** Systems nominal. Power at thirty-two
+> percent. Thanks, pal.
+
+It happens again at the monument — screen shattered a second time by a thrown
+knife mid-duel — and he powers back on in time to watch Oyster reach the orb.

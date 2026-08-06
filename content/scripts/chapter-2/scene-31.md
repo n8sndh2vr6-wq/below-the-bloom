@@ -2,6 +2,7 @@
 title: The King's Last Stand
 scene: INT. DEEP TRENCH – APPROACHING THE MONUMENT – NIGHT
 act: monument
+place: the-monument
 number: 31
 summary: The Acidic King corners them at the monument's foot, and the Froststalker King pays the final price.
 ---

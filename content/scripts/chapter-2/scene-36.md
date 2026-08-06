@@ -2,6 +2,7 @@
 title: Squid, We'll Find You
 scene: INT. MONUMENT CHAMBER – CONTINUOUS
 act: monument
+place: the-monument
 number: 36
 summary: Oyster reaches the orb at last, and the three of them step into the portal after Squid.
 ---

@@ -2,6 +2,7 @@
 title: The Monument Hallway
 scene: INT. MONUMENT HALLWAY – CONTINUOUS
 act: monument
+place: the-monument
 number: 32
 summary: A quiet walk down memory lane, right up to the doors of the grand chamber.
 ---

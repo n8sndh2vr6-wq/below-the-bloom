@@ -2,6 +2,7 @@
 title: A Loose Stone
 scene: INT. DEEP SEA CREVICE – NIGHT
 act: emergent
+place: emergent-kingdom
 number: 9
 summary: A rest stop turns up a hidden tunnel when Oyster's elbow finds a stone that isn't a stone.
 ---

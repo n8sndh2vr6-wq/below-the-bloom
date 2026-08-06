@@ -2,6 +2,7 @@
 title: Chapter Two
 subtitle: The Return to Surface
 order: 2
+timeline: chapter-2-timeline
 act-return: Act I · The Return | Two years gone, and the castle's doors open on their own.
 act-power: Act II · Whispers of Power | Old debts, empty kingdoms, and a shape that won't hold still.
 act-maw: Act III · The Maw King's Debt | A reunion, a headcount of the dead, and a promise kept.

@@ -3,7 +3,7 @@ title: The Emergent King
 role: Ruler of the lighted depths
 order: 5
 image: emergent-king
-tags: Crown, Ally
+tags: Crown, Antagonist
 aliases: EMERGENT KING
 ---
 
@@ -53,3 +53,31 @@ his open mouth. He bites down. The detonation takes him with it — the oldest
 thing in the ocean spent as ordnance to kill the thing that had been running it.
 
 > **EMERGENT KING (spirit):** The ocean owes you peace.
+
+## Chapter Two: revived, and worse for it
+
+Squid promised to restore the kings. He kept the promise badly. Oyster and Chip
+find a second, buried Emergent Kingdom through a hidden crevice tunnel, and the
+king who rockets out from behind its ruined throne is not the same one who made
+peace with the Froststalkers — he's alone, his troops gone, his people dead a
+year after [the Bloom](#/characters/the-bloom), and he's decided exactly who to
+blame for all of it.
+
+> **EMERGENT KING:** You heard lies! Lies! They all died… because of you. Because
+> they believed I was dead after the Bloom… self-destructed inside my body!
+
+He doesn't recognize the debt Oyster remembers — that his own death bought the
+survivors their peace. He swallows all three of them whole rather than hear it.
+
+## What's inside him
+
+Acid, in enough volume that Oyster, Chip and Pic have to jam a katana into his
+throat wall just to stop falling. Getting out costs Oyster a free-fall rocket
+launch off his own blaster, fired straight up his attacker's throat, and a
+second blast through the King's teeth to blow the exit open.
+
+> **OYSTER (grinning through pain):** Told you. Not dying in a digestive system.
+
+He is hurt, not killed, and the chapter never brings him back — the last anyone
+sees of him is his kingdom cracking and sinking behind three swimmers who got
+out only because they'd already survived worse.
