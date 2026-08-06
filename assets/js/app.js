@@ -418,6 +418,8 @@ function layoutPortal() {
 
   portal.style.height = `${Math.round(pageH)}px`;
   portal.dataset.lag = p.toFixed(4);
+  // End offset for the CSS scroll() timeline: the layer's shift at full scroll.
+  portal.style.setProperty('--drift-end', `${((pageH - V) * p).toFixed(1)}px`);
 
   hero.style.paddingTop = `${Math.round(ART.markBottom * Himg + 10)}px`;
   const heroBottom = hero.offsetTop + hero.offsetHeight;
@@ -435,13 +437,50 @@ function layoutPortal() {
   portalScroll();
 }
 
-/** Scroll work the portal owns: the parallax and the depth readout. */
+/*
+ * The parallax itself. Scroll events fire well below frame rate during
+ * momentum scrolling, so positioning the art from inside the handler makes
+ * it stutter against the smoothly-composited content. Two tiers instead:
+ *
+ *  - Browsers with CSS scroll-driven animations get a scroll() timeline —
+ *    the compositor moves the layer off the main thread and JavaScript
+ *    never touches it again. layoutPortal() supplies the end offset.
+ *  - Everyone else gets a requestAnimationFrame loop that eases the layer
+ *    toward its target each frame, which turns the sparse scroll samples
+ *    into continuous motion.
+ */
+const SCROLL_TIMELINE = typeof CSS !== 'undefined'
+  && CSS.supports('animation-timeline: scroll()');
+
+let driftFrame = null;
+let driftY = 0;
+let driftWritten = null;
+
+function driftLoop() {
+  const portal = document.getElementById('portal');
+  const drift = document.getElementById('portal-drift');
+  if (!portal || !drift) { driftFrame = null; return; }
+
+  const target = scrollY * Number(portal.dataset.lag || 0);
+  driftY += (target - driftY) * 0.16;
+  if (Math.abs(target - driftY) < 0.05) driftY = target;
+  if (driftY !== driftWritten) {
+    drift.style.transform = `translate3d(-50%, ${driftY}px, 0)`;
+    driftWritten = driftY;
+  }
+
+  driftFrame = requestAnimationFrame(driftLoop);
+}
+
+/** Scroll work the portal owns: the depth readout (and the JS parallax tier). */
 function portalScroll() {
   const portal = document.getElementById('portal');
   if (!portal) return;
-  const drift = document.getElementById('portal-drift');
-  const lag = Number(portal.dataset.lag || 0);
-  drift.style.transform = `translate3d(-50%, ${(scrollY * lag).toFixed(1)}px, 0)`;
+
+  if (!SCROLL_TIMELINE && driftFrame === null) {
+    driftY = scrollY * Number(portal.dataset.lag || 0);
+    driftFrame = requestAnimationFrame(driftLoop);
+  }
 
   const read = document.getElementById('depth-read');
   if (read) {

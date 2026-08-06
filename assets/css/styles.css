@@ -1889,3 +1889,22 @@ button.dial[aria-expanded="true"] .dial-label { color: var(--accent, var(--cyan)
   background: linear-gradient(180deg, transparent, rgba(1, 5, 10, 0.97) 22%, rgba(1, 5, 10, 0.98));
   opacity: clamp(0, min(calc(var(--sink, 0) * 6), calc((0.8 - var(--sink, 0)) * 6)), 1);
 }
+
+/* Compositor-driven parallax where the browser supports it: the drift layer
+   is animated by document scroll position itself, off the main thread, so
+   it can never stutter against the scrolling content. --drift-end is the
+   layer's total shift over the full scroll range, set by layoutPortal(). */
+@supports (animation-timeline: scroll()) {
+  .portal-drift {
+    animation: drift-lag linear both;
+    animation-timeline: scroll(root);
+  }
+  @keyframes drift-lag {
+    from { transform: translate3d(-50%, 0, 0); }
+    to   { transform: translate3d(-50%, var(--drift-end, 0px), 0); }
+  }
+}
+
+/* Keep the scroll-tied overlays on their own compositor layers so their
+   per-scroll opacity changes never trigger paint. */
+.portal-shade, .portal-markveil, .portal-caveveil, .portal-rays { will-change: opacity; }
