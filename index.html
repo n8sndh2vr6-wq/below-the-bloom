@@ -3,55 +3,98 @@
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
-  <meta name="theme-color" content="#03070f">
+  <meta name="theme-color" content="#01050a">
   <meta name="color-scheme" content="dark">
   <meta name="apple-mobile-web-app-capable" content="yes">
   <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
-  <title>Below the Bloom · Planet (Redacted) Archive</title>
-  <meta name="description" content="The wiki and script archive for Below the Bloom — Oyster, Chip, four kingdoms and the thing beneath them all.">
 
-  <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Cdefs%3E%3CradialGradient id='g'%3E%3Cstop offset='0' stop-color='%23e3b8ff'/%3E%3Cstop offset='.55' stop-color='%23b06cff'/%3E%3Cstop offset='1' stop-color='%23071f31'/%3E%3C/radialGradient%3E%3C/defs%3E%3Crect width='64' height='64' rx='14' fill='%2303070f'/%3E%3Ccircle cx='32' cy='36' r='19' fill='url(%23g)'/%3E%3Cpath d='M14 20q9 7 18 0t18 0' stroke='%237fe6ff' stroke-width='3' fill='none' stroke-linecap='round' opacity='.75'/%3E%3C/svg%3E">
+  <title>Below the Bloom — The Official Wiki</title>
+  <meta name="description" content="The official wiki for Below the Bloom. Lore, characters, creatures, locations and the full Chapter One screenplay from the world beneath Planet (Redacted).">
 
-  <link rel="preconnect" href="https://fonts.googleapis.com">
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,600;1,400&family=Inter:wght@400;500;600;800&family=Courier+Prime:ital,wght@0,400;0,700;1,400&display=swap" rel="stylesheet">
+  <meta property="og:type" content="website">
+  <meta property="og:title" content="Below the Bloom — The Official Wiki">
+  <meta property="og:description" content="Explore the world. Uncover the truth. Survive what lies below.">
+  <meta property="og:image" content="assets/img/hero-abyss.jpg">
+
+  <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Crect width='32' height='32' fill='%2301050a'/%3E%3Cpath d='M16 5l3 11-3 11-3-11z' fill='%23a970ff'/%3E%3Cpath d='M5 16h6M21 16h6' stroke='%235fd4e4' stroke-width='1.5'/%3E%3C/svg%3E">
+
+  <link rel="preload" as="font" type="font/woff2" href="assets/fonts/cinzel-var.woff2" crossorigin>
+  <link rel="preload" as="font" type="font/woff2" href="assets/fonts/cormorant-garamond-var.woff2" crossorigin>
+  <link rel="preload" as="image" href="assets/img/hero-abyss.jpg" fetchpriority="high">
+  <link rel="stylesheet" href="assets/css/fonts.css">
   <link rel="stylesheet" href="assets/css/styles.css">
 </head>
 <body>
-  <div class="ocean" aria-hidden="true">
-    <div class="layer abyss"></div>
-    <div class="layer bloom"></div>
-    <div class="layer caustics"></div>
-    <canvas id="motes"></canvas>
-    <div class="layer vignette"></div>
+
+<!-- ── Icon set ─────────────────────────────────────────────────────────────
+     Lucide (ISC licence), 24×24 / 2px stroke, plus one glyph drawn to match
+     for "Creatures & Species". Inlined so the page makes no icon requests. -->
+<svg xmlns="http://www.w3.org/2000/svg" class="sprite" aria-hidden="true" focusable="false">
+  <defs>
+    <symbol id="i-menu" viewBox="0 0 24 24"><path d="M4 6h16M4 12h16M4 18h16"/></symbol>
+    <symbol id="i-search" viewBox="0 0 24 24"><circle cx="11" cy="11" r="7.5"/><path d="M21 21l-4.4-4.4"/></symbol>
+    <symbol id="i-close" viewBox="0 0 24 24"><path d="M18 6 6 18M6 6l12 12"/></symbol>
+    <symbol id="i-chevron-right" viewBox="0 0 24 24"><path d="m9 18 6-6-6-6"/></symbol>
+    <symbol id="i-chevron-left" viewBox="0 0 24 24"><path d="m15 18-6-6 6-6"/></symbol>
+    <symbol id="i-arrow-left" viewBox="0 0 24 24"><path d="M19 12H5m7 7-7-7 7-7"/></symbol>
+    <symbol id="i-arrow-right" viewBox="0 0 24 24"><path d="M5 12h14m-7-7 7 7-7 7"/></symbol>
+    <symbol id="i-home" viewBox="0 0 24 24"><path d="M3 10.2 12 3l9 7.2V20a1 1 0 0 1-1 1h-5v-6H9v6H4a1 1 0 0 1-1-1z"/></symbol>
+    <symbol id="i-book" viewBox="0 0 24 24"><path d="M12 7v14"/><path d="M3 18a1 1 0 0 1-1-1V4a1 1 0 0 1 1-1h5a4 4 0 0 1 4 4 4 4 0 0 1 4-4h5a1 1 0 0 1 1 1v13a1 1 0 0 1-1 1h-6a3 3 0 0 0-3 3 3 3 0 0 0-3-3z"/></symbol>
+    <symbol id="i-user" viewBox="0 0 24 24"><circle cx="12" cy="8" r="4.6"/><path d="M20 21a8 8 0 0 0-16 0"/></symbol>
+    <symbol id="i-fangs" viewBox="0 0 24 24"><path d="M3 8.4C6 5.9 9.1 4.7 12 4.7s6 1.2 9 3.7"/><path d="M4.7 9.7c.4 4.1 1.4 7.2 2.5 9.2.4.7 1.3.7 1.7 0 1-1.8 1.7-4.4 2.1-7.7"/><path d="M19.3 9.7c-.4 4.1-1.4 7.2-2.5 9.2-.4.7-1.3.7-1.7 0-1-1.8-1.7-4.4-2.1-7.7"/><path d="M12 11.2v3"/></symbol>
+    <symbol id="i-pin" viewBox="0 0 24 24"><path d="M20 10c0 5-5.5 10.2-7.4 11.8a1 1 0 0 1-1.2 0C9.5 20.2 4 15 4 10a8 8 0 0 1 16 0"/><circle cx="12" cy="10" r="3"/></symbol>
+    <symbol id="i-scroll" viewBox="0 0 24 24"><path d="M15 12h-5M15 8h-5"/><path d="M19 17V5a2 2 0 0 0-2-2H4"/><path d="M8 21h12a2 2 0 0 0 2-2v-1a1 1 0 0 0-1-1H11a1 1 0 0 0-1 1v1a2 2 0 1 1-4 0V5a2 2 0 1 0-4 0v2a1 1 0 0 0 1 1h3"/></symbol>
+    <symbol id="i-gallery" viewBox="0 0 24 24"><rect x="3" y="3" width="18" height="18" rx="2"/><circle cx="9" cy="9" r="1.8"/><path d="m21 15-3.1-3.1a2 2 0 0 0-2.8 0L6 21"/></symbol>
+    <symbol id="i-clock" viewBox="0 0 24 24"><circle cx="12" cy="12" r="9"/><path d="M12 7v5.2l3.2 2"/></symbol>
+  </defs>
+</svg>
+
+<a class="skip" href="#view">Skip to content</a>
+
+<!-- ── Ambience ─────────────────────────────────────────────────────────── -->
+<div class="abyss" aria-hidden="true">
+  <div class="abyss-grain"></div>
+  <canvas id="drift"></canvas>
+</div>
+
+<div id="progress" class="progress" aria-hidden="true"></div>
+
+<!-- ── Masthead ─────────────────────────────────────────────────────────── -->
+<header id="masthead" class="masthead">
+  <button class="glyph-button" id="menu-open" aria-label="Open menu" aria-expanded="false" aria-controls="drawer">
+    <svg class="icon"><use href="#i-menu"/></svg>
+  </button>
+
+  <a class="masthead-title" id="masthead-title" href="#/" hidden></a>
+
+  <a class="glyph-button" href="#/search" aria-label="Search the wiki">
+    <svg class="icon"><use href="#i-search"/></svg>
+  </a>
+</header>
+
+<!-- ── Drawer ───────────────────────────────────────────────────────────── -->
+<div class="scrim" id="scrim" hidden></div>
+<nav class="drawer" id="drawer" aria-label="Wiki sections" hidden>
+  <div class="drawer-head">
+    <p class="kicker">Below the Bloom</p>
+    <button class="glyph-button" id="menu-close" aria-label="Close menu">
+      <svg class="icon"><use href="#i-close"/></svg>
+    </button>
   </div>
+  <div class="drawer-links" id="drawer-links"></div>
+  <p class="drawer-foot">“The deep remembers.”</p>
+</nav>
 
-  <div id="progress" class="progress" aria-hidden="true"></div>
+<main id="view" class="view" tabindex="-1"></main>
 
-  <header id="topbar" class="topbar"></header>
+<noscript>
+  <div class="noscript">
+    <h1>Below the Bloom</h1>
+    <p>This wiki builds every page from the Markdown files kept alongside it,
+      so it needs JavaScript switched on.</p>
+  </div>
+</noscript>
 
-  <main id="view" class="view" tabindex="-1"></main>
-
-  <nav class="tabbar" aria-label="Sections">
-    <a class="tab" data-tab="home" href="#/">
-      <span class="tab-glyph">◈</span><span class="tab-label">Home</span>
-    </a>
-    <a class="tab" data-tab="script" href="#/script">
-      <span class="tab-glyph">☰</span><span class="tab-label">Script</span>
-    </a>
-    <a class="tab" data-tab="wiki" href="#/wiki">
-      <span class="tab-glyph">◍</span><span class="tab-label">Wiki</span>
-    </a>
-    <a class="tab" data-tab="search" href="#/search">
-      <span class="tab-glyph">⌕</span><span class="tab-label">Search</span>
-    </a>
-  </nav>
-
-  <noscript>
-    <p class="noscript">This archive renders its scripts and wiki pages from the Markdown
-    sources in the repository, so it needs JavaScript switched on.</p>
-  </noscript>
-
-  <script type="module" src="assets/js/app.js"></script>
+<script type="module" src="assets/js/app.js"></script>
 </body>
 </html>
