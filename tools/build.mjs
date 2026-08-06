@@ -78,8 +78,21 @@ const KILL_VALUE = /^([^>]+?)\s*>\s*([^|]+?)\s*(?:\|\s*(.*))?$/;
 
 const warnings = [];
 
-function readScenes() {
-  const dir = path.join(CONTENT, 'scripts', 'chapter-1');
+function discoverChapters() {
+  const dir = path.join(CONTENT, 'scripts');
+  if (!fs.existsSync(dir)) return [];
+  return fs.readdirSync(dir, { withFileTypes: true })
+    .filter((entry) => entry.isDirectory())
+    .map((entry) => entry.name)
+    .sort((a, b) => {
+      const na = Number((/(\d+)/.exec(a) || [])[1] ?? 0);
+      const nb = Number((/(\d+)/.exec(b) || [])[1] ?? 0);
+      return na - nb || a.localeCompare(b);
+    });
+}
+
+function readScenes(chapterId) {
+  const dir = path.join(CONTENT, 'scripts', chapterId);
   const { data: meta } = readDoc(path.join(dir, '_index.md'));
 
   const acts = [];
@@ -133,7 +146,8 @@ function readScenes() {
       title: data.title,
       location: data.scene,
       synopsis: data.summary,
-      file: `content/scripts/chapter-1/${file}`,
+      chapterId,
+      file: `content/scripts/${chapterId}/${file}`,
       text: body,
       stats: [
         {
@@ -208,8 +222,13 @@ function addDials(sections, scenes) {
   const link = (scene) => ({
     label: `Scene ${scene.n}`,
     note: scene.title,
-    route: `#/story/chapter-1/${scene.slug}`,
+    route: `#/story/${scene.chapterId}/${scene.slug}`,
   });
+
+  const chapterTotals = new Map();
+  for (const scene of scenes) {
+    chapterTotals.set(scene.chapterId, (chapterTotals.get(scene.chapterId) || 0) + 1);
+  }
 
   // Every kill recorded anywhere in the scripts, with where it happened.
   const ledger = scenes.flatMap((scene) => scene.kills.map((k) => ({ ...k, scene })));
@@ -252,7 +271,7 @@ function addDials(sections, scenes) {
             detail: mine.map((k) => ({
               label: k.count > 1 ? `${k.victim} ×${k.count}` : k.victim,
               note: [k.note, `Scene ${k.scene.n}`].filter(Boolean).join(' · '),
-              route: `#/story/chapter-1/${k.scene.slug}`,
+              route: `#/story/${k.scene.chapterId}/${k.scene.slug}`,
             })),
           },
         ];
@@ -272,7 +291,7 @@ function addDials(sections, scenes) {
             detail: died.map((k) => ({
               label: k.count > 1 ? `${k.victim} ×${k.count}` : k.victim,
               note: [`killed by ${k.killer}`, `Scene ${k.scene.n}`].join(' · '),
-              route: `#/story/chapter-1/${k.scene.slug}`,
+              route: `#/story/${k.scene.chapterId}/${k.scene.slug}`,
             })),
           },
           {
@@ -306,7 +325,13 @@ function addDials(sections, scenes) {
           return { label, route: `#/${prefix}/${slug}` };
         });
 
-        const inScenes = cited('story/chapter-1');
+        const inScenes = [...new Set(
+          [...entry.text.matchAll(/\[([^\]]+)\]\(#\/story\/([a-z0-9-]+)\/([a-z0-9-]+)\)/g)]
+            .map((m) => `${m[2]}\u0000${m[3]}\u0000${m[1]}`),
+        )].map((triple) => {
+          const [chapterId, slug, label] = triple.split('\u0000');
+          return { label, route: `#/story/${chapterId}/${slug}` };
+        });
         entry.stats = [
           { label: 'Scenes cited', value: inScenes.length, max: total, detail: inScenes },
           { label: 'Characters', value: cited('characters').length, max: 10, detail: cited('characters') },
@@ -318,10 +343,11 @@ function addDials(sections, scenes) {
 
   for (const scene of scenes) {
     const killed = scene.kills;
+    const chapterTotal = chapterTotals.get(scene.chapterId) || 1;
     scene.stats = [
       {
-        label: 'Depth', value: Math.round((scene.n / total) * 100), max: 100, suffix: '%',
-        detail: [{ label: `Scene ${scene.n} of ${total}`, note: 'How far into the chapter this sits.' }],
+        label: 'Depth', value: Math.round((scene.n / chapterTotal) * 100), max: 100, suffix: '%',
+        detail: [{ label: `Scene ${scene.n} of ${chapterTotal}`, note: 'How far into the chapter this sits.' }],
       },
       ...scene.stats,
     ];
@@ -372,7 +398,7 @@ function addBacklinks(sections, scenes) {
       route: `#/${s.slug}/${e.slug}`, name: e.name, kind: s.title, text: e.text,
     }))),
     ...scenes.map((s) => ({
-      route: `#/story/chapter-1/${s.slug}`, name: `Scene ${s.n} — ${s.title}`, kind: 'Scene', text: s.text,
+      route: `#/story/${s.chapterId}/${s.slug}`, name: `Scene ${s.n} — ${s.title}`, kind: 'Scene', text: s.text,
     })),
   ];
 
@@ -388,20 +414,22 @@ function addBacklinks(sections, scenes) {
     }
   }
   for (const scene of scenes) {
-    scene.backlinks = (incoming.get(`#/story/chapter-1/${scene.slug}`) || []).slice(0, 12);
+    scene.backlinks = (incoming.get(`#/story/${scene.chapterId}/${scene.slug}`) || []).slice(0, 12);
   }
 }
 
 /* ----------------------------------------------------------------- write */
 
-const { meta: bookMeta, acts, scenes } = readScenes();
+const chapterIds = discoverChapters();
+const books = chapterIds.map((id) => ({ id, ...readScenes(id) }));
+const scenes = books.flatMap((b) => b.scenes);
 const sections = readSections();
 const images = imageMap();
 
 addDials(sections, scenes);
 addBacklinks(sections, scenes);
 
-const strip = ({ text, aliases, speakers, spoken, kills, ...rest }) => rest;
+const strip = ({ text, aliases, speakers, spoken, kills, chapterId, ...rest }) => rest;
 
 const index = {
   site: {
@@ -414,13 +442,14 @@ const index = {
   },
   images,
   sections: sections.map((s) => ({ ...s, entries: s.entries.map(strip) })),
-  chapters: [{
-    id: 'chapter-1',
-    title: bookMeta.title,
-    subtitle: bookMeta.subtitle,
-    acts,
-    scenes: scenes.map(strip),
-  }],
+  chapters: books.map((book) => ({
+    id: book.id,
+    title: book.meta.title,
+    subtitle: book.meta.subtitle,
+    timeline: book.meta.timeline || 'timeline',
+    acts: book.acts,
+    scenes: book.scenes.map(strip),
+  })),
 };
 
 fs.writeFileSync(path.join(CONTENT, 'index.json'), JSON.stringify(index, null, 2) + '\n');
@@ -431,13 +460,15 @@ const missing = sections
 // A single-word cue that speaks once and matches nobody's aliases is usually
 // a mistyped tag (KILLL:) rather than a character — real bit-parts read like
 // "MAW 2" or "DEADWAKE WARRIOR", so a space is enough to tell them apart.
+// Ensemble cues are standard screenplay shorthand, not characters.
+const ENSEMBLE = new Set(['ALL', 'BOTH', 'EVERYONE', 'CROWD', 'VOICES', 'TOGETHER']);
 const declared = new Set(sections.flatMap((s) => s.entries.flatMap((e) => e.aliases)));
 const tally = new Map();
 for (const scene of scenes) {
   for (const [cue, n] of scene.spoken) tally.set(cue, (tally.get(cue) || 0) + n);
 }
 for (const [cue, n] of tally) {
-  if (n === 1 && !cue.includes(' ') && !declared.has(cue)) {
+  if (n === 1 && !cue.includes(' ') && !declared.has(cue) && !ENSEMBLE.has(cue)) {
     warnings.push(`"${cue}:" speaks once, is one word and matches no character — mistyped tag?`);
   }
 }

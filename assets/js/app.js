@@ -358,30 +358,32 @@ function galleryIndex() {
 }
 
 function storyIndex() {
-  const book = site.chapters[0];
-  const acts = book.acts.map((act) => {
-    const scenes = book.scenes.filter((s) => s.act === act.id);
-    const rows = scenes.map((scene, i) => `
-      <a class="ledger-row fade" style="--i:${Math.min(i, 8)}" href="#/story/${book.id}/${scene.slug}">
-        <span>
-          <b class="ledger-name"><span class="ledger-index">${String(scene.n).padStart(2, '0')}</span> &nbsp;${escapeHtml(scene.title)}</b>
-          <small class="ledger-note">${escapeHtml(scene.synopsis)}</small>
-        </span>
-        ${icon('i-chevron-right', 'icon chev')}
-      </a>`).join('');
-    return `<h2 class="act">${escapeHtml(act.title)}<small>${escapeHtml(act.note)}</small></h2><div class="ledger">${rows}</div>`;
-  }).join('');
+  return site.chapters.map((book) => {
+    const acts = book.acts.map((act) => {
+      const scenes = book.scenes.filter((s) => s.act === act.id);
+      const rows = scenes.map((scene, i) => `
+        <a class="ledger-row fade" style="--i:${Math.min(i, 8)}" href="#/story/${book.id}/${scene.slug}">
+          <span>
+            <b class="ledger-name"><span class="ledger-index">${String(scene.n).padStart(2, '0')}</span> &nbsp;${escapeHtml(scene.title)}</b>
+            <small class="ledger-note">${escapeHtml(scene.synopsis)}</small>
+          </span>
+          ${icon('i-chevron-right', 'icon chev')}
+        </a>`).join('');
+      return `<h2 class="act">${escapeHtml(act.title)}<small>${escapeHtml(act.note)}</small></h2><div class="ledger">${rows}</div>`;
+    }).join('');
 
-  return `
-    <div class="ledger" style="margin-top:26px">
-      <a class="ledger-row fade" href="#/lore/timeline">
-        <span>
-          <b class="ledger-name">Chapter One — Timeline</b>
-          <small class="ledger-note">The whole descent in order, beat by beat.</small>
-        </span>
-        ${icon('i-chevron-right', 'icon chev')}
-      </a>
-    </div>${acts}`;
+    return `
+      <h1 class="chapter-heading fade">${escapeHtml(book.title)}${book.subtitle ? `<small>${escapeHtml(book.subtitle)}</small>` : ''}</h1>
+      <div class="ledger" style="margin-top:26px">
+        <a class="ledger-row fade" href="#/lore/${book.timeline || 'timeline'}">
+          <span>
+            <b class="ledger-name">${escapeHtml(book.title)} — Timeline</b>
+            <small class="ledger-note">The whole run in order, beat by beat.</small>
+          </span>
+          ${icon('i-chevron-right', 'icon chev')}
+        </a>
+      </div>${acts}`;
+  }).join('');
 }
 
 function sectionView(slug) {
@@ -512,7 +514,7 @@ async function sceneView(chapterId, slug) {
       ${pager(
         previous && { href: neighbours.previous, label: `Scene ${previous.n}`, name: previous.title },
         next ? { href: neighbours.next, label: `Scene ${next.n}`, name: next.title }
-             : { href: '#/lore/timeline', label: 'End of chapter', name: 'The timeline' },
+             : { href: `#/lore/${book.timeline || 'timeline'}`, label: 'End of chapter', name: 'The timeline' },
       )}
     </article>`);
 }
