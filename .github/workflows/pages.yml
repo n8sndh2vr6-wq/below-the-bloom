@@ -36,3 +36,11 @@ jobs:
       - name: Deploy to GitHub Pages
         id: deployment
         uses: actions/deploy-pages@v4
+        with:
+          # This step is mostly spent waiting in GitHub's own deployment
+          # queue, and it prints "deployment_queued" once a second while it
+          # does. A run on 6 Aug queued for 7m49s against the 10-minute
+          # default and only just made it, so allow twenty and poll less
+          # noisily. Neither setting affects how fast the site publishes.
+          timeout: 1200000
+          reporting_interval: 10000
