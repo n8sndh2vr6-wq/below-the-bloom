@@ -605,32 +605,61 @@ function galleryIndex() {
 }
 
 function storyIndex() {
-  return site.chapters.map((book) => {
-    const acts = book.acts.map((act) => {
-      const scenes = book.scenes.filter((s) => s.act === act.id);
-      const rows = scenes.map((scene, i) => `
-        <a class="ledger-row fade" style="--i:${Math.min(i, 8)}" href="#/story/${book.id}/${scene.slug}">
-          <span>
-            <b class="ledger-name"><span class="ledger-index">${String(scene.n).padStart(2, '0')}</span> &nbsp;${escapeHtml(scene.title)}</b>
-            <small class="ledger-note">${escapeHtml(scene.synopsis)}</small>
-          </span>
-          ${icon('i-chevron-right', 'icon chev')}
-        </a>`).join('');
-      return `<h2 class="act">${escapeHtml(act.title)}<small>${escapeHtml(act.note)}</small></h2><div class="ledger">${rows}</div>`;
-    }).join('');
+  const rows = site.chapters.map((book, i) => `
+    <a class="ledger-row fade" style="--i:${Math.min(i, 10)}" href="#/story/${book.id}">
+      <span>
+        <b class="ledger-name">${escapeHtml(book.title)}</b>
+        <small class="ledger-note">${escapeHtml(book.subtitle || '')}${book.subtitle ? ' — ' : ''}${book.acts.length} acts, ${book.scenes.length} scenes</small>
+      </span>
+      ${icon('i-chevron-right', 'icon chev')}
+    </a>`).join('');
 
-    return `
-      <h1 class="chapter-heading fade">${escapeHtml(book.title)}${book.subtitle ? `<small>${escapeHtml(book.subtitle)}</small>` : ''}</h1>
-      <div class="ledger" style="margin-top:26px">
-        <a class="ledger-row fade" href="#/lore/${book.timeline || 'timeline'}">
-          <span>
-            <b class="ledger-name">${escapeHtml(book.title)} — Timeline</b>
-            <small class="ledger-note">The whole run in order, beat by beat.</small>
-          </span>
-          ${icon('i-chevron-right', 'icon chev')}
-        </a>
-      </div>${acts}`;
+  return `<div class="ledger" style="margin-top:26px">${rows}</div>`;
+}
+
+function chapterIndex(book) {
+  const acts = book.acts.map((act) => {
+    const scenes = book.scenes.filter((s) => s.act === act.id);
+    const rows = scenes.map((scene, i) => `
+      <a class="ledger-row fade" style="--i:${Math.min(i, 8)}" href="#/story/${book.id}/${scene.slug}">
+        <span>
+          <b class="ledger-name"><span class="ledger-index">${String(scene.n).padStart(2, '0')}</span> &nbsp;${escapeHtml(scene.title)}</b>
+          <small class="ledger-note">${escapeHtml(scene.synopsis)}</small>
+        </span>
+        ${icon('i-chevron-right', 'icon chev')}
+      </a>`).join('');
+    return `<h2 class="act">${escapeHtml(act.title)}<small>${escapeHtml(act.note)}</small></h2><div class="ledger">${rows}</div>`;
   }).join('');
+
+  return `
+    <div class="ledger" style="margin-top:26px">
+      <a class="ledger-row fade" href="#/lore/${book.timeline || 'timeline'}">
+        <span>
+          <b class="ledger-name">${escapeHtml(book.title)} — Timeline</b>
+          <small class="ledger-note">The whole run in order, beat by beat.</small>
+        </span>
+        ${icon('i-chevron-right', 'icon chev')}
+      </a>
+    </div>${acts}`;
+}
+
+function chapterView(chapterId) {
+  const book = site.chapters.find((c) => c.id === chapterId);
+  if (!book) throw new Error(`There is no chapter called “${chapterId}” in this wiki.`);
+
+  const story = section('story');
+  setChrome(book.title, '#/story', story.accent);
+
+  paint(`
+    <div class="shell">
+      <header class="head">
+        <p class="kicker">${escapeHtml(story.title)}</p>
+        <h1 class="title">${escapeHtml(book.title)}</h1>
+        ${ornament()}
+        ${book.subtitle ? `<p class="standfirst">${escapeHtml(book.subtitle)}</p>` : ''}
+      </header>
+      ${chapterIndex(book)}
+    </div>`);
 }
 
 function sectionView(slug) {
@@ -732,7 +761,7 @@ async function sceneView(chapterId, slug) {
   if (!scene) throw new Error(`${book.title} has no scene called “${slug}”.`);
 
   const story = section('story');
-  setChrome(`Scene ${String(scene.n).padStart(2, '0')}`, '#/story', story.accent);
+  setChrome(`Scene ${String(scene.n).padStart(2, '0')}`, `#/story/${book.id}`, story.accent);
   waiting('Surfacing the scene');
 
   const { body } = parseFrontMatter(await read(scene.file));
@@ -910,6 +939,7 @@ async function route() {
     if (!parts.length) home();
     else if (parts[0] === 'search') searchView(params.get('q') || '');
     else if (parts[0] === 'story' && parts.length >= 3) await sceneView(parts[1], parts[2]);
+    else if (parts[0] === 'story' && parts.length === 2) chapterView(parts[1]);
     else if (known.has(parts[0]) && parts.length >= 2) await entryView(parts[0], parts[1]);
     else if (known.has(parts[0])) sectionView(parts[0]);
     else throw new Error('That page is not part of this archive.');
