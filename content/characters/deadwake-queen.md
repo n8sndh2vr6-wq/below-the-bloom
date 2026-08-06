@@ -1,3 +1,13 @@
+---
+title: The Deadwake Queen
+role: Ruler of the purple paradise
+order: 6
+image: deadwake-queen
+tags: Crown, Antagonist
+aliases: DEADWAKE QUEEN
+kills: 6
+---
+
 Enormous, sleek and elegant, her bioluminescent fins pulsing dominance, on a
 throne chiselled from obsidian coral at the heart of the
 [Deadwake kingdom](#/locations/deadwake-kingdom).

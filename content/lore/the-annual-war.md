@@ -1,3 +1,9 @@
+---
+title: The Annual War
+role: When the currents shift and the Maw hunger grows
+order: 3
+---
+
 Once a year, when the currents shift, the [Maw](#/creatures/maws) hunger grows
 and the kingdoms above them have to survive it.
 

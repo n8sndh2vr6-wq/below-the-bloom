@@ -1,3 +1,9 @@
+---
+title: The Castle and the Crown
+role: The legend that made a survivor leave a survivable wreck
+order: 4
+---
+
 Buried under ten layers of classified nonsense in
 [the Agency's](#/lore/the-agency) files is a *deep structure* — old, possibly
 alive, known only from blurry scans taken by people who then went missing.

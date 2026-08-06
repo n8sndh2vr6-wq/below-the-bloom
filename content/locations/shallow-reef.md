@@ -1,3 +1,11 @@
+---
+title: The Shallow Reef
+role: The only safe water in the chapter
+order: 4
+depth: 2
+scenes: 3
+---
+
 A vast coral-reef region in early morning light, with bioluminescent plants
 pulsing gently in the current and strange alien fish darting past. Soft beams of
 light come down from above and paint patterns on the sand.

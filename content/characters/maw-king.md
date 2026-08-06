@@ -1,3 +1,13 @@
+---
+title: The Maw King
+role: Ruler of the cavernous depths
+order: 4
+image: maw-king
+tags: Crown, Antagonist
+aliases: MAW KING
+kills: 1
+---
+
 Orange eyes, mandibles, claws that click on coral, and a throne of black,
 twisted, spiked coral at the centre of the [cavernous depths](#/locations/maw-territory).
 

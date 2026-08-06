@@ -1,3 +1,13 @@
+---
+title: Maws
+role: Ambush predators of the dark
+order: 2
+image: maws
+tags: Maw territory, Sapient
+aliases: MAW
+depth: 6
+---
+
 The ambush predators of the [cavernous depths](#/locations/maw-territory), and
 the reason every other kingdom on the planet has an army.
 

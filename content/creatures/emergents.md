@@ -1,3 +1,13 @@
+---
+title: Emergents
+role: The oldest things alive
+order: 3
+image: emergents
+tags: Lighted depths, Ancient
+aliases: EMERGENT
+depth: 7
+---
+
 The oldest beings on the planet, and the most dangerous thing in the ocean to
 underestimate — which is exactly what Oyster does, because he is hungry.
 

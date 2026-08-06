@@ -1,3 +1,11 @@
+---
+title: The Research Vessel
+role: Dim blue light, a window full of ice, four minutes to live
+order: 2
+depth: 0
+scenes: 1
+---
+
 Dim blue interior lighting. Humming instrument panels. A large window showing an
 icy planet below — rolling clouds, auroras, endless water.
 

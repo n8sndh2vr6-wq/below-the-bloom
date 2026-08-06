@@ -1,3 +1,13 @@
+---
+title: Deadwakes
+role: Armoured eels, venom bearers
+order: 4
+image: deadwakes
+tags: Purple paradise, Sapient
+aliases: DEADWAKE
+depth: 8
+---
+
 Long, eel-like, armoured, and streaked with bioluminescence. They hold the
 [purple paradise](#/locations/purple-paradise) — the most beautiful water in the
 chapter — and they are the reason it is empty.

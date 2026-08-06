@@ -1,3 +1,13 @@
+---
+title: Mariq Levi
+role: Tech officer
+order: 10
+image: mariq-levi
+tags: Human, Crew
+aliases: MARIQ
+kills: 0
+---
+
 Twenties, jokester, optimist, and the crew's morale for as long as the crew
 exists.
 

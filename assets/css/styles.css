@@ -1056,3 +1056,394 @@ mark { background: rgba(165, 108, 255, 0.3); color: #fff; padding: 0 2px; }
   .fade { opacity: 1; transform: none; }
   #drift { display: none; }
 }
+
+/* ==========================================================================
+   SPLASH — the descent before the site
+   ========================================================================== */
+
+.splash {
+  position: fixed;
+  inset: 0;
+  z-index: 200;
+  display: grid;
+  place-items: center;
+  background: var(--abyss);
+  overflow: hidden;
+  transition: opacity 0.8s ease, visibility 0.8s;
+}
+.splash.done { opacity: 0; visibility: hidden; pointer-events: none; }
+body.booting { overflow: hidden; }
+
+/* The key art, held on the wordmark and crushed to black everywhere else. */
+.splash-art {
+  position: absolute;
+  inset: 0;
+  background: url('../img/hero-abyss.jpg') 50% 52% / cover no-repeat;
+  -webkit-mask-image: radial-gradient(46% 26% at 50% 50%, #000 0%, rgba(0,0,0,.55) 42%, transparent 74%);
+  mask-image: radial-gradient(46% 26% at 50% 50%, #000 0%, rgba(0,0,0,.55) 42%, transparent 74%);
+  animation: splash-breathe 6s ease-in-out infinite, splash-in 1.6s cubic-bezier(.2,.8,.25,1) both;
+}
+
+@keyframes splash-in {
+  from { opacity: 0; transform: scale(1.14); filter: blur(14px); }
+  to   { opacity: 1; transform: scale(1);    filter: none; }
+}
+@keyframes splash-breathe {
+  0%, 100% { filter: brightness(0.94); }
+  50%      { filter: brightness(1.1); }
+}
+
+/* Sonar rings, pinging out from behind the wordmark. */
+.splash-sonar {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  width: 1px;
+  height: 1px;
+}
+.splash-sonar span {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  width: 46vmin;
+  height: 46vmin;
+  margin: -23vmin 0 0 -23vmin;
+  border: 1px solid var(--cyan);
+  border-radius: 50%;
+  opacity: 0;
+  animation: ping 3.6s cubic-bezier(.2,.6,.3,1) infinite;
+}
+.splash-sonar span:nth-child(2) { animation-delay: 1.2s; border-color: var(--violet); }
+.splash-sonar span:nth-child(3) { animation-delay: 2.4s; }
+
+@keyframes ping {
+  0%   { transform: scale(0.25); opacity: 0; }
+  14%  { opacity: 0.5; }
+  100% { transform: scale(2.1); opacity: 0; }
+}
+
+.splash-hud {
+  position: absolute;
+  left: 50%;
+  bottom: calc(var(--bottom) + 12svh);
+  transform: translateX(-50%);
+  width: min(78vw, 320px);
+  text-align: center;
+  animation: hud-in 1s ease 0.5s both;
+}
+@keyframes hud-in { from { opacity: 0; transform: translate(-50%, 14px); } to { opacity: 1; transform: translate(-50%, 0); } }
+
+.splash-depth {
+  margin: 0 0 14px;
+  font-family: var(--face-mono);
+  font-size: 0.78rem;
+  letter-spacing: 0.34em;
+  color: var(--cyan);
+  text-shadow: 0 0 18px rgba(98, 213, 230, 0.5);
+}
+.splash-depth b { font-weight: 400; }
+.splash-depth em { font-style: normal; opacity: 0.5; margin-left: 0.4em; }
+
+.splash-bar {
+  height: 1px;
+  background: rgba(129, 197, 214, 0.16);
+  overflow: hidden;
+}
+.splash-bar i {
+  display: block;
+  height: 100%;
+  width: 0;
+  background: linear-gradient(90deg, var(--cyan-deep), var(--violet));
+  box-shadow: 0 0 12px var(--violet);
+  transition: width 0.4s ease;
+}
+
+.splash-status {
+  margin: 14px 0 0;
+  font-family: var(--face-display);
+  font-size: 0.6rem;
+  letter-spacing: var(--track-m);
+  text-transform: uppercase;
+  color: var(--bone-4);
+  min-height: 1em;
+}
+
+.splash-skip {
+  position: absolute;
+  right: 16px;
+  bottom: calc(var(--bottom) + 16px);
+  padding: 10px 16px;
+  font-family: var(--face-display);
+  font-size: 0.58rem;
+  letter-spacing: var(--track-m);
+  text-transform: uppercase;
+  color: var(--bone-4);
+  cursor: pointer;
+  opacity: 0;
+  animation: fade-in 0.6s ease 2.4s forwards;
+}
+@keyframes fade-in { to { opacity: 1; } }
+.splash-skip:active { color: var(--cyan); }
+
+@media (prefers-reduced-motion: reduce) {
+  .splash-art { animation: none; }
+  .splash-sonar { display: none; }
+}
+
+/* ==========================================================================
+   DIALS — three readings at the head of every page
+   ========================================================================== */
+
+.dials {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 6px;
+  margin: 26px 0 0;
+  padding: 20px 0;
+  border-top: 1px solid var(--rule-soft);
+  border-bottom: 1px solid var(--rule-soft);
+}
+
+.dial { text-align: center; }
+
+.dial svg { width: min(25vw, 96px); height: auto; display: block; margin: 0 auto; }
+
+.dial-rim   { fill: none; stroke: var(--rule); stroke-width: 0.8; }
+.dial-tick  { stroke: var(--rule); stroke-width: 1; }
+.dial-tick.major { stroke: var(--bone-4); stroke-width: 1.4; }
+.dial-arc {
+  fill: none;
+  stroke: var(--accent, var(--cyan));
+  stroke-width: 2.6;
+  stroke-linecap: round;
+  filter: drop-shadow(0 0 5px var(--accent, var(--cyan)));
+}
+.dial-needle {
+  stroke: var(--bone);
+  stroke-width: 1.6;
+  stroke-linecap: round;
+}
+.dial-hub { fill: var(--accent, var(--cyan)); }
+
+.dial-value {
+  display: block;
+  margin-top: -26px;
+  font-family: var(--face-mono);
+  font-size: 1.05rem;
+  font-weight: 700;
+  letter-spacing: 0.02em;
+  color: #f2f8fb;
+}
+.dial-value small { font-size: 0.62em; opacity: 0.45; font-weight: 400; }
+
+.dial-label {
+  display: block;
+  margin-top: 8px;
+  font-family: var(--face-display);
+  font-size: 0.56rem;
+  letter-spacing: var(--track-s);
+  text-transform: uppercase;
+  color: var(--bone-3);
+  line-height: 1.35;
+}
+
+/* ==========================================================================
+   FIGURES — IMAGE: blocks inside articles and scenes
+   ========================================================================== */
+
+.figure { margin: 2em 0; }
+.figure .plate { aspect-ratio: 16 / 10; border-radius: 2px; }
+.figure figcaption {
+  margin-top: 10px;
+  font-size: 0.92rem;
+  font-style: italic;
+  line-height: 1.5;
+  color: var(--bone-3);
+  text-align: center;
+}
+.figure.missing .plate { aspect-ratio: 16 / 7; opacity: 0.55; }
+.figure.missing figcaption { font-style: normal; font-family: var(--face-mono); font-size: 0.76rem; }
+
+/* ==========================================================================
+   BACKLINKS — what else in the wiki points here
+   ========================================================================== */
+
+.backlinks { margin-top: 44px; padding-top: 22px; border-top: 1px solid var(--rule-soft); }
+.backlinks h2 {
+  margin: 0 0 4px;
+  font-family: var(--face-display);
+  font-size: 0.62rem;
+  font-weight: 500;
+  letter-spacing: var(--track-m);
+  text-transform: uppercase;
+  color: var(--accent, var(--cyan));
+}
+.backlinks ul { list-style: none; margin: 0; padding: 0; }
+.backlinks li { border-bottom: 1px solid var(--rule-soft); }
+.backlinks a {
+  display: flex;
+  align-items: baseline;
+  gap: 10px;
+  padding: 11px 0;
+  color: var(--bone-2);
+  transition: color 0.2s ease, padding-left 0.2s ease;
+}
+.backlinks a:active, .backlinks a:hover { color: var(--bone); padding-left: 6px; }
+.backlinks em {
+  flex: none;
+  font-style: normal;
+  font-family: var(--face-display);
+  font-size: 0.54rem;
+  letter-spacing: var(--track-s);
+  text-transform: uppercase;
+  color: var(--bone-4);
+}
+
+/* ==========================================================================
+   REVISIONS TO EARLIER RULES
+   ========================================================================== */
+
+/* Section accents drive icon, rule, glow and link colour per area. */
+.gateway .icon,
+.drawer-links a .icon { color: var(--gw, var(--cyan)); }
+.gateway:first-child .icon { color: var(--gw, var(--cyan)); }
+.gateway .chev { color: color-mix(in srgb, var(--gw, var(--cyan)) 60%, transparent); }
+.gateway:active, .gateway:hover {
+  background: linear-gradient(90deg, color-mix(in srgb, var(--gw) 14%, transparent), transparent 70%);
+}
+
+.head .kicker,
+.dossier-head .kicker { color: var(--accent, var(--violet-hot)); }
+.title-sub { color: var(--accent, var(--violet-hot)); }
+.orn { color: color-mix(in srgb, var(--accent, var(--cyan)) 72%, transparent); }
+.orn.violet { color: var(--accent, var(--violet)); }
+.tagset span { color: var(--accent, var(--cyan)); border-color: color-mix(in srgb, var(--accent, var(--cyan)) 26%, transparent); }
+.prose h2::after { background: linear-gradient(90deg, var(--accent, var(--violet)), transparent); }
+.prose h3 { color: var(--accent, var(--cyan)); }
+.title { text-shadow: 0 0 48px color-mix(in srgb, var(--accent, var(--cyan)) 22%, transparent); }
+.ledger-index { color: var(--accent, var(--violet)); }
+.entry:active .plate, .entry:hover .plate { border-color: color-mix(in srgb, var(--accent, var(--violet)) 55%, transparent); }
+.sounding span { background: linear-gradient(90deg, var(--cyan-deep), var(--accent, var(--violet))); }
+
+/* The placeholder plate now sits on the page colour instead of its own. */
+.plate {
+  background: var(--abyss-2);
+  border-color: var(--rule-soft);
+}
+.plate.empty {
+  background:
+    radial-gradient(72% 58% at 50% 46%, color-mix(in srgb, var(--accent, var(--violet)) 13%, transparent), transparent 72%),
+    var(--abyss-2);
+}
+.plate.empty::after {
+  background:
+    url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='54' height='54' viewBox='0 0 54 54'%3E%3Cpath d='M27 13l4.5 14L27 41l-4.5-14z' fill='none' stroke='%23dbe7ed' stroke-opacity='.28'/%3E%3Cpath d='M9 27h8M37 27h8' stroke='%23dbe7ed' stroke-opacity='.16'/%3E%3C/svg%3E")
+    center / 54px no-repeat;
+}
+
+/* Entry pages: no empty frame — an accent aura instead, so the top of the
+   page matches the rest of it until real artwork arrives. */
+.dossier-art.empty { display: none; }
+.dossier-head.bare {
+  padding-top: calc(var(--bar) + 30px);
+  position: relative;
+}
+.dossier-head.bare::before {
+  content: '';
+  position: absolute;
+  left: 50%;
+  top: 0;
+  width: min(120vw, 640px);
+  height: 300px;
+  transform: translateX(-50%);
+  z-index: -1;
+  background: radial-gradient(50% 50% at 50% 40%, color-mix(in srgb, var(--accent, var(--violet)) 22%, transparent), transparent 70%);
+  pointer-events: none;
+}
+
+/* ==========================================================================
+   PORTAL — the gateways stay below the fold
+   ========================================================================== */
+
+.portal-body { min-height: 1px; }
+
+.portal-intro { min-height: calc(100svh - var(--bar)); display: flex; flex-direction: column; }
+.portal-intro .creed { margin-top: 20px; }
+
+.scroll-cue {
+  margin-top: auto;
+  padding: 26px 0 12px;
+  display: grid;
+  place-items: center;
+  gap: 10px;
+  color: var(--bone-4);
+  font-family: var(--face-display);
+  font-size: 0.55rem;
+  letter-spacing: var(--track-m);
+  text-transform: uppercase;
+  animation: cue 3.4s ease-in-out infinite;
+}
+.scroll-cue svg { width: 16px; height: 16px; stroke: currentColor; fill: none; stroke-width: 1.6; }
+@keyframes cue {
+  0%, 100% { opacity: 0.35; transform: translateY(0); }
+  50%      { opacity: 0.9;  transform: translateY(5px); }
+}
+
+.gateways {
+  opacity: 0;
+  transform: translateY(26px);
+  transition: opacity 0.9s ease, transform 0.9s cubic-bezier(.2,.9,.25,1);
+}
+.gateways.seen { opacity: 1; transform: none; }
+.gateway { opacity: 0; transform: translateY(14px); transition: opacity .6s ease, transform .6s ease, background .25s ease, padding-left .25s ease; }
+.gateways.seen .gateway { opacity: 1; transform: none; }
+.gateways.seen .gateway:nth-child(1) { transition-delay: .05s; }
+.gateways.seen .gateway:nth-child(2) { transition-delay: .12s; }
+.gateways.seen .gateway:nth-child(3) { transition-delay: .19s; }
+.gateways.seen .gateway:nth-child(4) { transition-delay: .26s; }
+.gateways.seen .gateway:nth-child(5) { transition-delay: .33s; }
+.gateways.seen .gateway:nth-child(6) { transition-delay: .40s; }
+
+/* ==========================================================================
+   PRINT — writers print scenes
+   ========================================================================== */
+
+@media print {
+  .abyss, .masthead, .drawer, .scrim, .progress, .splash, .dials,
+  .pager, .backlinks, .scroll-cue, .portal-art { display: none !important; }
+  body { background: #fff; color: #111; font-size: 11pt; }
+  .view { padding: 0; }
+  .title { color: #000; text-shadow: none; }
+  .screenplay { border: 0; font-size: 11pt; }
+  .sp-cue { color: #000; }
+  .sp-line { border: 0; padding-left: 0; }
+  .sp-action .cap { color: #000; }
+  a { color: #000; border: 0; }
+}
+
+/* The wash deepens as you descend the page (--sink is set on scroll). */
+.abyss {
+  background:
+    radial-gradient(120% 70% at 50% 0%, rgba(7, 30, 43, calc(1 - var(--sink, 0) * 0.85)) 0%, transparent 58%),
+    radial-gradient(100% 60% at 50% 100%, rgba(90, 46, 160, calc(0.12 + var(--sink, 0) * 0.22)) 0%, transparent 64%),
+    var(--abyss);
+}
+
+/* Slow light bands, as if something above is still letting light through. */
+.abyss::after {
+  content: '';
+  position: absolute;
+  inset: -20% -10% auto;
+  height: 90vh;
+  background: repeating-linear-gradient(97deg,
+    rgba(129, 197, 214, 0.055) 0 3px, transparent 3px 46px);
+  -webkit-mask-image: radial-gradient(64% 52% at 50% 0%, #000 0%, transparent 76%);
+  mask-image: radial-gradient(64% 52% at 50% 0%, #000 0%, transparent 76%);
+  opacity: calc(0.9 - var(--sink, 0) * 0.8);
+  animation: sway 34s linear infinite alternate;
+}
+@keyframes sway {
+  from { transform: translate3d(-2%, 0, 0) skewX(-1.5deg); }
+  to   { transform: translate3d(2%, 2%, 0) skewX(1.5deg); }
+}
+@media (prefers-reduced-motion: reduce) { .abyss::after { animation: none; } }

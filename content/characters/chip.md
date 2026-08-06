@@ -1,3 +1,13 @@
+---
+title: Chip
+role: AI companion
+order: 2
+image: chip
+tags: Artificial, Chapter One
+aliases: CHIP
+kills: 0
+---
+
 An AI companion the size of a floating lamp, mounted to Oyster's shoulder
 projector port. He boots with a flicker and an insult, and he does not stop.
 

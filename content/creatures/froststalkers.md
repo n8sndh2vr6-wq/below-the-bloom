@@ -1,3 +1,13 @@
+---
+title: Froststalkers
+role: Pack hunters of the ice
+order: 1
+image: froststalkers
+tags: Icy trenches, Sapient
+aliases: FROSTSTALKER
+depth: 4
+---
+
 Fast, armoured predators that hold the [icy trenches](#/locations/icy-trenches)
 and everything approaching them. They are the first thing the ocean sends at
 Oyster, and the first thing he is completely wrong about.

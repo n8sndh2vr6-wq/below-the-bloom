@@ -1,3 +1,9 @@
+---
+title: The Bloom Event
+role: The violet pulse that took the ship down
+order: 1
+---
+
 A pulse of purple light that expands out of the ocean's surface *like a ripple
 through space itself*. It reads on instruments as an electromagnetic surge. It
 behaves like an intention.

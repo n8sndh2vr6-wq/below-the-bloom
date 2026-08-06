@@ -1,3 +1,13 @@
+---
+title: The Froststalker King
+role: Ruler of the icy trenches
+order: 3
+image: froststalker-king
+tags: Crown, Ally
+aliases: FROSTSTALKER KING, KING FROSTSTALKER
+kills: 4
+---
+
 Massive, armoured, wreathed in icy mist, with luminous scars that pulse a faint
 blue. He rules the [icy trenches](#/locations/icy-trenches) and the society built
 inside them.

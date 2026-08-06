@@ -1,3 +1,11 @@
+---
+title: The Pitch Black Zone
+role: No light, no readings, no bottom
+order: 5
+depth: 3
+scenes: 4, 5
+---
+
 No light. No readings. No bottom.
 
 The zone below the [reef](#/locations/shallow-reef) is where the planet stops

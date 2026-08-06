@@ -1,3 +1,13 @@
+---
+title: Squid
+role: God of this world
+order: 8
+image: squid
+tags: Entity, Chapter One
+aliases: SQUID
+kills: 0
+---
+
 The body of a man, the head of a squid, tendrils moving calmly in the water. He
 is sitting on the steps of his own throne when Oyster and Chip finally reach it,
 and he rises to greet them like a host.

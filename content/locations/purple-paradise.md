@@ -1,3 +1,11 @@
+---
+title: Purple Paradise
+role: A trap with a view
+order: 9
+depth: 8
+scenes: 29, 30
+---
+
 Tall, twisting coral spires glowing a serene lavender. Trees made of translucent
 mineral. Schools of bioluminescent fish drifting through water that is calm, and
 warm, and holding its breath.

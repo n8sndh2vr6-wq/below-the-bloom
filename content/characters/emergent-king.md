@@ -1,3 +1,13 @@
+---
+title: The Emergent King
+role: Ruler of the lighted depths
+order: 5
+image: emergent-king
+tags: Crown, Ally
+aliases: EMERGENT KING
+kills: 1
+---
+
 A fish slightly larger than the others, wearing a crown of coral and light, with
 a melodic echoing voice and — by Chip's assessment — a smug royalty look.
 

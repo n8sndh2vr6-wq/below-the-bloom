@@ -1,3 +1,9 @@
+---
+title: Chapter One — Timeline
+role: The whole descent in order, from orbit to the obsidian throne
+order: 6
+---
+
 Forty-eight scenes, one continuous descent. Read the
 [full screenplay](#/story) alongside it.
 

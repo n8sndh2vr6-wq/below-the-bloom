@@ -5,92 +5,128 @@ about Oyster, a stranded sixteen-year-old, and Chip, his sarcastic AI companion,
 descending through a classified alien ocean after a violet electromagnetic event
 drops their research vessel into it.
 
-This repository *is* the wiki. Every page is rendered at request time from the
-Markdown and screenplay files kept here, so editing a file edits the site.
+**You only ever edit two things: Markdown files, and images.** Everything else is
+generated.
 
-## Layout
+---
 
-```text
-.
-├── index.html                  # shell, icon sprite, drawer
-├── assets/
-│   ├── css/
-│   │   ├── fonts.css           # self-hosted @font-face rules
-│   │   └── styles.css          # everything else
-│   ├── fonts/                  # Cinzel, Cormorant Garamond, Courier Prime
-│   ├── img/
-│   │   ├── hero-abyss.jpg      # key art (carries the wordmark)
-│   │   ├── characters/         # one plate per character
-│   │   └── creatures/          # one plate per species
-│   └── js/
-│       ├── app.js              # routing, loading, views
-│       ├── markdown.js         # Markdown → HTML
-│       └── screenplay.js       # screenplay text → formatted HTML
-├── content/
-│   ├── manifest.json           # the table of contents
-│   ├── lore/                   # Lore & Canon
-│   ├── characters/             # Characters
-│   ├── creatures/              # Creatures & Species
-│   └── locations/              # Worlds & Locations
-└── scripts/
-    └── chapter-1/              # the screenplay, one file per scene
+## The three rules
+
+Every file in `content/` works the same way.
+
+**1. A header at the top, between two `---` lines.**
+
+```
+---
+title: Oyster
+role: Survivor, sixteen
+---
 ```
 
-## Adding an image
+**2. A blank line between every block.** That is how the site knows where one
+paragraph, line of dialogue or picture ends and the next begins.
 
-Drop the file in and it appears — no code change. Entries already point at the
-path they expect:
+**3. To place a picture, write `IMAGE:` and the name of the file.**
 
-| Entry | Expected file |
+```
+IMAGE: froststalker-king
+IMAGE: froststalker-king | He finds his children alive
+```
+
+The name is just the filename without `.jpg`. Put the picture anywhere under
+`assets/img/` and it will be found. Anything after the `|` becomes the caption.
+If the picture is not there yet, the page shows a labelled gap instead of
+breaking.
+
+---
+
+## Writing a scene
+
+`content/scripts/chapter-1/scene-12.md`
+
+```
+---
+title: Deep Cavern Chamber
+scene: INT. FROSTSTALKER KINGDOM – DEEP CAVERN CHAMBER – NIGHT
+act: frost
+number: 12
+summary: The King finds his cubs alive behind two strangers.
+---
+
+Silence settles over the room. Then—
+
+SOUND: ROARS. Deep, thunderous, echoing.
+
+CHIP (tight whisper): Uh… Oyster, I think we woke something up.
+
+Heavy steps echo as the Froststalker King bursts through the tunnel.
+
+IMAGE: froststalker-king | He finds his children alive
+
+KING FROSTSTALKER: You… you saved them.
+
+FADE OUT
+```
+
+That is the whole format:
+
+| Write this | You get |
 | --- | --- |
-| Oyster | `assets/img/characters/oyster.jpg` |
-| Chip | `assets/img/characters/chip.jpg` |
-| The Froststalker King | `assets/img/characters/froststalker-king.jpg` |
-| The Maw King | `assets/img/characters/maw-king.jpg` |
-| The Emergent King | `assets/img/characters/emergent-king.jpg` |
-| The Deadwake Queen | `assets/img/characters/deadwake-queen.jpg` |
-| The Bloom | `assets/img/characters/the-bloom.jpg` |
-| Squid | `assets/img/characters/squid.jpg` |
-| Dr. Lena Voss | `assets/img/characters/lena-voss.jpg` |
-| Mariq Levi | `assets/img/characters/mariq-levi.jpg` |
-| Froststalkers | `assets/img/creatures/froststalkers.jpg` |
-| Maws | `assets/img/creatures/maws.jpg` |
-| Emergents | `assets/img/creatures/emergents.jpg` |
-| Deadwakes | `assets/img/creatures/deadwakes.jpg` |
+| `NAME: words` | a line of dialogue |
+| `NAME (quietly): words` | dialogue with a direction |
+| `SOUND: THUMP.` | a sound effect |
+| `SCENE: INT. CAVE – NIGHT` | a heading inside the scene |
+| `IMAGE: slug \| caption` | a picture |
+| `- something` | a montage beat |
+| `FADE OUT` | a transition |
+| anything else | action |
 
-Portraits read best around **1200 × 1600** (3:4). Until a file exists the frame
-shows a sigil instead of a broken image, and the Gallery lists whatever is
-present.
+One line per line of dialogue — no indenting, no guessing. The site lays it out
+as a proper screenplay when it renders.
 
-Any other entry can take a picture too — add an `"image"` key to it in
-`content/manifest.json` and put the file where it points. Locations have none
-yet, which is why that index is a text list.
+`act:` must be one of the acts listed in
+`content/scripts/chapter-1/_index.md`.
 
-## Writing
+---
 
-### A scene
+## Writing an article
 
-Open the matching file in `scripts/chapter-1/` and write plain screenplay text:
+`content/characters/oyster.md`
 
-```text
-INT. FROSTSTALKER CAVE – CONTINUOUS        ← slugline (first line of the file)
+```
+---
+title: Oyster
+role: Survivor, sixteen
+order: 1
+image: oyster
+tags: Human, Chapter One
+aliases: OYSTER
+kills: 7
+---
 
-Blue light moves across the ice.           ← action
+Ordinary Markdown from here down.
 
-OYSTER                                     ← character cue
-(quietly)                                  ← parenthetical
-We're not turning back.                    ← dialogue
+## A heading
 
-THUMP.                                     ← sound
-FADE OUT.                                  ← transition
+> A quote from the script.
+
+IMAGE: oyster-hand | The prosthetic, moments after it syncs
 ```
 
-Blank lines separate blocks. Nothing else is required.
+Header fields, all optional except `title`:
 
-### An article
+| Field | Does what |
+| --- | --- |
+| `role` | the line under the name |
+| `order` | position in its index |
+| `image` | the picture, by name |
+| `tags` | the little pills under the title |
+| `aliases` | names to search the scripts for, for the Appearances dial |
+| `kills` | the Kills dial (characters) |
+| `depth` | how deep it sits, 0–10 (creatures, locations) |
+| `scenes` | which scenes it appears in (locations) |
 
-Articles are Markdown. Headings, lists, tables, quotes, bold, italics and links
-all work. To link somewhere else in the wiki, use its route:
+To link somewhere else in the wiki, use its address:
 
 ```markdown
 [Scene 12](#/story/chapter-1/scene-12)
@@ -98,33 +134,69 @@ all work. To link somewhere else in the wiki, use its route:
 [Purple Paradise](#/locations/purple-paradise)
 ```
 
-### A new page
+Links are two-way: anything you link to grows a **Referenced by** list pointing
+back at you.
 
-`content/manifest.json` is the table of contents — the site reads it to build
-every menu, index and search result. Add the file, then add its entry to the
-matching section's `entries` array:
+---
 
-```json
-{ "slug": "the-crown", "name": "The Crown",
-  "role": "One line shown under the name",
-  "image": "assets/img/characters/the-crown.jpg",
-  "tags": ["Artefact"],
-  "file": "content/lore/the-crown.md" }
+## After you edit
+
+```sh
+node tools/build.mjs
 ```
 
-`image` and `tags` are optional. Scenes go in the chapter's `scenes` array with
-a number, slug, act, path, title, location and synopsis — keep it in order.
+That reads every file, works out the dial readings, finds the cross-references,
+maps the pictures, and writes `content/index.json`. It also lists any picture a
+page is expecting but has not got.
+
+Run it after adding or renaming a file, or after dropping in a picture. Editing
+words inside a file that already exists does not need it.
+
+---
+
+## Adding a picture
+
+Drop the file into `assets/img/`, run the build, done. These are the names the
+pages are already waiting for:
+
+```
+assets/img/characters/  oyster · chip · froststalker-king · maw-king
+                        emergent-king · deadwake-queen · the-bloom
+                        squid · lena-voss · mariq-levi
+assets/img/creatures/   froststalkers · maws · emergents · deadwakes
+```
+
+Portraits read best around 1200 × 1600 (3:4); pictures inside an article suit
+16:10. `.webp`, `.jpg`, `.png` and `.avif` all work.
+
+---
+
+## Layout
+
+```text
+index.html                    the shell, icon sprite and splash
+assets/css/styles.css         all styling
+assets/css/fonts.css          self-hosted @font-face rules
+assets/fonts/                 Cinzel, Cormorant Garamond, Courier Prime
+assets/img/                   key art, characters, creatures
+assets/js/app.js              routing, dials, views
+assets/js/markdown.js         Markdown → HTML
+assets/js/script.js           scene files → screenplay
+content/index.json            generated — do not edit
+content/*/_index.md           one per section: its name, colour, icon, order
+content/lore|characters|creatures|locations/
+content/scripts/chapter-1/    the screenplay, one file per scene
+tools/build.mjs               the build
+```
 
 ## Reading it locally
-
-Run any static server from this folder and open the address it prints:
 
 ```sh
 python3 -m http.server 8000
 ```
 
-Opening `index.html` straight off the disk will not work — browsers block a page
-from reading its neighbouring files that way.
+Then open the address it prints. Opening `index.html` off the disk will not
+work — browsers block a page from reading its neighbouring files that way.
 
 ## Credits
 

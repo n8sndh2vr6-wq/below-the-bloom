@@ -1,3 +1,11 @@
+---
+title: The Castle
+role: The deep structure. The gates open on their own
+order: 12
+depth: 10
+scenes: 46, 47, 48
+---
+
 The *deep structure* from the Agency's files — old, possibly alive, known only
 from blurry scans taken by people who then went missing.
 

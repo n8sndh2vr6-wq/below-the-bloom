@@ -1,3 +1,11 @@
+---
+title: The Purple Abyss
+role: Where the Bloom keeps time
+order: 11
+depth: 9
+scenes: 36, 37, 38, 39, 40, 41, 42, 43, 44, 45
+---
+
 A deep glowing chamber of shimmering coral, glowing plants and misty purple
 light, with a low hum in it like a heartbeat. Also called *the purple land*.
 

@@ -1,3 +1,11 @@
+---
+title: The Deadwake Kingdom
+role: A cathedral walled in bioluminescent bone
+order: 10
+depth: 8
+scenes: 30, 31
+---
+
 Reached through a shadowed trench at the far edge of the
 [purple paradise](#/locations/purple-paradise), flanked by two enormous guards.
 

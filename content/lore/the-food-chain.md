@@ -1,3 +1,9 @@
+---
+title: The Food Chain
+role: Four kingdoms, one arrangement, and the thing that calls it balance
+order: 2
+---
+
 Four kingdoms hold the ocean between them. A fifth thing holds the four, and
 calls the arrangement balance.
 

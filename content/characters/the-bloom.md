@@ -1,3 +1,13 @@
+---
+title: The Bloom
+role: The tide itself
+order: 7
+image: the-bloom
+tags: Entity, Antagonist
+aliases: THE BLOOM, BLOOM
+kills: 5
+---
+
 A small, sleek, glowing fish whose scales ripple like thoughts. It speaks
 without moving its mouth. It is the antagonist of Chapter One and the reason
 there is a Chapter One at all.

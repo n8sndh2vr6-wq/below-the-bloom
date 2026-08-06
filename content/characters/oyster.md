@@ -1,3 +1,13 @@
+---
+title: Oyster
+role: Survivor, sixteen
+order: 1
+image: oyster
+tags: Human, Chapter One
+aliases: OYSTER
+kills: 7
+---
+
 Sixteen years old, lanky, and wearing a pressure suit unzipped at the collar
 right up until the day it has to keep him alive.
 
