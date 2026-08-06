@@ -35,8 +35,25 @@ IMAGE: froststalker-king | He finds his children alive
 
 The name is just the filename without `.jpg`. Put the picture anywhere under
 `assets/img/` and it will be found. Anything after the `|` becomes the caption.
-If the picture is not there yet, the page shows a labelled gap instead of
-breaking.
+If the picture is not there yet the page keeps the frame and the caption and
+notes which file it is waiting for, so a half-finished page still reads.
+
+### Tags the pages ignore
+
+Some tags are records for the index, not writing, and never appear on the
+page — `KILL:`, `NOTE:`, `TODO:`, `PLACE:`, `CAST:`, `REF:`, `TAG:`, `META:`.
+Put them anywhere in a scene or an article and they stay invisible.
+
+The full list lives in `assets/js/directives.js`, and both renderers and the
+build read it. To add another tag the pages should swallow, put one line
+there:
+
+```js
+FOO: 'record',
+```
+
+Only `IMAGE:`, `SOUND:` and `SCENE:` draw anything. Everything else that is
+not on the list — `CHIP:`, `DR. VOSS:` — is left alone and stays dialogue.
 
 ---
 

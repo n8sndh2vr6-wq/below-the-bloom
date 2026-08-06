@@ -1517,3 +1517,16 @@ button.dial[aria-expanded="true"] .dial-label { color: var(--accent, var(--cyan)
 .breakdown small { font-size: 0.9rem; font-style: italic; color: var(--bone-3); }
 .breakdown a b { color: var(--bone); }
 .breakdown span b { color: var(--bone-2); }
+
+/* A figure whose file has not arrived keeps its caption and names what is
+   missing, so a half-finished page still reads. */
+.figure.missing figcaption { font-style: italic; }
+.figure.missing figcaption small {
+  display: block;
+  margin-top: 6px;
+  font-family: var(--face-mono);
+  font-style: normal;
+  font-size: 0.7rem;
+  letter-spacing: 0.06em;
+  color: var(--bone-4);
+}

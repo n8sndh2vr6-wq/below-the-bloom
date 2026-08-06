@@ -14,6 +14,7 @@
 import fs from 'node:fs';
 import path from 'node:path';
 import { fileURLToPath } from 'node:url';
+import { directiveOf } from '../assets/js/directives.js';
 
 const ROOT = path.resolve(path.dirname(fileURLToPath(import.meta.url)), '..');
 const CONTENT = path.join(ROOT, 'content');
@@ -73,7 +74,9 @@ function imageMap() {
 /* ---------------------------------------------------------------- scenes */
 
 const CUE = /^([A-Z][A-Z0-9 .'’\-]{0,30}?)(?:\s*\(([^)]*)\))?:\s+(\S.*)$/;
-const KILL = /^KILL\s*:\s*([^>]+?)\s*>\s*([^|]+?)\s*(?:\|\s*(.*))?$/i;
+const KILL_VALUE = /^([^>]+?)\s*>\s*([^|]+?)\s*(?:\|\s*(.*))?$/;
+
+const warnings = [];
 
 function readScenes() {
   const dir = path.join(CONTENT, 'scripts', 'chapter-1');
@@ -96,22 +99,27 @@ function readScenes() {
     for (const block of body.split(/\n\s*\n/)) {
       const first = block.trim().split('\n')[0];
 
-      const kill = KILL.exec(first);
-      if (kill) {
-        // "KILL: killer > victim x3 | note" — one entry per body.
-        const victim = kill[2].trim();
-        const many = /\s+x(\d+)$/i.exec(victim);
-        kills.push({
-          killer: kill[1].trim(),
-          victim: many ? victim.slice(0, many.index).trim() : victim,
-          count: many ? Number(many[1]) : 1,
-          note: (kill[3] || '').trim(),
-        });
+      // Reserved tags are consumed first, exactly as the renderers do.
+      const directive = directiveOf(first);
+      if (directive) {
+        if (directive.tag === 'KILL') {
+          const kill = KILL_VALUE.exec(directive.value);
+          if (!kill) { warnings.push(`${file}: cannot read "KILL: ${directive.value}"`); continue; }
+          // "killer > victim x3 | note" — one entry per body.
+          const victim = kill[2].trim();
+          const many = /\s+x(\d+)$/i.exec(victim);
+          kills.push({
+            killer: kill[1].trim(),
+            victim: many ? victim.slice(0, many.index).trim() : victim,
+            count: many ? Number(many[1]) : 1,
+            note: (kill[3] || '').trim(),
+          });
+        }
         continue;
       }
 
       const cue = CUE.exec(first);
-      if (!cue || /^(SOUND|SCENE|IMAGE)$/i.test(cue[1])) continue;
+      if (!cue) continue;
       lines += 1;
       spoken.set(cue[1], (spoken.get(cue[1]) || 0) + 1);
       if (!speakers.includes(cue[1])) speakers.push(cue[1]);
@@ -420,10 +428,28 @@ fs.writeFileSync(path.join(CONTENT, 'index.json'), JSON.stringify(index, null, 2
 const missing = sections
   .flatMap((s) => s.entries.filter((e) => e.image && !images[e.image]).map((e) => `${s.slug}/${e.slug} → ${e.image}`));
 
+// A single-word cue that speaks once and matches nobody's aliases is usually
+// a mistyped tag (KILLL:) rather than a character — real bit-parts read like
+// "MAW 2" or "DEADWAKE WARRIOR", so a space is enough to tell them apart.
+const declared = new Set(sections.flatMap((s) => s.entries.flatMap((e) => e.aliases)));
+const tally = new Map();
+for (const scene of scenes) {
+  for (const [cue, n] of scene.spoken) tally.set(cue, (tally.get(cue) || 0) + n);
+}
+for (const [cue, n] of tally) {
+  if (n === 1 && !cue.includes(' ') && !declared.has(cue)) {
+    warnings.push(`"${cue}:" speaks once, is one word and matches no character — mistyped tag?`);
+  }
+}
+
 console.log(`content/index.json written`);
 console.log(`  ${sections.length} sections, ${sections.reduce((n, s) => n + s.entries.length, 0)} articles, ${scenes.length} scenes`);
 console.log(`  ${Object.keys(images).length} images mapped`);
 if (missing.length) {
   console.log(`  awaiting artwork (${missing.length}):`);
   for (const m of missing) console.log(`    ${m}`);
+}
+if (warnings.length) {
+  console.log(`  check (${warnings.length}):`);
+  for (const w of warnings) console.log(`    ${w}`);
 }

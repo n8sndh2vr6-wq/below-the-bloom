@@ -13,6 +13,8 @@
  * extension. tools/build.mjs maps every slug to its file.
  */
 
+import { directiveOf } from './directives.js';
+
 const ESCAPES = { '&': '&amp;', '<': '&lt;', '>': '&gt;', '"': '&quot;', "'": '&#39;' };
 const MARK = '\u0000';
 
@@ -39,10 +41,14 @@ export function renderImage(value, images = {}) {
   const src = images[slug];
   const label = caption || slug.replace(/-/g, ' ');
 
+  // No file yet: keep the frame and the caption, since the caption is part of
+  // the writing, and name the file that is missing underneath it.
   if (!src) {
     return `<figure class="figure missing">`
       + `<div class="plate empty"></div>`
-      + `<figcaption>Awaiting <code>${escapeHtml(slug)}</code></figcaption>`
+      + `<figcaption>`
+      + (caption ? `${inline(caption)}<small>awaiting ${escapeHtml(slug)}</small>` : `<small>awaiting ${escapeHtml(slug)}</small>`)
+      + `</figcaption>`
       + `</figure>`;
   }
 
@@ -90,7 +96,6 @@ const NUMBER = /^\s*(\d+)[.)]\s+(.*)$/;
 const HEADING = /^(#{1,6})\s+(.*)$/;
 const RULE = /^\s*([-*_])(\s*\1){2,}\s*$/;
 const TABLE_DIVIDER = /^\s*\|?[\s:|-]+\|[\s:|-]*$/;
-const IMAGE = /^IMAGE\s*:\s*(.+)$/i;
 
 const slugify = (text) => text.toLowerCase().replace(/[^\w\s-]/g, '').trim().replace(/\s+/g, '-');
 
@@ -126,9 +131,11 @@ export function renderMarkdown(source, images = {}) {
     const line = lines[index];
     if (!line.trim()) { index += 1; continue; }
 
-    const picture = IMAGE.exec(line.trim());
-    if (picture) {
-      html.push(renderImage(picture[1], images));
+    // A reserved tag on its own line: IMAGE draws a picture, every other
+    // reserved tag is a record and produces nothing.
+    const directive = directiveOf(line);
+    if (directive) {
+      if (directive.kind === 'figure') html.push(renderImage(directive.value, images));
       index += 1;
       continue;
     }
@@ -200,7 +207,7 @@ export function renderMarkdown(source, images = {}) {
     while (index < lines.length && lines[index].trim()
       && !HEADING.test(lines[index]) && !RULE.test(lines[index])
       && !/^\s*>/.test(lines[index]) && !/^\s*```/.test(lines[index])
-      && !IMAGE.test(lines[index].trim())
+      && !directiveOf(lines[index])
       && !BULLET.test(lines[index]) && !NUMBER.test(lines[index])) {
       paragraph.push(lines[index].trim());
       index += 1;

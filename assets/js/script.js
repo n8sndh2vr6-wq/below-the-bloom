@@ -7,7 +7,7 @@
  *   NAME: line                  dialogue
  *   NAME (quietly): line        dialogue with a direction
  *   SOUND: THUMP.               a sound
- *   KILL: Oyster > Maw | note   records a death (not shown in the scene)
+ *   KILL: Oyster > Maw | note   a record — never shown (see directives.js)
  *   SCENE: INT. CAVE – NIGHT    a heading inside the scene
  *   IMAGE: froststalker-king    a picture, optional  | caption
  *   - beat                      a montage beat
@@ -18,9 +18,9 @@
  */
 
 import { escapeHtml, renderImage } from './markdown.js';
+import { directiveOf } from './directives.js';
 
 const DIALOGUE = /^([A-Z][A-Z0-9 .'’\-]{0,30}?)(?:\s*\(([^)]*)\))?:\s+(\S[\s\S]*)$/;
-const MARKER = /^(SOUND|SCENE|IMAGE|KILL)\s*:\s*(.*)$/is;
 const BEAT = /^-\s+(.*)$/;
 const TRANSITION = /^(FADE IN|FADE OUT|FADE TO BLACK|CUT TO|CUT TO BLACK|SMASH CUT|DISSOLVE TO|MATCH CUT|THE END)\b/i;
 
@@ -46,16 +46,15 @@ export function renderScene(body, images = {}) {
   const cast = [];
 
   for (const block of blocks(body)) {
-    const marker = MARKER.exec(block);
-    if (marker) {
-      const kind = marker[1].toUpperCase();
-      const value = marker[2].trim();
-
-      // KILL: is a record for the dials, not something the scene says.
-      if (kind === 'KILL') continue;
-      if (kind === 'SOUND') { out.push(`<p class="sp-sound">${escapeHtml(value)}</p>`); continue; }
-      if (kind === 'SCENE') { out.push(`<p class="sp-slug">${escapeHtml(value)}</p>`); continue; }
-      out.push(renderImage(value, images));
+    // Reserved tags are handled before anything else, so a record like KILL:
+    // can never fall through and be printed as action.
+    const directive = directiveOf(block);
+    if (directive) {
+      const { kind, value } = directive;
+      if (kind === 'record') continue;
+      if (kind === 'sound') out.push(`<p class="sp-sound">${escapeHtml(value)}</p>`);
+      else if (kind === 'slug') out.push(`<p class="sp-slug">${escapeHtml(value)}</p>`);
+      else out.push(renderImage(value, images));
       continue;
     }
 
