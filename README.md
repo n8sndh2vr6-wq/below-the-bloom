@@ -1,45 +1,98 @@
 # Below the Bloom
 
-**Below the Bloom** is a cinematic sci-fi survival project about Oyster, a stranded teenage explorer, and Chip, his sarcastic AI companion, descending through a classified alien ocean planet after a violet electromagnetic event crashes their research vessel.
+The archive for **Below the Bloom** — a cinematic sci-fi survival story about
+Oyster, a stranded sixteen-year-old, and Chip, his sarcastic AI companion,
+descending through a classified alien ocean after a violet electromagnetic
+event drops their research vessel into it.
 
-The repository is organized as a GitHub Pages-ready static site.
+This repository *is* the wiki. Every page on the site is rendered at runtime
+from the Markdown and script files kept here, so editing a file edits the site.
 
-## Live site URL
-
-Once GitHub Pages is enabled for this repository, the project will be available at:
-
-```text
-https://<your-github-username>.github.io/below-the-bloom/
-```
-
-> This workspace does not currently have a Git remote configured, so the exact username/organization URL cannot be detected from the repository itself.
-
-## Project structure
+## What lives where
 
 ```text
 .
-├── index.html                         # GitHub Pages landing page
-├── assets/css/styles.css              # Landing page styles
-├── content/opening-scenes.md          # Current screenplay draft scenes
-├── legacy/Planet_Redacted_Archive_Phase1_v2.html
-│                                      # Original archive prototype
-└── README.md                          # Project and deployment notes
+├── index.html                  # the archive shell
+├── assets/
+│   ├── css/styles.css          # all styling
+│   └── js/
+│       ├── app.js              # routing, loading, views
+│       ├── markdown.js         # Markdown → HTML
+│       └── screenplay.js       # script text → formatted screenplay
+├── content/
+│   ├── manifest.json           # the site's table of contents
+│   └── wiki/*.md               # wiki entries
+└── scripts/
+    └── chapter-1/*.md          # the screenplay, one file per scene
 ```
 
-## Deploying with GitHub Pages
+## Writing
 
-1. Push this branch to GitHub.
-2. Open the repository on GitHub.
-3. Go to **Settings → Pages**.
-4. Under **Build and deployment**, choose **Deploy from a branch**.
-5. Select your default branch and the repository root (`/`).
-6. Save. GitHub will publish the site at the URL shown above.
+### Editing a scene
 
-## Creative direction
+Open the matching file in `scripts/chapter-1/` and write plain screenplay text.
+The renderer understands the standard shape:
 
-The landing page frames the project as the **Planet Redacted Archive**, highlighting the core story loop:
+```text
+INT. FROSTSTALKER CAVE – CONTINUOUS        ← slugline (first line of the file)
 
-- orbital research mission;
-- purple Bloom event;
-- submerged wreck survival;
-- descent toward the castle, the king, and the crown.
+Blue light moves across the ice.           ← action
+
+OYSTER                                     ← character cue
+(quietly)                                  ← parenthetical
+We're not turning back.                    ← dialogue
+
+THUMP.                                     ← sound
+FADE OUT.                                  ← transition
+```
+
+Blank lines separate blocks. Nothing else is required.
+
+### Editing a wiki page
+
+Wiki entries are Markdown files in `content/wiki/` that open with a short
+header:
+
+```markdown
+---
+title: Characters
+glyph: 👤
+summary: Oyster, Chip, and the god at the bottom.
+---
+
+# Characters
+…
+```
+
+Headings, lists, tables, quotes, bold, italics and links all work. To link to a
+scene from anywhere, use its route: `[Scene 12](#/script/chapter-1/scene-12)`.
+To link to another wiki page: `[Locations](#/wiki/locations)`.
+
+### Adding a page or a scene
+
+`content/manifest.json` is the table of contents — the site reads it to build
+every menu, index and search result.
+
+To add a **wiki page**, drop the Markdown file in `content/wiki/` and add an
+entry to the `wiki` array:
+
+```json
+{ "slug": "vehicles", "file": "content/wiki/vehicles.md",
+  "title": "Vehicles", "glyph": "🚀", "summary": "One sentence." }
+```
+
+To add a **scene**, drop the file in `scripts/chapter-1/` and add an entry to
+that chapter's `scenes` array, with its number, slug, arc, path, title,
+location and a one-line synopsis. Keep the array in scene order.
+
+## Reading it locally
+
+Open a terminal in this folder and run any static server, then visit the
+address it prints:
+
+```sh
+python3 -m http.server 8000
+```
+
+(Opening `index.html` straight off the disk won't work — browsers block a page
+from reading its own neighbouring files that way.)
